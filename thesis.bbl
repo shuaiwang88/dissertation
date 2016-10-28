@@ -1,0 +1,545 @@
+\begin{thebibliography}{72}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aksenova et~al.(2006)Aksenova, Zhang, and Lu]{aksenovaenrollment}
+S.S. Aksenova, D.~Zhang, and M.~Lu.
+\newblock Enrollment prediction through data mining.
+\newblock In \emph{2006 IEEE International Conference on Information Reuse and
+  Integration}, pages 510--515, Sept 2006.
+\newblock \doi{10.1109/IRI.2006.252466}.
+
+\bibitem[Al-Radaideh et~al.(2006)Al-Radaideh, Al-Shawakfa, and
+  Al-Najjar]{dt_performance1}
+Qasem~A Al-Radaideh, Emad~M Al-Shawakfa, and Mustafa~I Al-Najjar.
+\newblock Mining student data using decision trees.
+\newblock In \emph{International Arab Conference on Information Technology
+  (ACIT'2006), Yarmouk University, Jordan}, 2006.
+
+\bibitem[Allenby and Lenk(1994)]{logistic_application3}
+Greg~M. Allenby and Peter~J. Lenk.
+\newblock Modeling household purchase behavior with logistic normal regression.
+\newblock \emph{Journal of the American Statistical Association}, 89\penalty0
+  (428):\penalty0 1218--1231, 1994.
+\newblock \doi{10.1080/01621459.1994.10476863}.
+\newblock URL
+  \url{http://amstat.tandfonline.com/doi/abs/10.1080/01621459.1994.10476863}.
+
+\bibitem[Bailey(2006)]{dt_graduation}
+Brenda~L. Bailey.
+\newblock Let the data talk: Developing models to explain ipeds graduation
+  rates.
+\newblock \emph{New Directions for Institutional Research}, 2006\penalty0
+  (131):\penalty0 101--115, 2006.
+\newblock \doi{10.1002/ir.190}.
+\newblock URL \url{http://dx.doi.org/10.1002/ir.190}.
+
+\bibitem[Belsley et~al.(2005)Belsley, Kuh, and Welsch]{belsley2005regression}
+David~A Belsley, Edwin Kuh, and Roy~E Welsch.
+\newblock \emph{Regression diagnostics: Identifying influential data and
+  sources of collinearity}, volume 571.
+\newblock John Wiley \& Sons, 2005.
+
+\bibitem[Berry and Linoff(2004)]{dt_application5}
+Michael~JA Berry and Gordon~S Linoff.
+\newblock \emph{Data mining techniques: for marketing, sales, and customer
+  relationship management}.
+\newblock John Wiley \& Sons, 2004.
+
+\bibitem[Bhat(1995)]{logistic_application11}
+Vasanthakumar~N Bhat.
+\newblock A multivariate analysis of airline flight delays.
+\newblock \emph{International Journal of Quality \& Reliability Management},
+  12\penalty0 (2):\penalty0 54--59, 1995.
+
+\bibitem[Bloom(2004)]{logistic_application9}
+Jonathan~Z Bloom.
+\newblock Tourist market segmentation with linear and non-linear techniques.
+\newblock \emph{Tourism Management}, 25\penalty0 (6):\penalty0 723--733, 2004.
+
+\bibitem[Borah et~al.(2011)Borah, Jindal, Gupta, and Deka]{dt_enroll_india}
+M.D. Borah, R.~Jindal, D.~Gupta, and G.C. Deka.
+\newblock Application of knowledge based decision technique to predict student
+  enrollment decision.
+\newblock In \emph{2011 Recent Trends in Information Systems (ReTIS) on
+  International Conference}, pages 180--184, Dec 2011.
+\newblock \doi{10.1109/ReTIS.2011.6146864}.
+
+\bibitem[Braunstein et~al.(1999)Braunstein, Mcgrath, and
+  Pescatrice]{braunstein1999measuring}
+Andrew Braunstein, Michael Mcgrath, and Donn Pescatrice.
+\newblock Measuring the impact of income and financial aid offers on college
+  enrollment decisions.
+\newblock \emph{Research in Higher Education}, 40\penalty0 (3):\penalty0
+  247--259, 1999.
+\newblock ISSN 0361-0365.
+\newblock \doi{10.1023/A:1018742931941}.
+\newblock URL \url{http://dx.doi.org/10.1023/A%3A1018742931941}.
+
+\bibitem[Bruggink and Gambhir(1996)]{lr_2}
+Thomas~H Bruggink and Vivek Gambhir.
+\newblock Statistical models for college admission and enrollment: A case study
+  for a selective liberal arts college.
+\newblock \emph{Research in Higher Education}, 37\penalty0 (2):\penalty0
+  221--240, 1996.
+
+\bibitem[Bunkar et~al.(2012)Bunkar, Singh, Pandya, and Bunkar]{dt_performance}
+K.~Bunkar, U.K. Singh, B.~Pandya, and R.~Bunkar.
+\newblock Data mining: Prediction for performance improvement of graduate
+  students using classification.
+\newblock In \emph{2012 Ninth International Conference on Wireless and Optical
+  Communications Networks (WOCN)}, pages 1--5, Sept 2012.
+\newblock \doi{10.1109/WOCN.2012.6335530}.
+
+\bibitem[Chan and Loh(2004)]{lotus2}
+K.Y. Chan and W.Y. Loh.
+\newblock Lotus: An algorithm for building accurate and comprehensible logistic
+  regression trees.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 13\penalty0
+  (4):\penalty0 826--852, 2004.
+
+\bibitem[Chang(2006)]{changapplying2006}
+Lin Chang.
+\newblock Applying data mining to predict college admissions yield: A case
+  study.
+\newblock \emph{New Directions for Institutional Research}, 2006\penalty0
+  (131):\penalty0 53--68, 2006.
+\newblock ISSN 1536-075X.
+\newblock \doi{10.1002/ir.187}.
+\newblock URL \url{http://dx.doi.org/10.1002/ir.187}.
+
+\bibitem[Chang(2008)]{lr_1_chang}
+Tongshan Chang.
+\newblock Data mining: A magic technology for college recruitment.
+\newblock \emph{Paper of Overseas Chinese Association for Institutional
+  Research (www.ocair.org)}, 2008.
+
+\bibitem[Chen(2011)]{logistic_application10}
+Mu-Yen Chen.
+\newblock Predicting corporate financial distress based on integration of
+  decision tree classification and logistic regression.
+\newblock \emph{Expert Systems with Applications}, 38\penalty0 (9):\penalty0
+  11261--11272, 2011.
+
+\bibitem[Chen et~al.(2013)Chen, Song, Shi, Pi, and Sun]{lotus_app1}
+Weiwei Chen, Jie Song, Leyuan Shi, Liang Pi, and Peter Sun.
+\newblock Data mining-based dispatching system for solving the local pickup and
+  delivery problem.
+\newblock \emph{Annals of Operations Research}, 203\penalty0 (1):\penalty0
+  351--370, 2013.
+\newblock ISSN 0254-5330.
+\newblock \doi{10.1007/s10479-012-1118-1}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10479-012-1118-1}.
+
+\bibitem[Chien et~al.(2007)Chien, Wang, and Cheng]{dt_application8}
+Chen-Fu Chien, Wen-Chih Wang, and Jen-Chieh Cheng.
+\newblock Data mining for yield enhancement in semiconductor manufacturing and
+  an empirical study.
+\newblock \emph{Expert Systems with Applications}, 33\penalty0 (1):\penalty0
+  192--198, 2007.
+
+\bibitem[Cho et~al.(2002)Cho, Kim, and Kim]{dt_application1}
+Yoon~Ho Cho, Jae~Kyeong Kim, and Soung~Hie Kim.
+\newblock A personalized recommender system based on web usage mining and
+  decision tree induction.
+\newblock \emph{Expert systems with Applications}, 23\penalty0 (3):\penalty0
+  329--342, 2002.
+
+\bibitem[Curs and Jr.(2002)]{Curs2002111}
+Bradley Curs and Larry D.~Singell Jr.
+\newblock An analysis of the application and enrollment processes for in-state
+  and out-of-state students at a large public university.
+\newblock \emph{Economics of Education Review}, 21\penalty0 (2):\penalty0 111
+  -- 124, 2002.
+\newblock ISSN 0272-7757.
+\newblock \doi{http://dx.doi.org/10.1016/S0272-7757(00)00048-0}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0272775700000480}.
+
+\bibitem[De~La~Vi{\~n}a and Ford(2001)]{logistic_application1}
+Lynda De~La~Vi{\~n}a and Jamie Ford.
+\newblock Logistic regression analysis of cruise vacation market potential:
+  demographic and trip attribute perception factors.
+\newblock \emph{Journal of Travel Research}, 39\penalty0 (4):\penalty0
+  406--410, 2001.
+
+\bibitem[Dey(2001)]{dt_application6}
+Prasanta~Kumar Dey.
+\newblock Decision support system for risk management: a case study.
+\newblock \emph{Management Decision}, 39\penalty0 (8):\penalty0 634--649, 2001.
+
+\bibitem[Dynarski(1999)]{dynarski1999does}
+Susan~M. Dynarski.
+\newblock Does aid matter? measuring the effect of student aid on college
+  attendance and completion.
+\newblock Technical Report 7422, National Bureau of Economic Research, November
+  1999.
+\newblock URL \url{http://www.nber.org/papers/w7422}.
+
+\bibitem[Edwards(2016 (accessed April 10, 2016){\natexlab{a}})]{ACT_percentile}
+Halle Edwards.
+\newblock \emph{{ACT Percentiles and Score Rankings}}, 2016 (accessed April 10,
+  2016){\natexlab{a}}.
+\newblock \url{http://blog.prepscholar.com/act-percentiles-and-score-rankings}.
+
+\bibitem[Edwards(2016 (accessed April 10, 2016){\natexlab{b}})]{mean_sat}
+Halle Edwards.
+\newblock \emph{{Average ACT Score by State from 2014}}, 2016 (accessed April
+  10, 2016){\natexlab{b}}.
+\newblock
+  \url{"http://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows}.
+
+\bibitem[Evans et~al.(1995)Evans, Farkas, Gilpin, Berry, and
+  Pierce]{logistic_application2}
+Nicola Evans, Arthur Farkas, Elizabeth Gilpin, Charles Berry, and John~P.
+  Pierce.
+\newblock Influence of tobacco marketing and exposure to smokers on adolescent
+  susceptibility to smoking.
+\newblock \emph{Journal of the National Cancer Institute}, 87\penalty0
+  (20):\penalty0 1538--1545, 1995.
+\newblock \doi{10.1093/jnci/87.20.1538}.
+\newblock URL \url{http://jnci.oxfordjournals.org/content/87/20/1538.abstract}.
+
+\bibitem[Gross et~al.(2015)Gross, Hossler, Ziskin, and
+  Berry]{grossinstitutional2015}
+Jacob~PK Gross, Don Hossler, Mary Ziskin, and Matthew~S Berry.
+\newblock Institutional merit-based aid and student departure: A longitudinal
+  analysis.
+\newblock \emph{The Review of Higher Education}, 38\penalty0 (2):\penalty0
+  221--250, 2015.
+
+\bibitem[Ha and Park(1998)]{dt_application4}
+Sung~Ho Ha and Sang~Chan Park.
+\newblock Application of data mining tools to hotel data mart on the intranet
+  for database marketing.
+\newblock \emph{Expert Systems with Applications}, 15\penalty0 (1):\penalty0
+  1--31, 1998.
+
+\bibitem[Han et~al.(2011)Han, Kamber, and Pei]{han2011data}
+Jiawei Han, Micheline Kamber, and Jian Pei.
+\newblock \emph{Data mining: concepts and techniques: concepts and techniques}.
+\newblock Elsevier, 2011.
+
+\bibitem[Hansotia and Wang(1997)]{logistic_application6}
+Behram~J Hansotia and Paul Wang.
+\newblock Analytical challenges in customer acquisition.
+\newblock \emph{Journal of Interactive Marketing}, 11\penalty0 (2):\penalty0
+  7--19, 1997.
+
+\bibitem[Harrell(2013)]{harrell2013regression_book}
+Frank~E Harrell.
+\newblock \emph{Regression modeling strategies: with applications to linear
+  models, logistic regression, and survival analysis}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Heller(1997)]{heller1997student}
+Donald~E. Heller.
+\newblock Student price response in higher education: An update to leslie and
+  brinkman.
+\newblock \emph{The Journal of Higher Education}, 68\penalty0 (6):\penalty0
+  624--659, 1997.
+\newblock ISSN 00221546, 15384640.
+\newblock URL \url{http://www.jstor.org/stable/2959966}.
+
+\bibitem[Heller(1999)]{heller1999effects}
+Donald~E Heller.
+\newblock The effects of tuition and state financial aid on public college
+  enrollment.
+\newblock \emph{The Review of Higher Education}, 23\penalty0 (1):\penalty0
+  65--89, 1999.
+
+\bibitem[Herrmann and Datta(2002)]{logistic_application7}
+Pol Herrmann and Deepak~K. Datta.
+\newblock Ceo successor characteristics and the choice of foreign market entry
+  mode: An empirical study.
+\newblock \emph{Journal of International Business Studies}, 33\penalty0
+  (3):\penalty0 551--569, 2002.
+\newblock ISSN 00472506, 14786990.
+\newblock URL \url{http://www.jstor.org/stable/3069530}.
+
+\bibitem[Hinkle et~al.(2003)Hinkle, Wiersma, and Jurs]{hinkle2003applied}
+Dennis~E Hinkle, William Wiersma, and Stephen~G Jurs.
+\newblock Applied statistics for the behavioral sciences.
+\newblock 2003.
+
+\bibitem[Hosmer~Jr and Lemeshow(2004)]{hosmer2004applied}
+David~W Hosmer~Jr and Stanley Lemeshow.
+\newblock \emph{Applied logistic regression}.
+\newblock John Wiley \& Sons, 2004.
+
+\bibitem[Hossler(2000)]{hossler2000role}
+Don Hossler.
+\newblock The role of financial aid in enrollment management.
+\newblock \emph{New directions for student services}, 2000\penalty0
+  (89):\penalty0 77--90, 2000.
+
+\bibitem[Hossler et~al.(1989)Hossler, Braxton, and
+  Coopersmith]{hossler1989understanding}
+Don Hossler, John Braxton, and Georgia Coopersmith.
+\newblock Understanding student college choice.
+\newblock \emph{Higher education: Handbook of theory and research}, 5:\penalty0
+  231--288, 1989.
+
+\bibitem[Hossler et~al.(1990)]{hossler1990strategic}
+Don Hossler et~al.
+\newblock \emph{The Strategic Management of College Enrollments.}
+\newblock ERIC, 1990.
+
+\bibitem[Hung et~al.(2006)Hung, Yen, and Wang]{dt_application9}
+Shin-Yuan Hung, David~C Yen, and Hsiu-Yu Wang.
+\newblock Applying data mining to telecom churn management.
+\newblock \emph{Expert Systems with Applications}, 31\penalty0 (3):\penalty0
+  515--524, 2006.
+
+\bibitem[Jackson(1978)]{jacksonfinancial}
+Ga~Jackson.
+\newblock Financial aid and student enrollment.
+\newblock \emph{The Journal of Higher Education}, 49\penalty0 (6):\penalty0
+  548--574, 1978.
+\newblock \doi{10.2307/1981139}.
+\newblock URL \url{http://dx.doi.org/10.2307/1981139}.
+
+\bibitem[Jaeger and Hinz(2008)]{lr_retention2}
+Audrey~J Jaeger and Derik Hinz.
+\newblock The effects of part-time faculty on first semester freshmen
+  retention: A predictive model using logistic regression.
+\newblock \emph{Journal of College Student Retention: Research, Theory \&
+  Practice}, 10\penalty0 (3):\penalty0 265--286, 2008.
+
+\bibitem[Karim and Rahman(2013)]{dt_application10}
+Masud Karim and Rashedur~M Rahman.
+\newblock Decision tree and na{\"\i}ve bayes algorithm for classification and
+  generation of actionable knowledge for direct marketing.
+\newblock \emph{Journal of Software Engineering and Applications}, 6:\penalty0
+  196--206, 2013.
+
+\bibitem[Kemerer et~al.(1982)Kemerer, Baldridge, and
+  Green]{kemerer1982strategies}
+F.R. Kemerer, J.V. Baldridge, and K.C. Green.
+\newblock \emph{Strategies for effective enrollment management}.
+\newblock American Association of State Colleges and Universities, 1982.
+\newblock ISBN 9780880440622.
+\newblock URL \url{https://books.google.com/books?id=OpolAQAAIAAJ}.
+
+\bibitem[Kim(2004)]{lr_aid2}
+Dongbin Kim.
+\newblock The effect of financial aid on students' college choice: Differences
+  by racial groups.
+\newblock \emph{Research in Higher Education}, 45\penalty0 (1):\penalty0
+  43--70, 2004.
+
+\bibitem[Kim et~al.(2001)Kim, Lee, Shaw, Chang, and Nelson]{dt_application2}
+Jong~Woo Kim, Byung~Hun Lee, Michael~J Shaw, Hsin-Lu Chang, and Matthew Nelson.
+\newblock Application of decision-tree induction techniques to personalized
+  advertisements on internet storefronts.
+\newblock \emph{International Journal of Electronic Commerce}, 5\penalty0
+  (3):\penalty0 45--62, 2001.
+
+\bibitem[Leeds and DesJardins(2015)]{leedsthe2014}
+DanielM. Leeds and StephenL. DesJardins.
+\newblock The effect of merit aid on enrollment: A regression discontinuity
+  analysis of iowa’s national scholars award.
+\newblock \emph{Research in Higher Education}, 56\penalty0 (5):\penalty0
+  471--495, 2015.
+\newblock ISSN 0361-0365.
+\newblock \doi{10.1007/s11162-014-9359-2}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11162-014-9359-2}.
+
+\bibitem[Leslie and Brinkman(1988)]{leslie1988economic}
+Larry~L Leslie and Paul~T Brinkman.
+\newblock \emph{The Economic Value of Higher Education. American Council on
+  Education/Macmillan Series on Higher Education.}
+\newblock ERIC, 1988.
+
+\bibitem[Lindahl and Winship(1994)]{lr_alumni2}
+Wesley~E Lindahl and Christopher Winship.
+\newblock A logit model with interactions for predicting major gift donors.
+\newblock \emph{Research in Higher Education}, 35\penalty0 (6):\penalty0
+  729--743, 1994.
+
+\bibitem[Loh(2011)]{dt_review}
+W.Y. Loh.
+\newblock Classification and regression trees.
+\newblock \emph{Wiley Interdisciplinary Reviews: Data Mining and Knowledge
+  Discovery}, 1\penalty0 (1):\penalty0 14--23, 2011.
+
+\bibitem[Luan and Zhao(2006)]{luan2006data}
+J.~Luan and C.~Zhao, editors.
+\newblock \emph{New Directions for Institutional Research}.
+\newblock Special Issue: Data Mining in Action: Case Studies of Enrollment
+  Management. Wiley Subscription Services, Inc., A Wiley Company, 2006.
+
+\bibitem[Luan(2006)]{luan2006courseoffer}
+Jing Luan.
+\newblock Using academic behavior index (ab-index) to develop a learner
+  typology for managing enrollment and course offerings--a data mining
+  approach. ir applications. volume 10.
+\newblock Technical report, 2006.
+
+\bibitem[Maguire(1976)]{maguire1976organized}
+John Maguire.
+\newblock To the organized go the students.
+\newblock \emph{Bridge Magazine}, 39\penalty0 (1):\penalty0 16--20, 1976.
+
+\bibitem[Maltz et~al.(2007)Maltz, Murphy, and Hand]{maltzdecision}
+Elliot~N. Maltz, Kenneth~E. Murphy, and Michael~L. Hand.
+\newblock Decision support for university enrollment management: Implementation
+  and experience.
+\newblock \emph{Decision Support Systems}, 44\penalty0 (1):\penalty0 106 --
+  123, 2007.
+\newblock ISSN 0167-9236.
+\newblock \doi{http://dx.doi.org/10.1016/j.dss.2007.03.008}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S016792360700053X}.
+
+\bibitem[Midi et~al.(2010)Midi, Sarkar, and Rana]{Midi2010}
+Habshah Midi, S.K. Sarkar, and Sohel Rana.
+\newblock Collinearity diagnostics of binary logistic regression model.
+\newblock \emph{Journal of Interdisciplinary Mathematics}, 13\penalty0
+  (3):\penalty0 253--267, 2010.
+\newblock \doi{10.1080/09720502.2010.10700699}.
+\newblock URL \url{http://dx.doi.org/10.1080/09720502.2010.10700699}.
+
+\bibitem[Mishra et~al.(2014)Mishra, Kumar, and Gupta]{dt_performance2}
+Tripti Mishra, Dharminder Kumar, and Sangeeta Gupta.
+\newblock Mining students' data for prediction performance.
+\newblock In \emph{Proceedings of the 2014 Fourth International Conference on
+  Advanced Computing \& Communication Technologies}, ACCT '14, pages 255--262,
+  Washington, DC, USA, 2014. IEEE Computer Society.
+\newblock ISBN 978-1-4799-4910-6.
+\newblock \doi{10.1109/ACCT.2014.105}.
+\newblock URL \url{http://dx.doi.org/10.1109/ACCT.2014.105}.
+
+\bibitem[Nandeshwar et~al.(2011)Nandeshwar, Menzies, and
+  Nelson]{nandeshwarlearning2011}
+Ashutosh Nandeshwar, Tim Menzies, and Adam Nelson.
+\newblock Learning patterns of university student retention.
+\newblock \emph{Expert Systems with Applications}, 38\penalty0 (12), 2011.
+\newblock \doi{10.1016/j.eswa.2011.05.048}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.eswa.2011.05.048}.
+
+\bibitem[Newman and Petrosko(2011)]{lr_alumni1}
+MelissaD. Newman and JosephM. Petrosko.
+\newblock Predictors of alumni association membership.
+\newblock \emph{Research in Higher Education}, 52\penalty0 (7):\penalty0
+  738--759, 2011.
+\newblock ISSN 0361-0365.
+\newblock \doi{10.1007/s11162-011-9213-8}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11162-011-9213-8}.
+
+\bibitem[Nicolau(2011)]{logistic_application4}
+Jairo Nicolau.
+\newblock An analysis of the 2002 presidential elections using logistic
+  regression.
+\newblock \emph{Brazilian Political Science Review}, 1\penalty0 (1):\penalty0
+  125--135, 2011.
+
+\bibitem[Pandey et~al.(2012)Pandey, Yadav, and Pal]{pandeyAdvertise}
+Umesh~Kumar Pandey, Surjeet~Kumar Yadav, and Saurabh Pal.
+\newblock Data mining application to attract students in {HEI}.
+\newblock \emph{International Journal on Computer Science and Engineering},
+  4\penalty0 (6), 2012.
+
+\bibitem[Peng et~al.(2002)Peng, So, Stage, and St.~John]{lr_summary}
+Chao-YingJoanne Peng, Tak-ShingHarry So, FrancesK. Stage, and EdwardP.
+  St.~John.
+\newblock The use and interpretation of logistic regression in higher education
+  journals: 1988–-1999.
+\newblock \emph{Research in Higher Education}, 43\penalty0 (3):\penalty0
+  259--293, 2002.
+\newblock \doi{10.1023/A:1014858517172}.
+\newblock URL \url{http://dx.doi.org/10.1023/A:1014858517172}.
+
+\bibitem[Sohn and Kim(2007)]{logistic_application5}
+So~Young Sohn and Hong~Sik Kim.
+\newblock Random effects logistic regression model for default prediction of
+  technology credit guarantee fund.
+\newblock \emph{European Journal of Operational Research}, 183\penalty0
+  (1):\penalty0 472 -- 478, 2007.
+\newblock ISSN 0377-2217.
+\newblock \doi{http://dx.doi.org/10.1016/j.ejor.2006.10.006}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221706010393}.
+
+\bibitem[Squires et~al.(2001)Squires, Juric, and
+  Bettina~Cornwell]{logistic_application8}
+Lisa Squires, Biljana Juric, and T~Bettina~Cornwell.
+\newblock Level of market development and intensity of organic food
+  consumption: cross-cultural study of danish and new zealand consumers.
+\newblock \emph{Journal of Consumer Marketing}, 18\penalty0 (5):\penalty0
+  392--409, 2001.
+
+\bibitem[Sugrue(2010)]{optimization1}
+Paul~K Sugrue.
+\newblock An optimization model for the allocation of university based merit
+  aid.
+\newblock \emph{Journal of Student Financial Aid}, 40\penalty0 (2):\penalty0 2,
+  2010.
+
+\bibitem[Tang and Choy(2000)]{logistic_application13}
+Bo-sin Tang and Lennon Hung-tat Choy.
+\newblock Modelling planning control decisions: a logistic regression analysis
+  on office development applications in urban kowloon, hong kong.
+\newblock \emph{Cities}, 17\penalty0 (3):\penalty0 219--225, 2000.
+
+\bibitem[Thanh and Haddawy(2007)]{optimization_bayesian}
+Le~Van Thanh and P.~Haddawy.
+\newblock Deriving financial aid optimization models from admissions data.
+\newblock In \emph{Frontiers In Education Conference - Global Engineering:
+  Knowledge Without Borders, Opportunities Without Passports, 2007. FIE '07.
+  37th Annual}, pages F2A--7--F2A--12, Oct 2007.
+\newblock \doi{10.1109/FIE.2007.4417959}.
+
+\bibitem[Turcinek et~al.(2012)Turcinek, Stastny, and Motycka]{dt_application7}
+Pavel Turcinek, Jiri Stastny, and Arnost Motycka.
+\newblock Usage of data mining techniques on marketing research data.
+\newblock In \emph{Proceedings of the 11th WSEAS international conference on
+  Applied Computer and Applied Computational Science}, pages 159--164, 2012.
+
+\bibitem[Vialardi et~al.(2011)Vialardi, Chue, Peche, Alvarado, Vinatea,
+  Estrella, and Ortigosa]{dt_enroll_academic}
+C{\'e}sar Vialardi, Jorge Chue, Juan Peche, Gustavo Alvarado, Bruno Vinatea,
+  Jhonny Estrella, and {\'A}lvaro Ortigosa.
+\newblock A data mining approach to guide students through the enrollment
+  process based on academic performance.
+\newblock \emph{User Modeling and User-Adapted Interaction}, 21\penalty0
+  (1-2):\penalty0 217--248, 2011.
+\newblock ISSN 0924-1868.
+\newblock \doi{10.1007/s11257-011-9098-4}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11257-011-9098-4}.
+
+\bibitem[Vitaliano(1978)]{logistic_application12}
+Peter~Paul Vitaliano.
+\newblock The use of logistic regression for modelling risk factors: with
+  application to non-melanoma skin cancer.
+\newblock \emph{American journal of epidemiology}, 108\penalty0 (5):\penalty0
+  402--414, 1978.
+
+\bibitem[Wu(2009)]{dt_application3}
+Desheng Wu.
+\newblock Supplier selection: A hybrid model using dea, decision tree and
+  neural network.
+\newblock \emph{Expert Systems with Applications}, 36\penalty0 (5):\penalty0
+  9105--9112, 2009.
+
+\bibitem[Yadav and Pal(2012)]{SurjeetClassEnroll}
+Surjeet~Kumar Yadav and Saurabh Pal.
+\newblock Article: Data mining application in enrollment management: A case
+  study.
+\newblock \emph{International Journal of Computer Applications}, 41\penalty0
+  (5):\penalty0 1--6, March 2012.
+
+\bibitem[Yamashita et~al.(2013)Yamashita, Bailer, Noe, Yamashita, Bailer, and
+  Noe]{lotus_app2}
+Takashi Yamashita, A.~John Bailer, Douglas~A. Noe, Takashi Yamashita, A.~John
+  Bailer, and Douglas~A. Noe.
+\newblock Identifying {At-Risk} subpopulations of canadians with limited health
+  literacy.
+\newblock \emph{Epidemiology Research International}, 2013.
+\newblock \doi{10.1155/2013/130263}.
+\newblock URL \url{http://dx.doi.org/10.1155/2013/130263}.
+
+\end{thebibliography}
