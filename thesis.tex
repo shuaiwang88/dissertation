@@ -13,8 +13,9 @@
 \usepackage{floatrow}
 \usepackage{geometry,array,graphicx,float,caption}
 %% front pages
-
-\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode} % used to insert code
+    
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}%used to insert
+%code
 \usepackage{geometry,array,graphicx,float,caption}
 \usepackage{url}
 \usepackage{rotating} % for sidewaystable
@@ -24,7 +25,6 @@
 
 \usepackage[flushleft]{threeparttable} % add note to table
 \usepackage{epstopdf}  %for eps
-
 \usepackage{amsmath}
 \usepackage{natbib}  % for citation
 \usepackage{verbatim} 
@@ -34,12 +34,12 @@
 \usepackage{caption}
 \usepackage{subcaption}
 %\captionsetup{compatibility=false}
-
+	
 \usepackage{floatrow}
 \newfloatcommand{capbtabbox}{table}[][\FBwidth]
 \usepackage{blindtext}
 
-
+	
 \usepackage{verbatim} 
 \usepackage{paralist} % for inline list
 
@@ -48,7 +48,10 @@
 \usepackage{amsmath}
 \usepackage{setspace}
 
-\usepackage{longtable}
+\usepackage{adjustbox} 
+
+
+
 
 \begin{comment}
 
@@ -82,7 +85,7 @@ tableofcontents
 \newcommand{\authorfirst}{Shuai}
 \newcommand{\authorMI}{}
 \newcommand{\authorlast}{Wang}
-\newcommand{\degreefull}{Doctor of Philosophy}  % force hyphenation at syllables if line breaks are required
+\newcommand{\degreefull}{Doctor of Philosophy}  
 \newcommand{\degreeshort}{Ph.D in Engineering Program}
 \newcommand{\dept}{Department of Biomedical, Industrial and Human Factors
 Engineering }
@@ -99,14 +102,14 @@ the Scholarship Allocation Problem for a State University}
 thesis}
 \newcommand{\pdfkeywords}{keyword 1, keyword 2, keyword 3, keyword 4}
 \newcommand{\yearcomplete}{2017}
-
+	
 %-----------------------------------------------------------------------
 %  Thesis Advisor, Department Chair, Dean of Graduate Studies
 %-----------------------------------------------------------------------
 \newcommand{\thesisdirector}{Xinhui Zhang}
 \newcommand{\thesisdirectortitle}{Ph.D.}
-\newcommand{\phdProgrameOrDeptChair}{Frank W. Ciarallo} % CHANGE TO: Joseph C.Slater FOR MASTER THESIS
-\newcommand{\phdProgrameOrDeptChairEducation}{Ph.D.} % CHANGE TO: Ph.D., P.E.
+\newcommand{\phdProgrameOrDeptChair}{Frank W. Ciarallo} 
+\newcommand{\phdProgrameOrDeptChairEducation}{Ph.D.} 
 %FOR MASTER THESIS
 \newcommand{\phdProgrameOrDeptChairTitle}{Director, Ph.D. in Engineering
 Program} % CHANGE TO: Chair, Department of Mechanical and \\ Materials
@@ -596,7 +599,8 @@ methodologies proposed in this study as follows:
 
 In the most comprehensive case, the objective of the optimal scholarship
 assignment problem is composed of two parts, the net tuition income from
-students, which is the difference between tuition and fees, over the year of the
+students, which is the difference between tuition and fees, over the year of
+the
 studies at the institution, and the state share of instruction, known as SSI,
 which was awarded to the institution when the student graduate.  As such,  it
 is necessary to derive analytic models to predict the probability of student
@@ -614,7 +618,8 @@ a student with lower academic performance.  These two constraints makes it
 impossible to solve the scholarship assignment models at individual levels, and
 the large number of pair wise fairness constraints requires the development of
 customized algorithm to effectively solve the problem at the aggregate budget
-level.  This forms the second part of the methodologies proposed in this research
+level.  This forms the second part of the methodologies proposed in this
+research
 
 Though it is possible to adopt an individualized scholarship, doing so may
 complicate the scholarship awarding process, as such, a uniform policy based on
@@ -1147,8 +1152,9 @@ for the university.
 
 \citet{Thanh2007} presented an approach to maximize the tuition revenue through
 enrollment. By using a Bayesian network, the enrollment probability of each
-student was predicted. The accuracy of the model is 82.70\% with 10-fold cross
-validation. An optimization model was used to allocate the financial aid to
+student was predicted. The accuracy of the model is 82.70 $\%$ with 10-fold
+cross validation. An optimization model was used to allocate the financial aid
+to
 student groups subject to capacity constraints and faculty-student ratio
 constraints. The dataset for this study is very skewed, and the authors solve
 it by splitting the majority class (not enrolled) into groups. The authors also
@@ -1474,9 +1480,9 @@ variant of logistic regressions and are presented here.
 The data used in this study was provided by the institution being researched
 and consists of 47,932 applications that span seven years from 2006 to 2013.
 Out of these applications, 8,072 applications were not granted admission due to
-incomplete information or did not meet the admission requirement, 39,860 were
-granted admission. Out of the 39,860 admitted applications, 19,345 were
-enrolled, 20,515 were no enrolled.
+incomplete information or did not meet the admission requirement, 35,331 were
+granted admission. Out of the 35,331 admitted applications, 17,180 were
+enrolled, 18,151 were no enrolled.
 
 Out of the applications, 44,994 (93.8\%) of the applications are from the state
 of Ohio and these are the focus of this study. Financial aid awards of
@@ -1485,16 +1491,16 @@ students and thus are not addressed in this study. The applications from home
 schools (104 applicants) and applications for a satellite campus (1,796
 applicants) were also removed from analysis.
 
-This leaves a total of 35,458 applications and the statistics of the number of
+This leaves a total of 35,331 applications and the statistics of the number of
 applications in each year are shown in Table \ref{enroll_year_sum}
 \begin{table}[ht]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
           & 06-07 & 07-08 & 08-09 & 09-10 & 10-11 & 11-12 & 12-13 \\ \hline
-Enrolled  & 2,102  & 2,201  & 2,568  & 2,541  & 2,851  & 2,985  & 2,964  \\
+Enrolled  & 2133  & 2311  & 2473  & 2477  & 2706  & 2779  & 2301  \\
 \hline
-Not Enrolled   & 2,145  & 2,321  & 2,480  & 2,492  & 2,714  & 2,791  & 2,303
+Not Enrolled   & 2092  & 2197  & 2559  & 2525  & 2843  & 2976  & 2959
 \\ \hline
 \end{tabular}
 \caption{The number of Applications From 2007 to 2013}
@@ -1504,7 +1510,8 @@ Not Enrolled   & 2,145  & 2,321  & 2,480  & 2,492  & 2,714  & 2,791  & 2,303
 
 
 
-Figure \ref{enroll_sum} and \ref{grad_sum} show the histogram of some important variables in the enrollment and graduation predictions model.
+Figure \ref{enroll_sum} and \ref{grad_sum} show the histogram of some 
+important variables in the enrollment and graduation predictions model.
 
 
 
@@ -1538,8 +1545,10 @@ Figure \ref{enroll_sum} and \ref{grad_sum} show the histogram of some important 
 \includegraphics[width=\linewidth, height=6cm]{pic/enroll_index}
 \caption{} \label{enroll:f}
 \end{subfigure}
-  \caption{Histogram plot for some important variables in enrollment prediction: 
-                        (a) Gender (b) Tier (c) ACT Score (d) High school GPA (e) Ethnicity (f) Unemployment Index}
+  \caption{Histogram plot for some important variables in enrollment
+prediction: 
+                        (a) Gender (b) Tier (c) ACT Score (d) High school GPA
+(e) Ethnicity (f) Unemployment Index}
   \label{enroll_sum} 
 \end{figure}
 
@@ -1576,8 +1585,10 @@ Figure \ref{enroll_sum} and \ref{grad_sum} show the histogram of some important 
 \includegraphics[width=\linewidth]{pic/grad_comp}
 \caption{} \label{grad:f}
 \end{subfigure}
-  \caption{Histogram plot for some important variables in graduation prediction: 
-                        (a) Gender (b) Tier (c) ACT Score (d) High school GPA (e) Ethnicity (f) Composite Score} 
+  \caption{Histogram plot for some important variables in graduation
+prediction: 
+                        (a) Gender (b) Tier (c) ACT Score (d) High school GPA
+(e) Ethnicity (f) Composite Score} 
   \label{grad_sum} 
 \end{figure}
 
@@ -2131,50 +2142,42 @@ SHIP\end{tabular} & \begin{tabular}[c]{@{}c@{}}PELL.\\ GRANT\end{tabular} &
                    \\ \hline
 \hline \\[-1.8ex] 
                    
-GPA                & 1              & 0.596  & \textbf{0.884}
-& 0.612                                                   & -0.190
-& 0.159                                                       & -0.164
-& -0.017                                                  & -0.018
-\\
+GPA         & 1       & 0.596  & \textbf{0.884}
+& 0.612                 & -0.190
+& 0.159             & -0.164
+& -0.017            & -0.018 \\
 ACT                & 0.596          & 1      & 0.469
-& 0.586                                                   & -0.275
-& 0.069                                                       & -0.070
-& -0.039                                                  & 0.005
-\\
+& 0.586            & -0.275
+& 0.069                    & -0.070
+& -0.039             & 0.005\\
 HS.PERCENTILE      & \textbf{0.884} & 0.469  & 1
 & 0.594                                                   & -0.060
 & 0.266                                                       & -.0271
-& 0.011                                                   & -0.010
-\\
+& 0.011                                                   & -0.010\\
 SCHOLARSHIP        & 0.612          & 0.586  & 0.594
 & 1                                                       & 0.025
-& 0.456                                                       & -0.456
-& 0.031                                                   & 0.010
-\\
+& 0.456                             & -0.456
+& 0.031                                                   & 0.010\\
 PELL.GRANT         & -0.190         & -0.275 & -0.060
 & 0.025                                                   & 1
-& \textbf{0.845}                                              & \textbf{-0.830}
-& 0.023                                                   & 0.132
-\\
+& \textbf{0.845}         & \textbf{-0.830}
+& 0.023       & 0.132\\
 TOTAL.FREE.MONEY   & 0.159          & 0.069  & 0.266
-& 0.456                                                   & \textbf{0.845}
-& 1                                                           & \textbf{-0.987}
-& 0.037                                                   & 0.124
-\\
+& 0.456           & \textbf{0.845}
+& 1          & \textbf{-0.987}
+& 0.037                                                   & 0.124\\
 OUT.OF.POCKET      & -0.164         & -0.070 & -0.271
-& -0.456                                                  & \textbf{-0.830}
+& -0.456         & \textbf{-0.830}
 & \textbf{-0.987}                                             & 1
-& -0.039                                                  & -0.045
-\\
+& -0.039                                                  & -0.045\\
 DISTANCE.NUM       & -0.017         & -0.039 & 0.011
-& 0.031                                                   & 0.023
-& 0.037                                                       & -0.039
-& 1                                                       & -0.010
-\\
+& 0.031        & 0.023
+& 0.037            & -0.039
+& 1                                                       & -0.010\\
 UNEMPLOYMENT.INDEX & -0.018         & 0.005  & -0.010
 & 0.010                                                   & 0.132
-& 0.124                                                       & -0.045
-& -0.010                                                  & 1 \\
+& 0.124          & -0.045
+& -0.010         & 1 \\
 \hline \\[-1.8ex]                                                            
 \end{tabular}}
 \caption{Pearson Correlation Matrix of all Numeric Variables} 
@@ -2296,7 +2299,7 @@ presents a heuristic solution to the problem in a fraction of time.
 
 In our implementation, a backward stepwise procedure was adopted and the
 detailed backward stepwise selection process is presented in Table \ref{back}.
-In the table, the ``steps" column represents the number of iterations; the
+In the table, the ``step" column represents the number of iterations; the
 ``model" column represents the model in each iteration; the ``AIC" column
 represents the AIC value.  As can be seen, the process started with a full
 model with all of the predictor variables and continued to seek models with
@@ -2349,16 +2352,110 @@ data has 30,083 entries and the testing data has 5,260 entries. The general
 logistic regression model derived from the backward stepwise selection was used
 as the baseline model.
 
-If it is determine that $p(x) \geq 0.5$, then enrollment;  otherwise, not
-enroll, then the accuracy and performance indicator of the model is presented
-in Table  \ref{accuracy_model}.  %\textbf{ Please explain this table }. \textbf{
-The accuracy of the logistic regression model is 61.9 while the AUC is 0.658,
-and the data is not biased towards positive or negative class as shown in
-\citep{Marsh2004}. %}
+
+The summary statistics of logistic regression model is shown in Table 
+\ref{lr_summary}.  In the table, the odds ratio is usually reported in
+logistics regression model to interpret categorical variables but not good for
+nonlinear variables \citep{DesJardins2006, long2006regression}. We plot the
+predicted probability against a subgroup to see the relationship of the
+independent variables and dependent variable.
+
+
+T
+
+
+
+
+
+\begin{table}[]
+\centering
+\begin{adjustbox}{width=1.05\textwidth}
+
+\begin{tabular}{lccclcc}
+\\[-1.8ex]\hline
+\hline
+                                & Odds Ratio & Std. Error & z value
+& Pr(\textgreater|z|) & C.I. 2.50\% & C.I. 97.50\% \\ \hline
+(Intercept)             & 4.7198 & 0.1780 & 8.7200   & $0.000^{***}$ & 3.3305 &
+6.6926\\
+BlackOrAfricanAmerican  & 1.1277 & 0.0925 & 1.3000   & 0.1936 & 0.9410 & 1.3522\\
+Foreign  & 0.5094 & 1.1766 & -0.5700  & 0.5665 & 0.0246 & 4.1575\\
+Hawaiian  & 1.7913 & 0.4327 & 1.3500   & 0.1779 & 0.7726 & 4.2994\\
+Hispanic  & 1.2526 & 0.1170 & 1.9300   & $0.0542^{'}$ & 0.9959 & 1.5755\\
+IndianAlaskan           & 1.3809 & 0.2690 & 1.2000   & 0.2302 & 0.8128 & 2.3412\\
+TwoMore   & 1.9392 & 0.1151 & 5.7600   & $0.000^{***}$ & 1.5482 & 2.4309\\
+Unknown   & 0.4254 & 0.1363 & -6.2700  & $0.000^{***}$ & 0.3249 & 0.5545\\
+White     & 1.3574 & 0.0862 & 3.5400   & $0.0004^{***}$ & 1.1466 & 1.6079\\
+Tier2     & 0.8144 & 0.0534 & -3.8400  & $0.0001^{***}$ & 0.7334 & 0.9042\\
+Tier3     & 1.0308 & 0.1002 & 0.3000   & 0.7619 & 0.8471 & 1.2546\\
+Tier4     & 0.6313 & 0.1233 & -3.7300  & $0.0002^{***}$ & 0.4957 & 0.8036\\
+Tier5   & 0.7254 & 0.1386 & -2.3200  & $0.0206^{*}$ & 0.5526 & 0.9516\\
+Tier6 & 0.8033 & 0.1120 & -1.9500  & $0.0506^{'}$ & 0.6448 & 1.0003\\
+DISTANCE.BIN02  & 0.6710 & 0.0446 & -8.9400  & $0.000^{***}$ & 0.6147 &0.7323\\
+DISTANCE.BIN03 & 0.5493 & 0.0794 & -7.5500  & $0.000^{***}$ & 0.4700 & 0.6417\\
+DISTANCE.BIN04 & 0.6178 & 0.0889 & -5.4200  &$0.000^{***}$ & 0.5190 & 0.7353\\
+DISTANCE.BIN05 & 0.5004 & 0.0911 & -7.6000  & $0.000^{***}$ & 0.4186 & 0.5981\\
+DISTANCE.BIN06 & 0.3742 & 0.1223 & -8.0400  & $0.000^{***}$ & 0.2944 & 0.4755\\
+COLLEGE Education & 0.9735 & 0.0536 & -0.5000  & 0.6160 & 0.8763 & 1.0813\\
+COLLEG Engineering & 1.2287 & 0.0512 & 4.0200   & $0.0001^{***}$
+& 1.1115 & 1.3585\\
+COLLEGE Libra Arts  & 0.9577 & 0.0459 & -0.9400  & 0.3464 & 0.8754
+& 1.0479\\
+COLLEGE Nurse  & 1.0912 & 0.0505 & 1.7300   & $0.0838^{'}$ &
+0.9884 & 1.2048\\
+COLLEGE Business & 1.0600 & 0.0486 & 1.2000   & 0.2308 & 0.9637 & 1.1660\\
+COLLEGE University College & 0.9470 & 0.0452 & -1.2000  & 0.2283 & 0.8668 &
+1.0347\\
+ACT                     & 0.9590 & 0.0038 & -10.9500 & $0.000^{***}$ & 0.9518 &
+0.9662\\
+OUT.OF.POCKET           & 0.9999 & 0.0000 & -23.3600 & $0.000^{***}$ & 0.9999 &
+0.9999\\
+HS.PERCENTILE           & 0.9902 & 0.0012 & -8.4200  & $0.000^{***}$ & 0.9879 &
+0.9925\\
+GPA                     & 1.4393 & 0.0500 & 7.2900   & $0.000^{***}$ & 1.3051 &
+1.5876\\
+GENDERM                 & 1.0650 & 0.0276 & 2.2800   & $0.0226^{*}$ & 1.0089 &
+1.1242\\
+HS.RAIDER.COUNTRYRaider & 1.0572 & 0.0852 & 0.6500   & 0.5137 & 0.8941 & 1.2487\\
+UNEMPLOYMENT.INDEX      & 0.9588 & 0.0059 & -7.0700  & $0.000^{***}$ & 0.9477 &
+0.9701\\ 
+\\
+AIC: 39300\\
+Degrees of Freedom: 30070 \\
+Null Deviance:      41300 \\
+Residual Deviance: 39300
+
+\\
+\hline
+\multicolumn{7}{l}{\scriptsize{$^{***} p=0.000$, $^{**} p<0.001$, $^*
+p<0.01$,$^{'}p<0.05$}}
+\end{tabular}
+\end{adjustbox}
+\caption{Summary statistics of logistic regression}
+\label{lr_summary}
+\end{table}
+
+
+        
+
+
+
+
+
+
+The cut off value for enrollment is set to 0.5. So if  $p(x) \geq 0.5$, then
+enrollment;  otherwise, not enroll, then the accuracy and performance indicator
+of the model is presented in Table  \ref{accuracy_model}.  
+%\textbf{ Please explain this table }.
+
+%\textbf{
+%The accuracy of the logistic regression model is 61.9 while the AUC is 0.658,
+%and the data is not biased towards positive or negative class as shown in
+%\citep{Marsh2004}.} 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[!ht]
+\begin{table}[]
 \centering
 \begin{threeparttable}
 \begin{tabular}{|l|c|c|l|l|l|}
@@ -2370,8 +2467,8 @@ and the data is not biased towards positive or negative class as shown in
 \hline
 \multirow{2}{*}{Logistic Regression} & \multirow{2}{*}{0.658}   &
 \multirow{2}{*}{0.619 \tnote{*} } &
-\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Yes\\ No\end{tabular}}	 & 0.646
-& 0.414                                                                      \\
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Yes\\ No\end{tabular}}	 & 0.646 &
+0.414                 \\
 \cline{5-6} &  &   &  & 0.586            & 0.354
 \\ \hline
 \end{tabular}
@@ -2431,110 +2528,8 @@ $\theta = 0.5$, it shows that ....etc. ...}
 
 \end{comment}
   
-\begin{table}
-\begin{center}
-
-\begin{minipage}{0.4\textwidth}
- \scalebox{0.9}{   
-\begin{tabular}{l c }
-\\
-\\
-\hline
-Variable & Estimate\\
-\hline
-(Intercept)                     & $3.53^{***}$  \\
-                                & $(0.33)$      \\
-DISTANCE.BIN02                  & $-0.39^{***}$ \\
-                                & $(0.04)$      \\
-DISTANCE.BIN03                  & $-0.59^{***}$ \\
-                                & $(0.08)$      \\
-DISTANCE.BIN04                  & $-0.48^{***}$ \\
-                                & $(0.09)$      \\
-DISTANCE.BIN05                  & $-0.68^{***}$ \\
-                                & $(0.09)$      \\
-DISTANCE.BIN06                  & $-0.98^{***}$ \\
-                                & $(0.12)$      \\
-PELL.GRANT                      & $-0.00^{***}$ \\
-                                & $(0.00)$      \\
-ETHNICITYAfricanAmerican        & $0.12$        \\
-                                & $(0.09)$      \\
-ETHNICITYForeign                & $-0.71$       \\
-                                & $(1.18)$      \\
-ETHNICITYHawaiian               & $0.63$        \\
-                                & $(0.43)$      \\
-ETHNICITYHispanic               & $0.23^{*}$    \\
-                                & $(0.12)$      \\
-ETHNICITYAlaskan          & $0.31$        \\
-                                & $(0.27)$      \\
-ETHNICITYTwoMore                & $0.67^{***}$  \\
-                                & $(0.12)$      \\
-ETHNICITYUnknown                & $-0.89^{***}$ \\
-                                & $(0.14)$      \\
-ETHNICITYWhite                  & $0.27^{**}$   \\
-                                & $(0.09)$      \\
-       
-HS.COUNTY.TIERTier2             & $-0.20^{***}$ \\
-                                & $(0.05)$      \\
-HS.COUNTY.TIERTier3             & $0.03$        \\
-                                & $(0.10)$      \\    
-                                      
-HS.COUNTY.TIERTier4             & $-0.51^{***}$ \\
-                                & $(0.09)$      \\ 
-\hline                     
-\end{tabular}}
-
-\end{minipage} \hfil
-\begin{minipage}{0.4\textwidth}
- \scalebox{0.9}
- {   
-\begin{tabular}  {l c }    
-\hline
-Variable & Estimate   \\
-\hline
-                                                           
-HS.COUNTY.TIERTier5             & $-0.37^{***}$ \\
-                                & $(0.11)$      \\                      
-HS.COUNTY.TIERTier6             & $-0.26^{**}$  \\
-                                & $(0.09)$      \\
-APP.COLLEGEED                   & $-0.02$       \\
-                                & $(0.05)$      \\
-APP.COLLEGEEG                   & $0.21^{***}$  \\
-                                & $(0.05)$      \\
-APP.COLLEGELA                   & $-0.04$       \\
-                                & $(0.05)$      \\
-APP.COLLEGEN                    & $0.08$        \\
-                                & $(0.05)$      \\
-APP.COLLEGESM                   & $0.06$        \\
-                                & $(0.05)$      \\
-APP.COLLEGEUC                   & $-0.05$       \\
-                                & $(0.05)$      \\
-ACT                             & $-0.03^{***}$ \\
-                                & $(0.00)$      \\
-OUT.OF.POCKET                   & $-0.00^{***}$ \\
-                                & $(0.00)$      \\
-SCHOLARSHIP                     & $-0.00^{***}$ \\
-                                & $(0.00)$      \\
-HS.PERCENTILE                   & $-0.01^{***}$ \\
-                                & $(0.00)$      \\
-GPA                             & $0.41^{***}$  \\
-                                & $(0.05)$      \\
-GENDERM                         & $0.06^{*}$    \\
-                                & $(0.03)$      \\
-\hline
-AIC                             & 39290.04      \\
-BIC                             & 39556.01      \\
-Log Likelihood                  & -19613.02     \\
-Deviance                        & 39226.04      \\
-Num. obs.                       & 30071         \\
-\hline
-\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
-\end{tabular}
-}
-\end{minipage}
-\caption{Statistical model summary of logistic regression}
-\label{enroll:logistic_sum}
-\end{center}
-\end{table}
+  
+  
 
 
 \subsection{Logistic Regression Tree Model, Support Vectors Machines Models,
@@ -2620,7 +2615,8 @@ S                        & GPA                           & S
 \item[*] 95\% CI
 \end{tablenotes}
 \end{threeparttable}
-\caption{Accuracy of Enrollment Prediction from Logistic Regression Tree Model }
+\caption{Accuracy of Enrollment Prediction from Logistic Regression Tree Model
+}
 \label{accuracy_model_enroll}
 \end{table}
 
@@ -3068,7 +3064,8 @@ where the $x_i$ is the training data and $y_i$ is target variable.
 
 \textbf{Decision Trees} are commonly used to build classification and
 regression model in a form of tree-like or shape. Decision tree methods
-separate data into groups to grow branches. A decision tree contains root nodes,
+separate data into groups to grow branches. A decision tree contains root
+nodes,
 terminal nodes and internal nodes. Root node is the one on the topmost, usually
 represent by the best attributes. Leaf nodes contain the final decision value
 of the dependent variable. Internal nodes represent the value of attributes.
@@ -3263,7 +3260,8 @@ M     &   & set of  different levels of financial awards, indexed by $m $\\
 
 \begin{conditions*}
 \textbf{Parameters}\\
-p^e_{im}  & & probability of enrollment for applicant $i$, if given award $m$ \\
+p^e_{im}  & & probability of enrollment for applicant $i$, if given award $m$
+\\
 p^g_{im}    & & probability of graduation for applicant $i$, if given award
 $m$\\
 d(i,j)         & & 1 if applicant $i$ dominates applicant $j$; 0 otherwise.\\
@@ -4136,119 +4134,134 @@ University}  \label{app A}
 
 %\section{Variables used in the model}
 
-%The variable used in the model contains both continuous and discrete variables
+The variable used in the model contains both continuous and discrete variables
 and are listed in the table below.
 
-\begin{table}[ht]
+ 
+\begin{sidewaystable*}
+%\begin{table}[]
 \centering
-\caption{Description of Data Fields (Variables)}
-\label{my-label}
-\begin{tabular}{ll}
-\hline
-Variable Name     & \multicolumn{1}{c}{Description}      \\ \hline
-MATRICULATION     & Whether applicant enrolled or not           	  \\
-GPA               & High school GPA                                   \\
-ACT               & ACT score                       					\\
-HS.PERCENTILE     & Applicant's high school percentile         \\
-GENDER            & Male or female                       \\
-ETHNICITY         & Ethnicities                               \\
-UNDERREPRESENTED  & 1 if the applicant is white; 0 otherwise       \\
-%HS.RAIDER.COUNTRY & Whether high school graduate tend to go to WSU\\
-HS.DESC           & Applicant's high school                       \\
-TUITION           & Tuition of the school year                          \\
-PELL.GRANT        & Applicant's Pell grant information       \\
-SCHOLARSHIP       & How much scholarship the applicant got     \\
-TOTAL.FREE.MONEY  & SCHOLARSHIP+PELL.GRANT                         \\
-OUT.OF.POCKET     & TUITION-Total.FREE.MONEY              \\
-APP.COLLEGE       & Intended college            \\
-APP.MAJOR         & Intended major                \\ \hline
-\end{tabular}
-\end{table}
-	
-% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail:
-%hlavac at fas.harvard.edu
-% Date and time: Sun, Feb 21, 2016 - 17:20:56
-\begin{table}[ht] \centering 
-\caption{Summary Statistics, mean, standard deviation, median, mim, and max, of
-Selected Continuous Variables}
-  \label{Continuous} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccccccccc} 
+
+\caption{Summary of categorical variables}
+\label{enroll_discrete}
+\begin{adjustbox}{width=1.05\textwidth}
+
+\begin{tabular}{lccccl}
 \\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-  & mean & sd & median  & min & max  \\
-\hline \\[-1.8ex] 
-GPA   &$3.0$ & $0.6$ & $3.1$  & $0.4$ & $4.9$  \\ 
-ACT   & $21.2$ & $4.3$ & $21$ & $8$ & $36$    \\ 
-PELL.GRANT  & $1,452$ & $2,228$ & $0$ & $0$ & $5,550$  \\ 
-OUT.OF.POCKET  & $5,455$ & $2,467$ & $6,278$  & $$-$5,935$ & $8,354$   \\ 
-DISTANCE.NUM &  $57.6$ & $53.4$ & $43.8$  & $2.6$ & $276.7$   \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Summary of Enrollment and Not Enrollment of Various Regions (Tier 1:
-Tire 2: Tire 3: .....s) }
-\label{tier}
-\begin{tabular}{|c|c|c|}
 \hline
-HS.Tier & Enrolled & Not Enrolled \\ \hline
-Tier 1  & 8013     & 5500         \\ \hline
-Tier 2  & 2524     & 2570         \\ \hline
-Tier 3  & 661      & 623          \\ \hline
-Tier 4  & 2470     & 4123         \\ \hline
-Tier 5  & 1296     & 2469         \\ \hline
-Tier 6  & 2228     & 2866         \\ \hline
+Variable                        & Enrolled & Not Enrolled & Graduated & Not
+Graduated & Definitions of Variables                    \\ \hline
+Tier 1                          & 7190    & 6322        & 1471     & 5719      
+& Dummy; 1=Tier 1; 0=otherwise                \\ 
+Tier 2                          & 2183    & 2909        & 438       & 1745     
+& Dummy; 1=Tier 2; 0=otherwise                \\
+Tier 3                          & 606      & 672          & 179       & 427    
+& Dummy; 1=Tier 3; 0=otherwise                \\
+Tier 4                          & 2146    & 4446        & 243       & 1903     
+& Dummy; 1=Tier 4; 0=otherwise                \\
+Tier 5                          & 1145    & 2620        & 242       & 903      
+& Dummy; 1=Tier 5; 0=otherwise                \\
+Tier 6                          & 1943    & 3149        & 441       & 1502     
+& Dummy; 1=Tier 6; 0=otherwise                \\
+Asian                           & 319      & 378          & 76        & 243    
+& Dummy; 1=Asian; 0=otherwise                 \\
+African American                & 2916    & 4400        & 264       & 2652     
+& Dummy; 1=African American; 0=otherwise      \\
+Hawaiian                        & 15       & 15           & 1         & 14     
+& Dummy; 1=Hawaiian; 0=otherwise              \\
+Hispanic                        & 355      & 461          & 57        & 298    
+& Dummy; 1=Hispanic; 0=otherwise              \\
+Native Indian/Alaskan           & 36       & 39           & 8         & 28     
+& Dummy; 1=Native Indian/Alaskan; 0=otherwise \\
+Two/More                        & 504      & 454          & 78        & 426    
+& Dummy; 1=Two/More; 0=otherwise              \\
+Unknown                         & 118      & 451          & 22        & 96     
+& Dummy; 1=Unknown ; 0=otherwise              \\
+White                           & 10949   & 13917       & 2508      & 8441     
+& Dummy; 1=White; 0=otherwise                 \\
+College of Business (BA)        & 1636    & 2167        & 375       & 1261     
+& Dummy; 1=BA; 0=otherwise                    \\
+College of Science \& Math (SM) & 2330    & 2931        & 491       & 1839     
+& Dummy; 1=SM; 0=otherwise                    \\
+College of Liberal Arts (LA)    & 2714    & 3976        & 527       & 2187     
+& Dummy; 1=LA; 0=otherwise                    \\
+College of Education (ED)       & 1419    & 1973        & 284       & 1135     
+& Dummy; 1=ED; 0=otherwise                    \\
+College of Engineering (EG)     & 2081    & 2347        & 482       & 1599     
+& Dummy; 1=EG; 0=otherwise                    \\
+College of Nursing (N)          & 2033    & 2675        & 337       & 1696     
+& Dummy; 1=N; 0=otherwise                     \\
+University College  (UC)        & 3000    & 4049        & 518       & 2483     
+& Dummy; 1=UC; 0=otherwise                    \\
+Female                          & 9922    & 10784       & 1816  & 6936  &
+Dummy; 1=Female; 0=otherwise  \\
+Male                            & 7270    & 7367        & 1198      & 5263   &
+Dummy; 1=Male;0=otherwise    \\
+Underrepresented-Yes            & 4146    & 5748        & 483       & 3662     
+& Dummy; 1=Underrepresented; 0=otherwise      \\
+Underrepresented-No             & 11067   & 14370       & 2530      & 8537     
+& Dummy; 1=Not Underrepresented ; 0=otherwise\\
+Raider County         & 10299   & 10404   & 2160        &  8139     & Dummy;
+1=Raider (County close to WSU); 0=otherwise                     \\
+Not Raider County  & 4914       & 9714     & 854       & 4060        & Dummy;
+1=NotRaider (County not close to WSU) ; 0=otherwise   \\
+ \hline 
 \end{tabular}
-\end{table}
+\end{adjustbox}
+%\end{table}
+\end{sidewaystable*}
 
-\begin{table}[ht]
-\centering
-\caption{Summary of Enrollment and Not Enrollment by Ethnicity}
-\label{ethnicity}
-\begin{tabular}{|c|c|c|}
-\hline
-Ethnicity             & Enrolled & Not Enrolled \\ \hline
-Asian                 & 350      & 347          \\ \hline
-African American      & 3,332     & 3,984         \\ \hline
-Hawaiian              & 19       & 11           \\ \hline
-Hispanic              & 403      & 413          \\ \hline
-Native Indian/Alaskan & 40       & 35           \\ \hline
-Two/More              & 583      & 375          \\ \hline
-Unknown               & 156      & 418          \\ \hline
-White                 & 12,309    & 12,568        \\ \hline
-\end{tabular}
-\end{table}
 
-\begin{table}[h]
-\centering
-\caption{Summary of Enrollment and Not Enrollment by College}
-\label{college}
-\begin{tabular}{|c|c|c|}
-\hline
-College                    & Enrolled & Not Enrolled \\ \hline
-College of Business        & 1825     & 1984         \\ \hline
-College of Science \& Math & 2573     & 2688         \\ \hline
-College of Liberal Arts    & 3086     & 3604         \\ \hline
-College of Education       & 1609     & 1784         \\ \hline
-College of Engineering     & 2331     & 2097         \\ \hline
-College of Nursing         & 2338     & 2373         \\ \hline
-University College         & 3430     & 3621         \\ \hline
-\end{tabular}
-\end{table}
 
-\begin{table}[h]
+\begin{sidewaystable*}{}
 \centering
-\begin{tabular}{|c|c|c|}
+\caption{Summary of continuous variables}
+\label{continuous}
+
+\begin{adjustbox}{width=1.05\textwidth}
+\begin{tabular}{lccccccl}
+\\[-1.8ex]\hline
+\hline 
+Variable          & n        & mean        & sd          & median   & min      
+& max       & Description of Variables                                         
+
+\\ \hline
+GPA                & $35331$ & $3.094$     & $0.63$     & $3.10$  & $0.40$    
+& $4.90$   & High School GPA \\
+ACT                & $35331$ & $21.268$    & $4.39$     & $21$     & $8$    &
+$36$   & Composite ACT   \\
+HS PERCENTILE      & $35331$ & $60.89$    & $24.83$    & $64$     & $0$        
+& $100$     & Hight School Percentile Rank                                     
+\\
+SCHOLARSHIP        & $35331$ & $777.45$   & $1339.30$ & $0$      & $0$        
+& $8354$   & Scholarship offered                                               
+\\
+PELL GRANT         & $35331$ & $1452.15$ & $2228.13$ & $0$      & $0$         &
+$5550$   & Pell Grant Information \\
+TOTAL FREE MONEY   & $35331$ & $2229.61$ & $2492.47$ & $150$  & $0$         &
+$1390$  & SCHOLARSHIP + PELL GRANT                                             
+\\
+OUT OF POCKET      & $35331$ & $5455.20$ & $2467.15$ & $6278$  & $$-$5935$ &
+$8354$   & TUITION - TOTAL FREE Money                                          
+\\
+DISTANCE.NUM       & $35331$ & $57.67$    & $53.49$    & $43.82$ & $2.65$     &
+$276.75$ & \begin{tabular}[c]{@{}l@{}}Distance between high school \\ to WSU
+main campus\end{tabular} \\
+UNEMPLOYMENT.INDEX & $35331$ & $7.91$     & $1.890$     & $7.400$  & $5.40$    
+& $10.40$  & \begin{tabular}[c]{@{}l@{}}Unemployment rate of \\ application
+year\end{tabular}           \\
+COMB SCORE  & $35331$ & $52.20$  & $9.60$  & $52$  & $21$   & $82$  & GPA * 10
++ ACT    \\   
 \hline
-Gender & Enrolled & Not Enrolled \\ \hline
-Female  & 9,922     & 10,784        \\ \hline
-Male   & 7,270     & 7,367         \\ \hline
 \end{tabular}
-\caption{Summary of Enrollment by Gender}
-\label{enroll_gender}
-\end{table}
+\end{adjustbox}
+\end{sidewaystable*}
+
+
+
+
+
+
 
 
 \begin{figure}[ht]
@@ -4289,7 +4302,6 @@ score was converted to ACT according to \citep{ACTSAT}.
 high school, which is an easy way to represent applicant's standing at
 graduation relative to other graduate.
 \end{itemize}.    
-
 
 
 
