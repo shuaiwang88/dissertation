@@ -1,4 +1,4 @@
-\begin{thebibliography}{101}
+\begin{thebibliography}{103}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -190,6 +190,14 @@ M~Scott DeBerard, Glen Spielmans, and Deana Julka.
 Gerben Dekker, Mykola Pechenizkiy, and Jan Vleeshouwers.
 \newblock Predicting students drop out: A case study.
 \newblock In \emph{Educational Data Mining 2009}, 2009.
+
+\bibitem[DesJardins et~al.(2006)DesJardins, Ahlburg, and
+  McCall]{DesJardins2006}
+Stephen~L. DesJardins, Dennis~A. Ahlburg, and Brian~P. McCall.
+\newblock An integrated model of application, admission, enrollment, and
+  financial aid.
+\newblock \emph{The Journal of Higher Education}, 77\penalty0 (3):\penalty0
+  381--429, 2006.
 
 \bibitem[Donald et~al.(2010)Donald, Lichtenstein, Palumbo, and
   Zaporowski]{Bosshardt2010}
@@ -427,6 +435,12 @@ W.Y. Loh.
 \newblock Classification and regression trees.
 \newblock \emph{Wiley Interdisciplinary Reviews: Data Mining and Knowledge
   Discovery}, 1\penalty0 (1):\penalty0 14--23, 2011.
+
+\bibitem[Long and Freese(2006)]{long2006regression}
+J~Scott Long and Jeremy Freese.
+\newblock \emph{Regression models for categorical dependent variables using
+  Stata}.
+\newblock Stata press, 2006.
 
 \bibitem[Luan(2006)]{luan2006courseoffer}
 J.~Luan.
