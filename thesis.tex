@@ -10,6 +10,7 @@
 %\usepackage{subfigure} % allows the use of 339
 %\usepackage{subfig}
 
+\usepackage{dirtytalk} % for quoation
 \usepackage{epstopdf}  %for eps
 \usepackage{floatrow}
 \usepackage{geometry,array,graphicx,float,caption}
@@ -397,9 +398,9 @@ opportunities and projects to sponsor my Ph.D. study.  These projects involve
 various aspects of operations research, from the integrated regression and time
 series based forecasting and inventory management, periodic vehicle routing,
 collaborative category optimization, and staff scheduling optimization.  These
-projects open my eyes and helped me to mature as an operations researcher.
+projects opened my eyes and helped me to mature as an operations researcher.
 
-I would like to thanks my friends in the optimization lab,  Dr. Lei Zheng, Dr.
+I would like to thank my friends in the optimization lab,  Dr. Lei Zheng, Dr.
 Gamze Kilincli, Dr. Lebin Lin, Issac Hampton, Hakan Gecili and Lijian Xiao.
 Thanks for the fun time that we spent together.
 
@@ -430,7 +431,8 @@ Thanks for the fun time that we spent together.
 \section{Introduction to Enrollment Management}
 
 Enrollment management was coined by Dr. Jack Maguire \citep{Maguire1976} and is
-used frequently to describe strategies and tactics to shape the enrollment of a
+ frequently used to describe strategies and tactics to shape the enrollment of
+a
 higher learning institution to meet established goals, such as to increase the
 number of high-caliber students, to diversify the student body, and to retain
 more students \citep{Kemerer1982}.   Enrollment management is defined as a
@@ -441,7 +443,7 @@ graduation \citep{Hossler1990} and is critical to many colleges and university
 
 Enrollment management is a research-based process that creates a synergy among
 recruitment, pricing and financial aid, academic affairs, student life, and
-constituent relations ~\citep{huddlestonenrollment2000}, and has provided a
+constituent relations \citep{huddlestonenrollment2000}, and has provided a
 fertile ground for advanced statistical and data analytical studies. These
 studies can be categorized into the following areas: prediction of headcount
 \citep{Chang2006}, financial aid allocation \citep{leedsthe2014, Dynarski2003},
@@ -458,7 +460,7 @@ higher learning institutions to target and attract potential students
 various costs such as tuition, fees, room and board, and books while they
 attend an educational institution. Financial aid comes from federal and state
 programs, as well as private institutions and agencies.  Financial aid can be
-awarded in the forms of grants, education loans, and scholarships.  Grants are
+awarded in the form of grants, education loans, and scholarships.  Grants are
 money that students do not have to repay, such as the federal Pell Grants, and
 are usually based on financial need.  Loans are money students borrow and must
 pay back, usually with interest costs, such as Free Application for Federal
@@ -504,9 +506,9 @@ of students received some types of grant aid with an average grant award of
 The widespread use of financial aid to target potential applicants leads to
 several important problems yet to be solved in the literature, i.e., a) the
 identification of a subset of potential applicants (customers) to target and b)
-the selection of individual level discounts (scholarships) in order to
-discriminate among these potential applicants.  The institution's goal is to
-achieve not only a given level of revenue  or a desired enrollment level
+the selection of individual-level discounts (scholarships) to
+distinguish among these potential applicants.  The institution's goal is to
+achieve not only a given level of revenue  or the desired enrollment level
 subject to scholarship budget constraints, but also to attract a student body
 with desirable average characteristics. In this research, this is referred to
 as \textit{the optimal scholarship decision problem} and is the focus of this
@@ -514,21 +516,22 @@ study.
 
 Though financial aid design and allocation is an important part of enrollment
 management strategies, studies of financial aid are mostly limited to
-descriptive analyses  or meta-analyses of the causal effects of financial aid
-on student enrollment decisions or on the college choice process.   For
+descriptive studies  or meta-analyses of the causal effects of financial aid
+on student enrollment decisions or the college choice process.   For
 example, \citet{Hossler1989} have consistently found that
 ``African American students and Latino students are more cost sensitive and
 more responsive to financial aid offers than majority students of similar
 socioeconomic background.''  \citet{Braunstein1999} found that for
-every every \$1,000 increase in financial aid, the probability  of  enrollment
+every \$1,000 increase in financial aid, the probability  of  enrollment
 increased between 1.1\% and 2.5\%.    These studies, nevertheless, have not
 addressed the fundamental question to be answered: how to allocate limited
 financial aid awards to students to reach institution goals such as to maximize
 its revenue.
 
-The problem however is that it is sometimes difficult to separate the impact of
+The problem, however, is that it is sometimes difficult to separate the impact
+of
 tuition from the effects of student financial aid and comes up with
-all-inclusive models that fits all institutions, as such several practices
+all-inclusive models that fit all institutions, as several such practices
 exist in the higher education industry in balancing tuition and financial aid.
 For example, some private and public colleges maintain low costs and offer very
 little institutional financial aid. These institutions rely on low costs as the
@@ -541,13 +544,14 @@ influence the matriculation decisions of students who receive these offers.
 The problem is also complicated by the fact that the effects of tuition costs
 and financial aid do not uniformly affect the decisions of prospective or
 currently enrolled college students. Some students and families automatically
-equate higher cost with higher quality. Other potential college matriculates
+equate higher cost with higher quality. Another potential college matriculates
 automatically exclude higher cost institutions because they believe they cannot
 afford them.
 
 Nevertheless, it is possible for individual institutions to study the impact of
 price or financial aid to most of the students and families in their markets,
-and optimize the price or financial aid to students to achieve its enrollment
+moreover, optimize the price or financial aid to students to achieve its
+enrollment
 goals.  This is referred to as the scholarship allocation problem and is the
 focus of this research.
 
@@ -563,13 +567,15 @@ such an example.
 
 Wright State University is one of the thirteen state universities within Ohio
 and had an enrollment of 17,779  in the 2013-2014 academic year. The university
-aims to provide affordable service with high-quality education and is eager to
+aims to provide affordable education experience but with high-quality education
+and is eager to
 grow its enrollment and revenue in the coming years.  The desire to grow,
 however, is faced with tough challenges because the university is competing
 with other flagship universities for high-talented students and with community
 colleges for students seeking affordability.
 
-Raising tuition, and accordingly allocating a large portion of the increase in
+Raising tuition, and accordingly allocating a significant portion of the
+increase in
 financial aid to target students, however, is not an option for a state
 institution such as Wright State University. To provide affordable education,
 the state government has capped statewide tuition increases, and at the time of
@@ -580,7 +586,7 @@ where the population remains steady with no dramatic increase in high school
 graduates. The effective use of institutional resources such as financial aid
 to increase enrollment has thus been the focus of university executives.
 Though several questions have been raised, these questions boil down to the
-levels of scholarship students should be awarded so as to maximize the net
+levels of scholarship students should be awarded to maximize the net
 revenue for the institution.
 
 
@@ -590,7 +596,7 @@ revenue for the institution.
 In the solution of the optimal financial aid decision problem,  it is necessary
 to solve several sequential problems related to a) the determination of
 responses to financial aid award from students with various demographic,
-academic, residential, and financial backgrounds, in terms of probability of
+academic, residential, and financial backgrounds, regarding the probability of
 enrollment, the length of study, and the probability of graduation, b) the
 allocation of the scholarship to maximize revenue and c) derivation of
 manageable scholarship award policy that is simple and effective in
@@ -600,11 +606,12 @@ methodologies proposed in this study as follows:
 
 
 In the most comprehensive case, the objective of the optimal scholarship
-assignment problem is composed of two parts, the net tuition income from
+assignment problem is composed of two parts. The first one is the net tuition
+income from
 students, which is the difference between tuition and fees, over the year of
-the
-studies at the institution, and the state share of instruction, known as SSI,
-which was awarded to the institution when the student graduate.  As such,  it
+the studies at the institution. The second one is the state share of
+instruction, known as SSI,
+which was awarded to the institution once the students graduate.  As such,  it
 is necessary to derive analytic models to predict the probability of student
 matriculation decisions, to predict the number of years of study at the
 institution, and to predict the probability of graduation from the institution.
@@ -627,7 +634,7 @@ Though it is possible to adopt an individualized scholarship, doing so may
 complicate the scholarship awarding process, as such, a uniform policy based on
 simple measures would be preferred and thus explored.  As such, the results
 from the optimal scholarship assignment problem, in the form of the amount of
-scholarship awarded for each student, needs to be analyzed to gain managerial
+scholarship awarded to each student, needs to be analyzed to gain managerial
 insights and to form scholarship award policy for implementation.  This forms
 the third part of methodologies proposed in this research.
 
@@ -663,7 +670,7 @@ scholarship allocated over the years, plus the state share of instruction (SSI)
 once the student graduates.  The constraints to be observed include the total
 budget limitations as well as other considerations such as fairness.
 
-In addition, for merit-based scholarship, the fairness constraint stipulates
+Also, for merit-based scholarship, the fairness constraint stipulates
 that a student with better academic performance should be assigned to an equal
 or higher level of scholarships than that of students with a lower academic
 performance. The inclusion of the fairness constraints has dramatically
@@ -672,7 +679,7 @@ minimum cardinality dominance have to be developed to solve the model
 effectively.
 
 Computation experiment shows that the use of minimum cardinality dominance has
-achieved a dramatic reduction in terms of model size. In a test case with more
+achieved a dramatic reduction regarding model size. In a test case with more
 than 6000 students,  from more than 13.5 million constraints, with pairwise
 comparison of 6000 students, to only 191, 000 constraints, and thus enables to
 effective solution of the models.   In this particular case,  the original
@@ -683,15 +690,14 @@ the large model size,  the reduced model nevertheless can be solved in minutes.
 Regression analysis is developed to translate the optimization results, in the
 form of the  amount of scholarship awarded for each student, into managerial
 insights and to derive a policy for implementation.  The analysis suggested
-that
-the use of a composite score, derived based on the student's GPA and ACT
+that the use of a composite score, derived based on the student's GPA and ACT
 scores, could be used as the bases in the award of scholarships and several
-policies based on piecewise regression etc have been explored to form simple
+policies based on piecewise regression etc. have been explored to form simple
 yet effective scholarship policies.
 
 %Though it is possible to adopt an individualized scholarship, doing so may
-complicate the scholarship awarding process, as such, a uniform policy based on
-simple measures would be preferred.
+%complicate the scholarship awarding process, as such, a uniform policy based
+%on simple measures would be preferred.
 
 \section{Implementation Results}
 The proposed models have been developed and used as the foundation for the
@@ -702,6 +708,7 @@ scholarship to potential students as a marketing strategy before these students
 even apply. Table \ref{enroll_stats} presents the enrollment statistics for the
 university in the 2012 - 2013 academic year and those of the 2013 - 2014
 academic year.
+
 
 \begin{table}[ht!]
 \centering
@@ -731,7 +738,7 @@ Matriculated                   & 2,001 & 2,222 & 221         & 11.0\%      \\
 \label{enroll_stats}
 
 \end{table}
-
+%%%%%%%%%%%
 In the 2012-2013 academic year, there were a total of 6,101 applicants, of
 them,4,541   are admitted. 2,375 were awarded scholarships and 2,166 were not
 scholarships. 52\% of the students were awarded scholarships and a total of
@@ -757,7 +764,8 @@ could negatively impact the institution's total net tuition revenue.  The
 problem nevertheless has not been widely studied by the academic literature.
 
 This research proposes a set of analytic models to predict the students'
-response in terms of enrollment and graduation decisions to scholarship, and an
+response in terms of enrollment and graduation decisions to scholarship, and
+an
 optimization model to determine the scholarship level.  The methodologies
 elegantly integrate data mining (in the prediction of enrollment and
 graduation decision) and optimization techniques. The successful solution of
@@ -767,7 +775,7 @@ aid allocation, as seen below, and has brought noticeable financial benefits to
 the university under the study.
 
 The prediction of student's enrollment decision is by itself a hard problem,
-partly due to the fact that enrollment in a particular institution is
+partly because enrollment in a particular institution is
 determined
 by many factors that are not available to the institution.  For example, it is
 well known that a student's enrollment decision is affected by his family
@@ -780,11 +788,11 @@ attract
 students
 
 The research should be used with caution because universities have different
-tuition and financial aid structures.  For example, some regional public and
+tuition and financial aid structures.  For example, some local public and
 private institutions have sustained enrollments by keeping costs low and have a
 sound reputation in local markets and use their cost advantages as the
 principal mechanism for attracting students.  The proposed research is unlikely
-to be applicable to these institutions.
+to apply to these institutions.
 
 \section{Organization of the Thesis}
 \vspace{0.25in}
@@ -796,10 +804,13 @@ presents the mathematical models and techniques for computational improvement.
 Section 6 presents the policy development, implementation results, and future
 research.
 
+
+%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Literature Review}
 The solution of the financial aid allocation problems requires innovative
 models and techniques that draw insights from data mining analytic and
-optimization techniques, as well as a deep understanding of the factors that
+optimization techniques, as well as a thorough understanding of the factors
+that
 affect the decision-making process of potential students.  As such, before the
 presentation of related techniques on predictive  analytic specific student
 enrollment decisions and  optimization techniques, it is necessary to first
@@ -837,23 +848,24 @@ Many more studies have been released ever since the meta-analysis in
 \citep{Leslie1987}. These research studies reached similar conclusions, i.e.,
 higher prices reduce higher education enrollments.  For
 example,\citet{Leslie1987} derived the calculation of a student price response
-coefficient (SPRC) and found that
+coefficient (SPRC) and found that:
+
 \begin{quote} 
 The mean price response is about $-0.7$ percentage points. That is, for every
 \$100 increase in tuition price -- given 1982 - 2983 average weighted higher
 education prices of \$3842 for tuition and room and board, one would expect an
-18 - 24 year old participation rate drop of about three quarters of a
+18 - 24 year old participation rate drop of about three-quarters of a
 percentage point. (p,188)
 \end{quote} 
 
 These findings seem to suggest that as tuition increase, many high school
-students can not afford college and enrollment might decrease; yet this has not
-been observed in practice and a great many students do attend college over the
-period being examined. \citet{Leslie1987} explained the quandary and the answer
-was partially due to the ameliorating effects of financial aid, especially for
-lower income students., i.e., receiving a financial aid award has a significant
-positive effect on the likelihood that a student will enter the institution
-that has made the financial aid offer.
+students can not afford college and enrollment might decrease; yet this has
+not been observed in practice and a large number of students do attend college
+over the period being examined. \citet{Leslie1987} explained the quandary and
+the answer was partially due to the ameliorating effects of financial aid,
+especially for lower income students., i.e., receiving a financial aid award
+has a significant positive effect on the likelihood that a student will enter
+the institution that has made the financial aid offer.
 
 In a later study, \citet{Leslie1988} reviewed 45 econometric analyses of
 relationships between student financial aid and college enrollment.
@@ -866,7 +878,7 @@ demand for colleges.  The results show that by controlling other factors,
 ``financial aid receipt recipients were 6.5 percent point more likely to enter
 colleges in 1972 and 7.8 percentage points more likely in 1980".
 \citet{Braunstein1999} found that for every \$1,000 increase in financial
-aid, the probability of  enrollment increased between 1.1\% and 2.5\%.
+aid, the probability of enrollment increased between 1.1\% and 2.5\%.
 \citet{Crouse2015} studied the nationwide tuition elasticity of for public
 two-year colleges and found that at the mean, a \$100 increase in tuition would
 lead to a decline in enrollment of about 0.883\%.
@@ -898,18 +910,18 @@ lead to a decline in enrollment of about 0.883\%.
 %attracting students. Institutions that attract primarily commuting students
 %(for example, community colleges and metropolitan institutions) are also
 %hesitant to raise their costs too high. A large proportion of their
-enrollments
-%are part-time students who are very cost sensitive and may not take enough
-%classes to qualify for most forms of financial aid
+%enrollments are part-time students who are very cost sensitive and may not
+%take enough classes to qualify for most forms of financial aid
 
+
+%%%%%%%%%%%%%%%%%%%
 \subsection{The Student Demand Theory on Financial Aid and Enrollment}
 Financial aid, nevertheless, is not simply discount to the posted tuition
 price, but  a term that incorporates many different forms of student
 assistance,
 grants, loans, scholarships and work-study waging, i.e., the net cost paid to
 be a recipient of a \$1,000 grant is different than that of a student receiving
-a
-loan.  These factors make the analysis of relationship between financial aid
+a loan.  These factors make the analysis of relationship between financial aid
 and enrollment in higher education more complex \citep{Heller1997}.
 
 It is also important to realize the difference between the \textit{targeting
@@ -1040,6 +1052,7 @@ are still far from completion; for example, \citet{Winters2015} found there is
 no statistical evidence on the effectiveness of certain state-based merit aid
 programs on college completion.
 
+%%%%%%%%%%%%%%%
 \section{Enrollment Prediction at Micro-Level College Level}
 The student demand study investigates at the macro-level enrollment decisions
 associated with students, yet it is still very hard to use these studies to
@@ -1048,30 +1061,34 @@ particular schools. \citet{Carter2011} pointed out that `` published research
 using market-level data, though appropriate for national policy debates, is not
 necessarily useful for governance decisions at the university level. "
 
-The prediction of whether a student  will attend a particular college is quite
+The prediction of whether a student will attend a particular college is quite
 hard.  For example,  it is well known that financial aid is one of the many
 variables that affect a students enrollment decision, but students may turn
 down a generous financial aid package from a small regional private college if
 they are admitted to a prestigious Ivy League college that offers no financial
 aid.  As such, it is critical to understand the decision process; the study of
-the factors and the decision process is referred as the college choice process
+the factors and the decision process is referred as the college choice
+process
 models.
 
 \subsection{College Choice Process / Models} 
-The college choice process models aims to address the following questions: (1)
-"what factors are important to students of nontraditional age in making college
-decisions?" (2) "what are the phases of the college choice process?" (3) "what
-factors are important in creating a desire to attend college?" (4) "why is the
-college search and application phase so important?" and (5) "how can an
-institution more effectively manage enrollment in the selection and attendance
-phase?" \citep{Paulsen1990}
+The college choice process models aims to address the following questions
+\citep{Paulsen1990}:
+\begin{quote}
+ (1) what factors are important to students of nontraditional age in making
+college decisions? (2) what are the phases of the college choice process?
+(3) what factors are important in creating a desire to attend college? (4)
+why is the college search and application phase so important? how
+can an institution more effectively manage enrollment in the selection and
+attendance phase?
+\end{quote}
 
 \citet{Jackson1978}  modeled general model of students' postsecondary decision
 processes as a function of Place, Background, School, Student, Friends,
 Occupation, Aspiration, Plans, Colleges, Jobs.  The author also stated that
-``The complexity of this model requires extensive attention if one wishes to
+\say{The complexity of this model requires extensive attention if one wishes to
 weigh one background factor against another, or to determine which  factors act
-upon the system and which act within".
+upon the system and which act within}.
 
 \citet{Paulsen1990} studied students college choice to understand why students
 choose to attend one particular college over another. First, the past responses
@@ -1095,6 +1112,9 @@ incentives for college savings, for example, or devising more effective early
 information programs about postsecondary education.
 
 \subsection{Microlevel Enrollment Predictions and Financial Aid Allocation} 
+
+
+%todo xz this parapraph has tons of literature not in bib
 Given the various factors in the college choice process, it would be desirable
 to predict the students' response to the enrollment decision at specific
 university.  In many respects, this problem is similar to problems addressed in
@@ -1108,147 +1128,107 @@ with making individual level offer decisions (e.g., Venkatesan and Kumar 2004).
 The approach to admissions and financial aid decisions has many similarities
 with this subset.  For example, like Venkatesan, Kumar, and Bohling (2007),
 \citep{Carter2011}, this research uses an individual customer response model
-that conditions on covariates.  In order to solve our optimization problem at
+that conditions on covariates.  To solve our optimization problem at
 the individual level, we develop an optimization-based solution method.
 
 %A few papers in the marketing literature specially model the college choice
-problem (Punj and Staelin 1978; Chapman 1979; Chapman and Staelin 1982; Wainer
-2005), but do not address how to optimally allocate a scholarship budget. For
-example, Punj and Staelin (1978) run policy simulations to determine the value
-of increasing the scholarship to a given student, but do not embed this
-simulation within the school's decision problem of trading across multiple
-average characteristics.
+%problem (Punj and Staelin 1978; Chapman 1979; Chapman and Staelin 1982; Wainer
+%2005), but do not address how to optimally allocate a scholarship budget. For
+%example, Punj and Staelin (1978) run policy simulations to determine the value
+%of increasing the scholarship to a given student, but do not embed this
+%simulation within the school's decision problem of trading across multiple
+%average characteristics.
+%
+
 
 \citet{Carter2011} modeled individual student-choice behavior and derived
 market level implications via upward aggregation to get college enrollment
 estimations. The papers use discrete-choice experiments in which choice sets
-are customized in real-time to reflect each respondent's true consideration set
-of schools as well as to capture elements of inter-university competition.  The
-paper proposed the use of tuition elasticities estimated by college and show
-that elastic demand can have deleterious effects on the quality of an incoming
-class even when demand for seats far outstrips supply.
+are customized in real-time to reflect each respondent's  schools under
+consideration as well as to capture elements of inter-university competition. 
+The paper proposed the use of tuition elasticities estimated by college and
+show that \say{ elastic demand can have deleterious effects on the quality of
+an incoming class even when demand for seats far outstrips supply}.
 
+%todo extra vspace here?
 \vspace{0.25in}
-These studies, nevertheless, have not addressed the fundamental question to be
-answered: how to allocate limited financial aid awards to students with various
-socioeconomic backgrounds to reach institution goals such as to maximize its
-revenue. This is referred to as the optimal financial aid allocation problem.
-Though there have been a lot of mathematical models in various other
-industries, the use of mathematical models for enrollment management and
-financial aid allocation has been rather limited.
+These studies, nevertheless, have not addressed the fundamental question to 
+be answered: how to allocate limited financial aid awards to students with 
+various socioeconomic backgrounds to reach institution goals such as to
+maximize its revenue. This is referred to as the optimal financial aid
+allocation problem. Though there have been a lot of mathematical models in
+various other industries, the use of mathematical models for enrollment
+management and financial aid allocation has been rather limited.
 
-\citet{Marsh2004} consider admission decisions where the institution only cares
-about the number of students  enrolling (i.e., the characteristics of the
-students don't enter the objective) and apply a Bayesian decision framework
-with a loss function to account for uncertainty. Ehrenberg and Sherman (1984)
-consider cases where the institution cares about a single, objective (observed)
-quality index (e.g., SAT scores) and proposes a model that allocates a single
-scholarship level to all members of a predetermined group of students. Their
-approach ignores uncertainty and does not provide guidance as to how to
-actually solve the optimization problem.
+\begin{comment}
+Ehrenberg and Sherman (1984) studied cases that the institution only pays
+attention to a single individual objective: quality index (e.g., SAT scores)
+and proposed a model that allocates a single scholarship level to all of the
+groups of students. Their approach ignores uncertainty and does not provide
+guidance as to how to solve the optimization problem.
+\end{comment}
 
-\citet{Ehrenberg1984} provided one of the earliest models of optimal financial
-aid policies for a selective university. The model implies that the financial
-aid package to be offered to each category of admitted applicants depends on
-the elasticity of the fraction who accept offers of admission with respect to
-the financial aid package offered them, the propensity of the category to
-enroll, the elasticity of the category's average quality with respect to the
-number admitted, and the relative weight the university assigns them in the
-utility function. While the latter must be determined subjectively, the former
-parameters are subject to empirical estimation. We conclude with a study of one
-institution's data and illustrates how they may be estimated. These estimates
-are then applied to illustrate what the "optimal" financial aid policy would be
-for the university.
+\citet{Ehrenberg1984} provided one of the earliest optimization models to
+derive aid policies for a university. The study showed that the financial aid
+package to be offered to each group of admitted applicants depends on the
+elasticity of the group who accept offers of admission.  The elasticity of 
+the category's average quality with respect to the number admitted and the
+relative weight the university assigns them in a utility function, which is
+from empirical estimation. They used a single index (SAT scores) as 
+objective and proposed a model that allocates one single level of scholarship
+to all students in each group.
 
-\citet{Thanh2007} presented an approach to maximize the tuition revenue through
-enrollment. By using a Bayesian network, the enrollment probability of each
-student was predicted. The accuracy of the model is 82.70 $\%$ with 10-fold
-cross-validation. An optimization model was used to allocate the financial aid
-to
-student groups subject to capacity constraints and faculty-student ratio
-constraints. The dataset for this study is very skewed, and the authors solve
-it by splitting the majority class (not enrolled) into groups. The authors also
-used an ensemble model and found that the stacking method is more suitable for
-the problem.
+\citet{Thanh2007} proposed an approach to maximize the tuition revenue 
+through enrollment. By using a Bayesian network, the enrollment probability 
+of each student is predicted.  An optimization model was developed to 
+maximize  tuition revenue subjects to capacity constraints and faculty-
+student ratio constraints. The dataset for this study is very skewed, and the
+authors solve it by splitting the majority class (not enrolled) into groups.
+The authors  also used an ensemble model and found that the stacking method 
+is more  suitable for the problem. By adopting the optimization model, the
+institute  can achieve the current enrollment level while reducing the
+financial budget.
 
-\citet{Thanh2007}  presented a novel approach to deriving probabilistic models
-that predict enrollment given applicant background and the amount of financial
-aid offered. Our Bayesian network models can be used to optimize various
-enrollment objectives. We present a novel efficient optimization algorithm that
-uses the models to maximize expected tuition revenue under capacity constraints
-including student-faculty ratio and accommodation. We demonstrate and
-evaluate
-our approach using four years of graduate admissions data from the
-Asian
-Institute of Technology, consisting of 7,788 applicants from 84 different
-countries. This dataset is particularly challenging since reliable family
-income data is not available for students from most of these countries.
-Evaluating the Bayesian network model with 10-fold cross validation yields an
-ROC value of 0.8451, with a predictive accuracy of 82.70\% at a threshold of
-0.5. Comparing the results of the tuition revenue optimization model to the
-institute's current financial aid allocation practice shows that if single-term
-tuition revenue is the sole optimization criterion, the institute can achieve
-its current enrollment numbers while realizing significant savings in its
-financial aid budget. The prediction and optimization software is currently
-being incorporated into the institute's online admissions processing system.
 
-\citet{Bosshardt2010} In the context of a theoretical model of expected profit
-maximization, this paper shows how historic institutional data can be used to
-assist enrollment managers in determining the level of financial aid for
-students with varying demographic and quality characteristics. Optimal tuition
-pricing in conjunction with empirical estimation of matriculation probability
-functions illustrates how financial aid can be used to maximize net tuition
-revenue given institutionally determined objectives. The model provides insight
-into the level of price sensitivity of prospective matriculants at a
-medium-sized
-comprehensive private college.
+\citet{Bosshardt2010} This paper studied how to combine empirical estimation 
+of matriculation probability and optimal tuition pricing  which represents 
+the optimal level of financial aid for each applicant, based on demographic 
+and academic information of applicants.
 
 \citet{Sugrue2010} used a constrained optimization technique to allocate
 merit-based aid at a medium-sized private university. The objective of the
-study was to attract higher quality students, measured by combined SAT score,
+study is to attract higher quality students, measured by combined SAT score, 
 so as to improve the overall academic performance in the enrollment. The
 constraints of the study include the availability of students in certain SAT
-score ranges, the total budget available, and the enrollment limit.  The
-optimization models involved used the actual enrolled data from previous
-admission years in every level of combined SAT score.  \citet{Sugrue2010}:The
-allocation of merit-based financial aid during the college admissions process
-presents postsecondary institutions with complex and financially expensive
-decisions. This article describes the application of linear programming as a
-decision tool in merit-based financial aid decisions at a medium-size private
-university. The objective defined for the model is to maximize the quality of
-the incoming class as measured by average combined SAT scores. The approach
-involves using the yield rates from the previous year for each combination of
-SAT score and merit aid award while eliminating from consideration combinations
-for which insufficient data is available. Parameter estimation is based upon
-2006 data and the results of the model are measured against 2007 data. It is
-shown that the modeling approach yielded a higher average SAT scores when
-applied to actual 2007 admissions data.
+score ranges, the total budget available, and the enrollment limit. The
+approach yielded a higher average SAT score when applied.
+
 
 \citet{Belloni2012} recently defines the optimal admission and scholarship
 decisions and choosing customized marketing offers to attract a desirable mix
-of customers.  The authors pointed out that this is a large targeted marketing
-and price discrimination problem and require a tailored approach to exploit the
-particular setting.  The approach accounts for the
-desire to attract a cohort of matriculating students with multiple features
-such as percent female, percent from different regions of the world, average
-test scores, and average grade point average.   The authors developed a
-stochastic optimization model where that each student's choice is empirically
-estimated. The approach is tested in a field study of an MBA scholarship
-process and implement adjusted scholarship decisions.
+of customers.  The authors pointed out that this is a large targeted 
+marketing and price discrimination problem and require a tailored approach to
+exploit the particular setting.  The approach takes into consideration to
+attract a cohort of matriculating students with multiple features such as
+percent of female, percent of different regions of the world, average test
+scores and high school GPA.The authors developed a stochastic optimization
+model where that each student's choice is empirically estimated. The approach
+is tested in a field study of an MBA scholarship process and implement 
+adjusted scholarship decisions.
 %%%%%%%%%%%%%%%
 \section{Methodology Reviews}
 \subsection{Statistical Methodology in Student Demand Studies}
 Most of the research studies on the student demand studies have used either
-cross-sectional statistics regression analysis.  Cross-sectional studies
-examine how graduates behave in the face of a various post-secondary option,
-and
-uses multivariate analysis on data sets as such the high school and beyond
-survey to measure the impact of tuition and aid on the students' decision.   
-In
-simply words, let $s_i$ be some measure of an individual's schooling, such as
-college entry or completed year of college, Air$_i$ be the amount of student
-aid for which an individual is eligible,  let $\sigma_i$  be unobserved
-determinants of schooling  random element, then the multivariate analysis can
+cross-sectional statistics regression analysis. 
+%todo xz either or? 
+Cross-sectional studies examine how graduates behave in the face of a various
+post-secondary option, and uses multivariate analysis on data sets as such the
+high school and beyond survey to measure the impact of tuition and aid on the
+students' decision.   In simple words, let $s_i$ be some measure of an
+individual's schooling, such as
+college entry or completed a year of college, Aid$_i$ be the amount of eligible
+aid for an individual,  let $\sigma_i$  be unobserved determinants of schooling
+random element, then the multivariate analysis can
 be stated as $$S_i = \alpha + \beta * Aid_i + \sigma_i$$
 To address the empirical question of how much a given dollar of aid affects
 behavior,  it is noticed that eligibility of aid likely related to many other
@@ -1259,43 +1239,44 @@ parameters in the faces of correlations.
 Model}  Hybrid approach that combines multivariate analysis and time series can
 be seen in studies such as \citet{Heller1999}. In the examination of sources of
 variation in state spending on need-based aid, merit-based aid, and
-appropriations over the period 1990–2010, \citep{McLendon2014} uses the lagged
+appropriations over the period 1990 \– 2010, \citep{McLendon2014} uses the
+lagged
 value of an outcome variable itself as a predictor variable and uses
 generalized method of moments regression model for the analysis.
 
 \subsubsection{$\bullet \quad$  The Inclusion of External Change Variables in
-the Model:}  \citet{Dynarski2003} argue that the traditional approach to
-regress a person's educational attainment against covariates and the aid for
-which he is eligible and interpret the coefficient on aid as its causal effect
-is problematic, as aid eligibility is correlated with many observed and
-unobserved characteristics that affect schooling decisions. In identifying the
-effect of aid, the authors suggest the use of a source of variation in aid that
-is plausibly exogenous to unobservable attributes that influence college
-attendance. A shift in aid policy that affects some students but not others is
-one such source of exogenous variation.  Such an approach was used in
-\citep{Dynarski2003, Abraham2006},
+the Model:} 
+
+ \citet{Dynarski2003} argue that \say{the traditional approach to regress a
+person's educational attainment against covariates and the aid for which he is
+eligible and interpret the coefficient on aid as its causal effect} is
+problematic because of the complex nature of various characteristics which
+impact on the matriculation decision. To identify the effect of financial aid,
+the authors suggest adding variation in the financial aid which is exogenous to
+unobservable factors that influence the matriculation.  Similar approach was
+used in \citep{Dynarski2003, Abraham2006},
 
 \citet{Curs2002} argued that the application and enrollment are correlated
 because they depend on many of the same observed or unobserved attributes of
 the students and the university.  The authors applied empirical analyses
-through bi-variate probit models  to estimate  the application and enrollment
-decision for both in-state and out-of-state freshmen at the University of
-Oregon and compared the responsiveness of applicants and enrollees to
-person-specific and time-specific variation in the net price.   The results
+through probit models to estimate the application and enrollment decision for
+both in-state and out-of-state first-year students at the University of Oregon
+and compared the responsiveness of applicants and enrollees to person-specific
+and time-specific variation in the net price.   The results
 provided the first formal evidence that the net price elasticity differs for
-in-state and out-of-state students and that these differences are sensitive to
+in-state and out-of-state students and these differences are sensitive to
 whether the price variation occurs across individuals or over time.
 
 \subsection{Binary Prediction Models on Matriculation Probability}
 While the regression model works well for the student demand model, as at the
 macro-level, the decision to be observed is the percentage of enrollment
-students in all students;  at the individual level,  the probability of enroll
-or not enroll is however not directly observed, but with only two binary
-outcomes.  The problem to predict ``enroll'' or ``not enroll'' belongs to a set
-of problems with binary outcomes, and to solve these prediction problems,
-statistical models such as logistic regression and data mining tools such as
-neural networks and decision tree analysis are typically been utilized
-\citep{Han2011, James2014}.
+students in all students;  at the individual level,  the probability of
+enrolling or not is however not directly observed, but with only two binary
+outcomes.  Predicting ``enroll'' or ``not enroll'' belongs to a set of problems
+with binary outcomes and statistical models such as logistic regression and
+data mining tools such as neural networks and decision tree analysis are
+typically used \citep{Han2011, James2014}.
+
 
 \subsubsection{$\bullet \quad$  Logistic Regression Technique}
 \textbf{Technique}: Logistic regression, or binary logistic regression, is a
