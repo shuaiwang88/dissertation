@@ -36,7 +36,8 @@
 #1% expand defined
   }%
 }
-\newcommand{\thesisordissertation}{\uppercase{\thesisordissertationlc}}% 'Thesis' or 'Dissertation'
+\newcommand{\thesisordissertation}{\uppercase{\thesisordissertationlc}}
+% 'Thesis' or 'Dissertation'
 
 % \newcommand[1]{\checkfor}{
 %   \ifthenelse{\isundefined{#1}}{%
@@ -97,7 +98,7 @@
 %-----------------------------------------------------------------------
 \title{                          \thesistitle                          }
 
-\author{           A \thesisordissertationlc \ submitted in partial fulfillment          \\  %  SHUAI
+\author{           A \MakeLowercase{\thesisordissertationlc}\ submitted in partial fulfillment          \\  %  SHUAI
                      of the requirements for the degree of            \\
                         \degreefull              \\
 \\ \\ \\
@@ -208,7 +209,6 @@
   \rule{3in}{0.01in}
   \\                     \thesisdirector, \thesisdirectortitle
   \\                      \thesisordissertation\ Director
-  \\
   \vfill%\vspace{1.2cm}
   \rule{3in}{0.01in}
   \\                     \phdProgrameOrDeptChair, \phdProgrameOrDeptChairEducation
@@ -255,3 +255,4 @@
             citecolor={blue}
            ]{hyperref}
 \usepackage{fancyhdr}
+
