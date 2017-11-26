@@ -13,17 +13,16 @@
 \usepackage{dirtytalk} % for quoation
 \usepackage{epstopdf}  %for eps
 \usepackage{floatrow}
-\usepackage{geometry,array,graphicx,float,caption}
+
 %% front pages
     
 \usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}%used to insert
 %code
-\usepackage{geometry,array,graphicx,float,caption}
+\usepackage{geometry,array,float,caption,tabularx}
 \usepackage{url}
 \usepackage{rotating} % for sidewaystable
 \usepackage{pdflscape} % for sideway figure
 \usepackage{comment}
-\usepackage{array,tabularx,float}
 
 \usepackage[flushleft]{threeparttable} % add note to table
 \usepackage{epstopdf}  %for eps
@@ -279,7 +278,8 @@ I would like to take this opportunity to extend my thanks to my dissertation com
 
 I would like to thank the Kroger Operations Research team for providing various opportunities and projects to sponsor my Ph.D. study.  These projects involve various aspects of operations research, from the integrated regression and time series based forecasting and inventory management, periodic vehicle routing, collaborative category optimization, and staff scheduling optimization.  These projects opened my eyes and helped me to mature as an operations researcher.
 
-I would like to thank my friends in the large scale optimization lab,  Dr. Gamze Kilincli, Dr. Lebin Lin, Isaac Hampton, Hakan Gecili and Lijian Xiao. Thanks for the fun time that we spent together.
+I would like to thank my friends in the large scale optimization lab: Dr. Gamze Kilincli, Dr. Lebin Lin, Isaac Hampton, Hakan Gecili, and Lijian Xiao. Thanks for the fun time that we spent together.
+Special thanks go to the May family: Christina May, Dr. Maria May, Robert May, Anna May, and Janice Baratheon for all the support during my study.
 
 %
 %=============================
@@ -397,7 +397,7 @@ To reduce computational burden, the concept of a minimum cardinality dominance s
 
 The methodology based on the above framework was adopted by the institution under study and its use resulted in an overhaul of the scholarship design. The piecewise regression derived, composite score based scholarship award policy was used as the foundation for the scholarship award for the university in the 2013 to 2014 academic year. A proactive marketing approach has been taken where the enrollment and admission office has obtained data on student performance from ACT and potential students are awarded the scholarship before they even apply. This has yielded an significant increase in directly admitted students under a similar budget. 
 
-Table \ref{enroll_stats1} presents the enrollment statistics for the university in the 2012 - 2013 academic year and those of the 2013 - 2014 academic year.
+Table \ref{enroll_stats1} presents the enrollment statistics for the university in the 2012 - 2013 and 2013 - 2014 academic year after the new policy was applied:
 
 \begin{table}[H]
 \centering
@@ -553,7 +553,7 @@ discrimination problem and required a tailored approach to exploit the particula
 cohort of students based on an expected profile and then offer customized scholarship. The approach is tested in a field study of 
 an MBA scholarship assignment process, and scholarship decisions were adjusted based on its results.
 
-It bears mentioning that most of these studies tried to solve the college choice problem at the individual level, i.e. determine the value of increasing the scholarship level of a given student, but do not address how to optimally allocate a scholarship budget at the aggregate level. What's more, they did not address the allocation of the aid  across multiple students with various socioeconomic characteristics, and thus did not fundamentally address the university's optimal scholarship allocation problems to reach institutional goals such as to maximize revenue.  Though there have been a lot of mathematical models in various other industries, the use of mathematical models for enrollment management and financial aid allocation is rather limited.
+It bears mentioning that most of these studies tried to solve the college choice problem at the individual level, i.e. determine the value of increasing the scholarship level of a given student, but did not address how to optimally allocate a scholarship budget at the aggregate level. What's more, these studies did not address the allocation of financial aid for students with various socioeconomic characteristics, and thus did not fundamentally address the university's optimal scholarship allocation problems to reach institutional goals such as to maximize revenue.  Though there have been a lot of mathematical models in various other industries, the use of mathematical models for enrollment management and financial aid allocation is rather limited.
 
 \section{Methodology Reviews}
 Statistical models have been widely used in these macro-level student 
@@ -567,7 +567,7 @@ is typically adopted at the micro level, as it is used to predict
 binary outcomes.
 
 \subsection{Regression Models in Student Demand Studies}
-Researchers use cross-sectional methods to examine how graduates behave in the face of various post-secondary options, and use multivariate analysis on data sets such as the high school and beyond survey to measure the impact of tuition and aid on students' decisions. In mathematical way,
+ Researchers use cross-sectional methods to examine how graduates behave in the face of various post-secondary options, and use multivariate analysis on data sets such as the high school and beyond survey to measure the impact of tuition and aid on students' decisions. In mathematical way,
 \citet{Dynarski2002} used the following equation to represent the relationship between the effect of financial aid and choice decisions:
 let $S_i$ measuring student's decision such as matriculation, completion, and number of years stay in college; Aid$_i$ be the amount of eligible aid for an individual; $\sigma_i$  be unobserved factors of decision, then the multivariate analysis can be stated as: $$S_i = \alpha + \beta * Aid_i + \sigma_i$$
 
@@ -688,7 +688,7 @@ In the financial status fields, expected family contribution (EFC) measures an a
 
 \noindent \textit{Race}:  There are six categories of races reported: White (10,949 enrolled, 13,917 not enrolled), African American (2,916 enrolled, 4,400 not enrolled), Hispanic (355 enrolled, 461 not enrolled), and Asian (319 enrolled, 378 not enrolled).  The rests are various others or not disclosed (673 enrolled, 959 not enrolled).
 
-\noindent \textit{Distance Bin}: There are six tiers, categorized by how far the student lives from the campus:  Tier 1 (7,190 enrolled, 6,322 not enrolled), Tier 2 (2,183 enrolled, 2,909 not enrolled), Tier 3 (606 enrolled, 672 not enrolled), Tier 4 (2,146 enrolled, 4,446 not enrolled), Tier 5, 1,145 enrolled, 2,640 not enrolled), and Tier 6 (1,943 enrolled,  3,149 not enrolled) 
+\noindent \textit{Distance Bin}: There are six tiers, categorized by how far the student lives from the campus:  Tier 1 (7,190 enrolled, 6,322 not enrolled), Tier 2 (2,183 enrolled, 2,909 not enrolled), Tier 3 (606 enrolled, 672 not enrolled), Tier 4 (2,146 enrolled, 4,446 not enrolled), Tier 5  (1,145 enrolled, 2,640 not enrolled), and Tier 6 (1,943 enrolled,  3,149 not enrolled) 
 
 \noindent \textit{Intending Colleges}.  Business  (1,636 enrolled, 2,167 not enrolled), Science and Math (2,330 enrolled, 2,931 not enrolled), Liberal Arts (2,714 enrolled, 3976 not enrolled), Education (1,419 enrolled, 1,973 not enrolled), Engineering  (2,081 enrolled, 2,347 not enrolled), Nursing (2,033 enrolled, 2,675 not enrolled), and University College (3,000 enrolled, 4,049 not enrolled). 
 
@@ -735,7 +735,7 @@ Variable         & n        & mean        & sd          & median   & min        
 GPA              & 17,180 & 3.08     & 0.61     & 3.10  & 1         & 4.90   \\
 ACT              & 17,180 & 21.08    & 4.22     & 21     & 10        & 35      \\
 HS.PERCENTILE    & 17,180 & 60.02    & 24.69    & 62     & 0         & 100     \\
-DISTANCE.NUM     & 17,180 & 48.80    & 48.32    & 30.77 & 2.65     & 270.24 \\\hline
+DISTANCE.NUM     & 17,180 & 48.80    & 48.32    & 30.77 & 2.65     & 270.24 \\%\hline
 SCHOLARSHIP      & 17,180 & 744.56   & 1,348.68 & 0      & 0         & 8,354   \\
 PELL.GRANT       & 17,180 & 1,750.12 & 2,336.59 & 0      & 0         & 5,550   \\
 TOTAL.FREE.MONEY & 17,180 & 2,494.69 & 2,564.35 & 2,000  & 0         & 13,902  \\ 
@@ -1209,11 +1209,11 @@ Logistic regression is a popular method when predicting variables with dichotomo
 \noindent \textbf{Graduation probability:} what is the probability of graduation (yes) for the same applicant?
 
 \vspace{0.15in}
-%\noindent \textbf{Methodology.} 
+%\noindent \textbfx{Methodology.} 
 Let us denote $p^e(x)$ and $p^g(x)$ as the enrollment and graduation probability respectively. Because the probability $p(x)$ must fall in $[0,1]$th, a regular linear regression is unsuitable as the regression function is not bounded. To resolve this issue, a ratio, called the odds of success and defined as  $\frac{p(x)}{1-p(x)}$,  is used to form a regression model and and a logistic function is defined as:
 \begin{equation}
-\ensuremath{\log\frac{p(x)}{1-p(x)}=\beta_0+\beta_1 x_1+\beta_2 x_2 +\ldots+\beta_k x_k}
-\end{equation}
+\ensuremath{¡=\beta_0+\beta_1 x_1+\beta_2 x_2 +\ldots+\beta_k x_k}
+¡\end{equation}
 The probability of enrollment or graduation can thus be rewritten as:
 \begin{equation}
 p(x)=\frac{e^{\beta_0+\beta_1 x_1+\beta_2 x_2 +\ldots+\beta_i x_i}}{1+e^{\beta_0+\beta_1 x_1+\beta_2 x_2 +\ldots+\beta_ix_i}}
@@ -1776,7 +1776,7 @@ However, it  bears mentioning that the prediction of these probabilities alone  
 
 
 \chapter {Prediction Models on the Number of Years of Study}
-Recall that the net tuition of a student is the difference between  tuition and  scholarship each year, summed over the total years of study.    This chapter studies the models to address the question on the number of years of study once a student enrolls in the university. 
+Recall that the net tuition of a student is the difference between tuition and scholarship, and the scholarship is renewable. This chapter studies the models to address the question on the number of years of study once a student enrolls in the university. 
 % * <meiqingtian@gmail.com> 2017-11-19T21:22:45.597Z:
 % 
 % > scholarship
@@ -1858,15 +1858,28 @@ where  $x_i$ is the training data and $y_i$ is target variable.
 % left off here 11/19
 % 
 % ^.
+
 \vspace{0.15in}
-\noindent \textbf{Decision Trees} are commonly used to build classification and regression models in the form of tree-like  shapes. Decision tree methods separate data into groups to grow branches. A decision tree contains root nodes, terminal nodes, and internal nodes. The root node is the one on the topmost, usually represented by the best attributes. Leaf nodes contain the final decision values of the dependent variable. Internal nodes represent the values of attributes. The algorithms used to build decision tree includde ID3, C4.5, C5.0, CHAID, CRUISE, etc. To split the tree, measurement algorithm like Gini index or information gain is used. For regression specifically, minimized  residual sum of squares (SSE):
+\noindent \textbf{Decision Trees} are commonly used to build classification and regression models in the form of tree-like  shapes. Decision tree methods separate data into groups to grow branches. A decision tree contains root nodes, terminal nodes, and internal nodes. The root node is the topmost node. Leaf nodes contain the final decision values of the dependent variable. Internal nodes represent the values of attributes. The algorithms used to build a decision tree include ID3, C4.5, C5.0, CHAID, CRUISE, etc. To split the tree, measurement algorithms like Gini index or information gain is used. For regression specifically, minimized  residual sum of squares (SSE):
+% * <meiqingtian@gmail.com> 2017-11-22T02:53:43.603Z:
+% 
+% >  The root node is the one on the topmost, usually represented by the best attributes.
+% I don't know what you're trying to say
+% 
+% ^ <meiqingtian@gmail.com> 2017-11-22T02:54:52.573Z.
 \begin{equation}
     SSE = \sum_{i \in S_1} (y_i - \overline{y_1}) + \sum_{i \in S_2} (y_i - \overline{y_2})
 \end{equation}
 are used to split the value of an attribute. $\overline{y_1}$ and $\overline{y_2}$ are the average values of the dependent variables in group $S_1$ and $S_2$. 
 
 \vspace{0.15in}
-\noindent \textbf{Stochastic Gradient Boosting} is a sub-category of boosting methods which convert weak learned to strong learners. A boosting model starts building the model using base machine learning algorithms with a different distribution, then a second model is generated based on correcting errors from the first model. A decision tree with a fixed sized is typically used as the weak learner in the gradient boosting. The process stops until the limit of the base algorithm is reached, or certain accuracy is achieved. The estimate of response variables becomes consecutively more accurate between iterations. Stochastic gradient boosting for regression problems uses square error as a loss function. At each iteration, a sample of data was randomly selected from the full training data without replacement. The weaker learner then is built on the sample data instead of the full training data \citep{FRIEDMAN2002367}. 
+\noindent \textbf{Stochastic Gradient Boosting} is a sub-category of boosting methods which convert weak learners to strong learners. A boosting model works in the following way: starting with a base machine learning algorithm with a different distribution,  a second model is generated based on correcting errors from the first model. A decision tree with a fixed sized is typically used as the weak learner in the gradient boosting. The process iterates until the limit of the base algorithm is reached, or a certain accuracy is achieved. The estimate of response variables becomes consecutively more accurate between iterations. Stochastic gradient boosting for regression problems uses square error as a loss function. At each iteration, a sample of data was randomly selected from the full training data without replacement. The weaker learner then is built on the sample data instead of the full training data \citep{FRIEDMAN2002367}. 
+% * <meiqingtian@gmail.com> 2017-11-22T03:03:41.838Z:
+% 
+% > different
+% different from what?
+% 
+% ^.
 
 \vspace{0.15in}
 \noindent \textbf{Model Metrics.} To evaluate the performance of the model, the Root Mean Square Error (RMSE)  and the mean absolute error (MAE) are commonly used. 
@@ -1885,7 +1898,7 @@ MAE = \frac{1}{n}\sum_{i=1}^n \left| y_i - \hat{y_i}\right|
 \textbf{Model Implementation.} For SVM regression, we used linear kernel in R (implemented in e1071 package \citep{e1071} using default settings). For GLM, we used the base function in R base package. For decision tree, we used rpart package \citep{rpart} in R. For stochastic gradient boosting, we used  gbm package in R \citep{gbm}.
 
 \subsection{Experiment Results}
-Two sets of experiments were conducted to evaluate the model's performance. The first experiment is 10-fold cross-validation. Data used in this experiment is from the year 2006-2007 and 2007-2008.  80\% of data were randomly chosen to build the model, and 20\% percent of the data were used to validate the model in each fold. The final evaluation model is the average metric of all the folds. The second experiment is using data from 2008-2009 to predict the unseen students.  The results of the prediction models are as shown below:
+Two sets of experiments were conducted to evaluate the model's performance. The first experiment is 10-fold cross-validation. Data used in this experiment is from the year 2006-2007 and 2007-2008.  80\% of the data was randomly chosen to build the model, and 20\% percent of the data was used to validate the model in each fold. The final evaluation model is the average metric of all the folds. The second experiment is using data from 2008-2009 to predict the unseen students.  The results of the prediction models are as shown below:
 
 \begin{table}[H]
 \centering
@@ -2029,7 +2042,7 @@ height=3.5in,scale=0.5]{pic/Stochastic_boositing.eps}
 \chapter{Mathematical Models for The Optimal Financial Aid  Allocation Problem }
 The study of students' responses to scholarship awards, though it has provided many insights into the behavior of students in responding to awards, has not addressed the allocation of limited financial aid to students fundamentally.
 
-For example, it is easy to see that local students require less money while students in far-away regions may need more money,  but it is still puzzling as: a) should we allocate the money to local students as they are our bread and butter students and requires less money or b) should we allocate the money to far-away students as local students will come anyway? The solution to these problems requires the solution of an optimization problem to allocate the financial aid optimally, which is addressed in this chapter.
+For example, it is easy to see that local students require less money while students in far-away regions may need more money,  but it is still puzzling as: a) should we allocate the money to local students as they are our bread and butter students and require less money or b) should we allocate the money to far-away students as local students will come anyway? The solution to these problems requires the solution of an optimization problem to allocate the financial aid optimally, which is addressed in this chapter.
 
 \section{The Financial Aid Optimization Model}
 Given a set of applicants and their probabilities of enrollment and graduation with respect to different levels of financial aid, the optimization problem to be solved is to determine the financial aid to each applicant to  maximize the revenue. This is referred as the financial aid allocation problem.
@@ -2057,7 +2070,7 @@ M     &   & set of  different levels of financial awards, indexed by $m $\\
 \begin{conditions*}
 \textbf{Parameters}\\
 p^e_{im}  & & probability of enrollment for applicant $i$, if given award $m$\\
-p^g_{im}    & & probability of graduation for applicant $i$, if given award$m$\\
+p^g_{im}    & & probability of graduation for applicant $i$, if given award $m$\\
 N_{im}    & & expected number of years student $i$ stays at the institution, if given award$m$  \\  
 d(i,j)         & & 1 if applicant $i$ dominates applicant $j$; 0 otherwise.\\
 B                & & total budget for financial aid\\
@@ -2238,7 +2251,7 @@ A minimum cardinality dominance matrix, defined as $D_m$, can be readily defined
 
 
 \section{Model Comparison and Results}
-Computation experiments show that the use of minimum cardinality dominance has achieved a dramatic reduction in terms of model size.  To see this, Table \ref{model_comparison} presents the numbers of variables and constraints with respective to models. Here, though the number of variables has not changed, the number of constraints has been dramatically reduced, specifically the dominance constraint (\ref{constraint:2}), which composes the largest part of the model. The original model has a total of 13,833,800 dominance constraints due to the use of a direct or full dominance matrix, the reduced model; however, has only 220,877 constraints.
+Computation experiments show that the use of minimum cardinality dominance has achieved a dramatic reduction in terms of model size.  To see this, Table \ref{model_comparison} presents the numbers of variables and constraints corresponding to each model. Here, though the number of variables has not changed, the number of constraints has been dramatically reduced, specifically the dominance constraint (\ref{constraint:2}), which comprises the largest part of the model. The original model has a total of 13,833,800 dominance constraints due to the use of a direct or full dominance matrix, the reduced model; however, has only 220,877 constraints.
 
 \begin{table}[H]
 \centering
@@ -2452,7 +2465,7 @@ The optimization result based on the above model could be sent to a general line
 
 
 \section{Derivation of Scholarship Award Policies}
-Scholarship award policies can be derived based on the above model based on general linear regression or decision tree.  Here the predictor or dependent variable is the amount of the award, and the independent variables are GPA, ACT scores, etc.  Although variables such as gender could affect the enrollment and graduation probabilities,  aid allocation based on these variables is controversial. 
+Scholarship award policies can be derived using the above model, which is based on general linear regression or decision tree.  Here the predictor or dependent variable is the amount of the award, and the independent variables are GPA, ACT scores, etc.  Although variables such as gender could affect the enrollment and graduation probabilities,  aid allocation based on these variables is controversial. 
 As a result, in the derivation of financial aid policies, variables such as gender, family income and ethnicity are not considered in the design of a merit-based scholarship.
 
 \subsection{Scholarship Award Policy Based on Decision Tree }
@@ -2864,7 +2877,11 @@ Figure \ref{allocation_results_a}, for example, clearly shows that no scholarshi
 
 
 \subsubsection{Stepwise Regression Based on Composite Score}
-Using``CS'' as the variable representing the composite score, a piecewise regression is used to capture these observations and the resulting regression equations are shown in Table \ref{money_result} and a graph of the piecewise regression is shown in  Figure \ref{PieceWisePolicy}. A simpler discretized version of the scholarship policy is shown in Table \ref{money_result_discrete}. 
+Using ``CS'' as the variable representing the composite score, a piecewise regression is used to capture these observations and the resulting regression equations are shown in Table \ref{money_result}. After the communication with the school enrollment administrations,  a simpler discretized version of the scholarship policy is shown in Table \ref{money_result_discrete}. 
+
+
+% and a graph of the piecewise regression is shown in  Figure \ref{PieceWisePolicy}. 
+
 
 \begin{table}[H]
 \centering
@@ -2880,12 +2897,12 @@ Composite Score & \# of Applicants & Scholarship Amount \\ \hline
 \label{money_result}
 \end{table}
 
-\begin{figure}[ht]
-   \centering
- \includegraphics[width=6in, height=2.5in]{pic/PieceWiseRegression.eps}
- \caption{Piecewise linear regression result and the original results}
- \label{PieceWisePolicy}
-\end{figure}
+% \begin{figure}[ht]
+%    \centering
+%  \includegraphics[width=6in, height=2.5in]{pic/PieceWiseRegression.eps}
+%  \caption{Piecewise linear regression result and the original results}
+%  \label{PieceWisePolicy}
+% \end{figure}
 
 \begin{table}[H]
 \centering
@@ -2914,18 +2931,18 @@ shuai
 \end{comment}
 
 \begin{figure} [!htbp]
-\includegraphics[width=6in,height=2.5in]{pic/composite_10k.eps}
+\includegraphics[width=6in,height=3in]{pic/composite_10k.eps}
 \caption{Scholarship vs Composite score for SSI=10,000} \label{allocation_results_g}
 \end{figure}
 
 \begin{figure} [!htbp]
-\includegraphics[width=6in,height=2.5in]{pic/composite_12k.eps}
+\includegraphics[width=6in,height=3in]{pic/composite_12k.eps}
 \caption{Scholarship vs Composite score for SSI=12,000} \label{allocation_results_h}
 \end{figure}
 
 
 \begin{figure} [!htbp]
-\includegraphics[width=6in,height=2.5in]{pic/composite_14k.eps}
+\includegraphics[width=6in,height=3in]{pic/composite_14k.eps}
 \caption{Scholarship vs Composite score for SSI=14,000} \label{allocation_results_i}
 \end{figure}
 
@@ -2997,11 +3014,11 @@ Matriculated                   & 2,001 & 2,222 & 221         & 11.0\%      \\\hl
 
 \end{table}
 
-In 2012-2013, there are a total of 6,101 applicants; 4,541  were admitted, 2,375 were awarded scholarships, and 2,166 were not scholarships. 52\% of the students were awarded scholarships, and a total of 2,001 students matriculated.
+In 2012-2013, there are a total of 6,101 applicants; 4,541  were admitted, 2,375 were awarded scholarships, and 2,166 were not awarded scholarships. 52\% of the students were awarded scholarships, and a total of 2,001 students matriculated.
 
 In the 2013-2014 academic year, there were a total of 6,068 applicants; of them, 4,773 were admitted, 2,616 were awarded scholarships, and 2,157 were not awarded scholarships. 56\% of the students are awarded scholarships, and a total of 2,222 students matriculated.
 
-Notice that the number of applicants does not change dramatically, actually showing a reduction of -43 (-0.7\% increase), but the actual enrollment increased by 221  or 11.0\% over the previous years.  It is believed that the use of the optimal policy could generate millions of dollars  in revenue for the university in the next few years.
+Notice that the number of applicants does not change dramatically, actually showing a reduction of -43 (0.7\% decrease), but the actual enrollment increased by 221  or 11.0\% over the previous years.  It is believed that the use of the optimal policy could generate millions of dollars  in revenue for the university in the next few years.
 
 \begin{comment}
 \section{Implementation}
@@ -3051,22 +3068,22 @@ structure models, stochastic models.
 % Study on enrollment management falls into two main areas
 
 \chapter{Conclusion}
-This research studies the optimal financial aid allocation problems that puzzles many higher education institutions.  The problem is complex yet of financial importance. Various techniques have been investigated and a three-phase framework was proposed in the paper to the solution of the optimal scholarship allocation problem to derive simple yet effective financial aid policies.
+This research studies the optimal financial aid allocation problem that puzzles many higher education institutions.  The problem is complex yet of financial importance. Various techniques have been investigated and a three-phase framework was proposed in the paper as the solution of the optimal scholarship allocation problem to derive simple yet effective financial aid policies.
 
-In the first phase, a series of predictive models have been investigated to estimate two types of responses from students with financial aid awards. The first response is enrollment and graduation decisions from students with various socioeconomic characteristics;  the second response is the number of years of studies once a student enrolls in the institution.
+In the first phase, a series of predictive models have been investigated to estimate two types of responses from students with financial aid awards. The first response is enrollment and graduation decisions from students with various socioeconomic characteristics;  the second response is the number of years of study once a student enrolls in the institution.
 
 In the first case,  because of the binary nature of the responses,  "enroll" or "not enroll",  "graduate" or "do not graduate", logistic regression based models have been adopted to predict the probability of enrollment of an applicant and the probability of graduation given that he/she enrolls. In the second case, a regression analysis is to be used to predict the number of years of study once the student enrolls in the institution.
 
-In the second phase, an integer linear program is designed to allocate financial aid to applicants with an objective to maximize the revenue, which is composed of tuition minus scholarship allocated over the years, plus the state share of instruction (SSI) once the student graduates.  The constraints to be observed include the total budget limitations as well as other considerations such as fairness. For a merit-based scholarship, the fairness constraint stipulates that a student with better academic performance should be assigned to an equal or higher level of scholarships than that of students with a lower academic performance. The inclusion of the fairness constraints has dramatically increased the size of the model and a model reduction technique, referred to as minimum cardinality dominance had to be developed to solve the model effectively.
+In the second phase, an integer linear program is designed to allocate financial aid to applicants with an objective to maximize the revenue, which is composed of tuition minus scholarship allocated over the years, plus the state share of instruction (SSI) once the student graduates.  The constraints to be observed include the total budget limitations as well as other considerations such as fairness. For a merit-based scholarship, the fairness constraint stipulates that a student with better academic performance should be assigned to an equal or higher level of scholarship than that of a students with a lower academic performance. The inclusion of the fairness constraints has dramatically increased the size of the model and a model reduction technique, referred to as minimum cardinality dominance, had to be developed to solve the model effectively.
 
-Computational experiment shows that the use of minimum cardinality dominance has achieved a dramatic reduction regarding model size. In a test case, pairwise comparison of 6,000 students was reduced from more than 13.5 million constraints to only 191,000 constraints, enabling effective solution of the models.  In this particular case,  the original model is computationally unsolvable, actually running out of memory because of the large model size;  the reduced model nevertheless can be solved in minutes.
+A computational experiment shows that the use of minimum cardinality dominance has achieved a dramatic reduction regarding model size. In a test case, pairwise comparison of 6,000 students was reduced from more than 13.5 million constraints to only 191,000 constraints, enabling effective solution of the models.  In this particular case,  the original model is computationally unsolvable, actually running out of memory because of the large model size;  the reduced model nevertheless can be solved in minutes.
 
 In the third phase, regression analysis is developed to translate the optimization results, in the form of the  amount of scholarship awarded for each student, into managerial insights and to derive a policy for implementation.  The analysis suggested that the use of a composite score, derived based on the student's GPA and ACT scores, could be used as the basis in the award of scholarships to form simple yet effective scholarship policies.
 
-The result of the study has been successfully implemented in the exemplary state university and has resulted in millions of financial benefits.  The research would be applicable to many other institutions and offers a methodologies and tools and insights into the solution of financial aid problems. 
+The result of the study has been successfully implemented in the exemplary state university and has resulted in millions of financial benefits.  The research would be applicable to many other institutions and offers a methodology, tools and insights into the solution of financial aid problems. 
 
 \noindent \textbf{Future Studies.}
-The results from the optimization specify the scholarship awards to each applicant under a specific population and budget.  The actual size and composition of the application pool could be affected by the unemployment rate and is random in nature.  Nevertheless, at this stage, this study on optimization under a specific pool.  Stochastic optimization techniques such as sampling  to find the optimal allocation under a random enrichment will be of great interest. 
+The results from the optimization specify the scholarship awards to each applicant under a specific population and budget.  The actual size and composition of the application pool could be affected by the unemployment rate and is random in nature.  Nevertheless, at this stage, this study is on optimization under a specific pool.  Stochastic optimization techniques such as sampling  to find the optimal allocation under a random enrichment will be of great interest. 
 
 % \begin{figure}[ht]
 %    \centering
