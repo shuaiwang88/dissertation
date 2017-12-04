@@ -274,12 +274,35 @@ Program} % CHANGE TO: Chair, Department of Mechanical and \\ Materials
 
 \setlength{\parindent}{2em}
 
-I would like to take this opportunity to extend my thanks to my dissertation committee,  Dr. Xinhui Zhang, Dr. Pratik Parikh, Dr. Nan Kong, Dr. Caroline Cao and Dr. Subhashini Ganapathy for their time and effort in serving in the committee.  I would also like to express my special thanks to Dr. Zhang for his encouragement during this process that inspired creativity and motivation.
+I would like to take this opportunity to extend my thanks 
+to my dissertation committee,  Dr. Xinhui Zhang, Dr. 
+Pratik Parikh, Dr. Caroline Cao, Dr. Subhashini 
+Ganapathy, and Dr. Nan Kong, for taking their time and effort 
+in serving in the committee. Thank you for the invaluable 
+suggestions to my study.  I would like to express my 
+deepest gratitude to my advisor Dr. Zhang for his 
+encouragement, patience and knowledge.
 
-I would like to thank the Kroger Operations Research team for providing various opportunities and projects to sponsor my Ph.D. study.  These projects involve various aspects of operations research, from the integrated regression and time series based forecasting and inventory management, periodic vehicle routing, collaborative category optimization, and staff scheduling optimization.  These projects opened my eyes and helped me to mature as an operations researcher.
+I would like to thank the Kroger Operations Research team 
+for providing various opportunities and projects to 
+sponsor my Ph.D. study.  These projects involve various 
+aspects of operations research, from the integrated 
+regression and time series based forecasting and 
+inventory management, periodic vehicle routing, 
+collaborative category optimization, and staff scheduling 
+optimization.  These projects opened my eyes and helped 
+me to mature as an operations researcher.
 
-I would like to thank my friends in the large scale optimization lab: Dr. Gamze Kilincli, Dr. Lebin Lin, Isaac Hampton, Hakan Gecili, and Lijian Xiao. Thanks for the fun time that we spent together.
-Special thanks go to the May family: Christina May, Dr. Maria May, Robert May, Anna May, and Janice Baratheon for all the support during my study.
+I would like to thank my friends from the BIE department 
+and the large scale optimization lab (Lab 249): Dr. Yan 
+Liu, Dr. Gamze Kilincli, Dr. Lebin Lin, Isaac Hampton, 
+Hakan Gecili, Lijian Xiao and Jue Huang. Thanks for the 
+fun time that we spent together. I would also thanks my 
+friends from the computer science department: Zhongliang 
+Li, Dr. Ming Tan, and Dr. Shaodan Zhai.
+Special thanks go to the May family: Christina May, Dr. 
+Maria May, Robert May, Anna May, and Janice Baratheon for 
+all the support during my study.
 
 %
 %=============================
@@ -427,7 +450,7 @@ The research studies the optimal allocation of scholarships that faces the enrol
 
 \textbf{Contribution.} This research proposes a set of analytic models to predict the students' response in terms of enrollment and graduation decisions to scholarship award, and an optimization model to determine the scholarship level.  The methodologies elegantly integrate data mining (in the prediction of enrollment and graduation decisions and the derivation of award policies) and optimization techniques. The successful solution of these problems will fill the gap in the literature of the optimal financial aid allocation problem, contribute significantly to research studies in financial aid allocation, and has brought noticeable financial benefits to the university under the study.
 
-\textbf{Limitation.} The prediction of student's enrollment decision is by itself a hard problem, partly because enrollment in a particular institution is determined by many factors that are not available to the institution.  For example, it is well known that a student's enrollment decision is affected by family influence and aspiration level, which are not available to any institution without detailed survey studies.  The research is also limited by the availability of data provided by the institution under study.   Nevertheless, the methodology proposed in this research could potentially be applied to similar college universities where merit-based aid could be an effective tool to attract students.
+\textbf{Limitation.} The prediction of student's enrollment decision is by itself a hard problem,  because enrollment in a particular institution is determined by many factors that are not available to the institution.  For example, it is well known that a student's enrollment decision is affected by family influence and aspiration level, which are not available to any institution without detailed survey studies.  The research is also limited by the availability of data provided by the institution under study.   Nevertheless, the methodology proposed in this research could potentially be applied to similar college universities where merit-based aid could be an effective tool to attract students.
 
 \vspace{0.25in}
 \noindent \textbf{Organization of the Thesis.} The remainder of the thesis is organized as follows. Section 2 presents a review of related literature. Section 3 presents the predictive models based on logistic regression on the probability of enrollment and graduation and Section 4 presents the predictive models for the number of years of study; Section 5 presents the mathematical models and techniques for computational improvement. Section 6 presents the policy development and implementation results, and finally section 7 presents the conclusion and  future research.
@@ -699,7 +722,7 @@ In the financial status fields, expected family contribution (EFC) measures an a
 %\begin{sidewaystable*}{}
 \begin{table} [H]
 \centering
-\begin{tabular}{|l|cccccc|} \hline \hline 
+\begin{tabular}{|l|cccccc|} \hline %\hline 
 Variable          & n        & mean        & sd          & median   & min      & max \\ \hline
 GPA                & $35331$ & $3.094$     & $0.63$     & $3.10$  & $0.40$     & $4.90$   \\
 ACT                & $35331$ & $21.27$    & $4.39$     & $21.00$     & $8$    &$36$      \\
@@ -730,7 +753,7 @@ Financially, among the applicants, the average awarded scholarship is \$1452, an
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|cccccc|} \hline \hline
+\begin{tabular}{|l|cccccc|} \hline %\hline
 Variable         & n        & mean        & sd          & median   & min         & max       \\ \hline
 GPA              & 17,180 & 3.08     & 0.61     & 3.10  & 1         & 4.90   \\
 ACT              & 17,180 & 21.08    & 4.22     & 21     & 10        & 35      \\
@@ -1254,7 +1277,7 @@ The baseline model is a general linear logistic regression model.  Before the mo
 
 %\begin{sidewaystable}[!htbp]
 \begin{table}[H]
-\begin{tabular}{@{\extracolsep{4pt}} |l|ccccc|} \hline   \hline 
+\begin{tabular}{@{\extracolsep{4pt}} |l|ccccc|} \hline  %\hline 
 & GPA            & ACT    & \begin{tabular}[c]{@{}c@{}}HS.\\
 PERCENTILE\end{tabular} & \begin{tabular}[c]{@{}c@{}}SCHOLAR-\\
 SHIP\end{tabular} & \begin{tabular}[c]{@{}c@{}} 
@@ -1408,7 +1431,7 @@ The summary statistics for major variables in the logistic regression selected b
 \begin{table}[H]
 \centering
 \begin{adjustbox}{width=0.95\textwidth}
-\begin{tabular}{|lccclccc|} \hline \hline
+\begin{tabular}{|lccclccc|} \hline %\hline
                                & Estimate & Std. Error & z value  &
                                                            Pr(\textgreater|z|) & Signif & 2.50\% & 97.50\% \\ \hline
 (Intercept)                     & 2.5934   & 0.1476     & 6.4600   & 0.0000    & ***         & 1.9423 & 3.4639  \\
@@ -1469,7 +1492,7 @@ Table \ref{lr_summary2} shows the summary statistics of major variables in the l
 \caption{Summary statistics of logistic regression for graduation model}
 \label{lr_summary2}
 \begin{adjustbox}{width=0.95\textwidth}
-\begin{tabular}{|llllllll|} \hline \hline
+\begin{tabular}{|llllllll|} \hline %\hline
 Coefficients:                   & Estimate & Std. Error & z value & Pr(\textgreater|z|) & Significant & 5\%    & 95\%   \\
 (Intercept)                     & 2.6008   & 0.1576     & 3.1800  & 0.0015      & **          & 1.2737 & 2.1390 \\
 GPA                             & 2.6872   & 0.0505     & 7.9640  & 0.0000      & ***         & 1.3757 & 1.6242 \\
@@ -1532,7 +1555,7 @@ logistic regression function at the tree node.
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|c|c|c|c|}
-\hline \hline
+\hline %\hline
  %& \multicolumn{2}{c|}{Variables} & \multicolumn{2}{c|}{Variables} \\ \hline
 \multicolumn{1}{|c|}{\multirow{2}{*}{Column}} & \multicolumn{2}{c|}{Enrollment}
 & \multicolumn{2}{c|}{Graduation}                            \\ \cline{2-5}
@@ -1743,7 +1766,7 @@ The predictions of enrollment probabilities for six applications with  different
  \small
  \setlength\tabcolsep{4pt}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-    \hline \hline
+    \hline %\hline
     \multicolumn{12}{ |c| }{GPA 2.9, ACT 19 }  \\ \hline
 & Student               & 0       & 1000    & 2000    & 3000    & 4000    &5000    & 6000    & 7000    & 8000    & 10000   \\ \hline
 1& 2.9-Tier1-19-White    & 59.55 & 64.63 & 69.39 & 73.77 & 77.73 & 81.24 & 84.31 & 86.96 & 89.22 & 91.72 \\ \hline
@@ -1922,7 +1945,7 @@ The results show that the tree-based methods (decision trees and stochastic grad
 \caption{Summary statistics of linear regression for number of years of study }
 \label{LR_num_years}
 \begin{adjustbox}{width=0.95\textwidth}
-\begin{tabular}{|llllllll|} \hline \hline
+\begin{tabular}{|llllllll|} \hline %\hline
 Coefficients:                   & Estimate & Std. Error & z value & Pr(\textgreater|z|) & Significant & 5\%    & 95\%   \\
 
 (Intercept)                    &  -3.0276 & 1.3632  & -2.2  &  0.026 & *  &0.0033 & 0.7006 \\  
@@ -2256,21 +2279,21 @@ Computation experiments show that the use of minimum cardinality dominance has a
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|l|c|c|}
-\hline \hline
-\multicolumn{2}{|c|}{Model Components}                                        &
+\hline %\hline
+\multicolumn{2}{|c|}{Model Components}     &
 Original Model & Reduced Model \\ \hline
 Variables                   & \multicolumn{1}{|l|}{Allocation (binary)  $x_i$}
 & 57,860         & 57,860        \\ \hline
 \multirow{3}{*}{Constraint} & One Award per ID  (\ref{constraint:1})        &
 5,260          & 5,260         \\ \cline{2-4}
-& Dominance  (\ref{constraint:2})               & 13,833,800     & 191,497
+& Dominance  (\ref{constraint:2})    & 13,833,800   & 191,497
 \\ \cline{2-4}
-& Total Budget   (\ref{constraint:3})           & 1              & 1
+& Total Budget   (\ref{constraint:3})   & 1       & 1
 \\ \cline{2-4}
 & Total Number of Constraints                   & 13,839,061     & 196,758
 \\ \hline
 \end{tabular}
-\caption{Summary of size of the optimization models }
+\caption{Size of the optimization models }
 \label{model_comparison}
 \label{size_model}
 \end{table}
@@ -2285,7 +2308,7 @@ Table \ref{ssi10k}, Table \ref{ssi12k}, and Table \ref{ssi14k} show the optimiza
 \caption{Computational statistics of optimization model under SSI=10,000}
 \label{ssi10k}
 \begin{tabular}{|c|c|c|c|c|c|}
-\hline \hline
+\hline %\hline
 SSI                          & \multicolumn{5}{c|}{10,000}                      
 \\ \hline
 \multicolumn{1}{|l|}{Budget} & \multicolumn{1}{l|}{Integer Solution} &
@@ -2343,7 +2366,7 @@ SSI     & \multicolumn{5}{c|}{12,000}
 \caption{Computational statistics of optimization model under SSI=14,000}
 \label{ssi14k}
 \begin{tabular}{|c|c|c|c|c|c|}
-\hline \hline 
+\hline %\hline 
 SSI     & \multicolumn{5}{c|}{14,000}                      
 \\ \hline
 \multicolumn{1}{|l|}{Budget} & \multicolumn{1}{l|}{Integer Solution} &
@@ -2877,7 +2900,11 @@ Figure \ref{allocation_results_a}, for example, clearly shows that no scholarshi
 
 
 \subsubsection{Stepwise Regression Based on Composite Score}
-Using ``CS'' as the variable representing the composite score, a piecewise regression is used to capture these observations and the resulting regression equations are shown in Table \ref{money_result}. After the communication with the school enrollment administrations,  a simpler discretized version of the scholarship policy is shown in Table \ref{money_result_discrete}. 
+Using ``CS'' as the variable representing the composite score, a piecewise 
+regression is used to capture these observations and the resulting regression 
+equations are shown in Table \ref{money_result}. After the communication with 
+the school enrollment administrations,  a simpler discretized version of the 
+scholarship policy is shown in Table \ref{money_result_discrete}. 
 
 
 % and a graph of the piecewise regression is shown in  Figure \ref{PieceWisePolicy}. 
@@ -3083,7 +3110,7 @@ In the third phase, regression analysis is developed to translate the optimizati
 The result of the study has been successfully implemented in the exemplary state university and has resulted in millions of financial benefits.  The research would be applicable to many other institutions and offers a methodology, tools and insights into the solution of financial aid problems. 
 
 \noindent \textbf{Future Studies.}
-The results from the optimization specify the scholarship awards to each applicant under a specific population and budget.  The actual size and composition of the application pool could be affected by the unemployment rate and is random in nature.  Nevertheless, at this stage, this study is on optimization under a specific pool.  Stochastic optimization techniques such as sampling  to find the optimal allocation under a random enrichment will be of great interest. 
+The results from the optimization specify the scholarship awards to each applicant under a specific population and budget.  The actual size and composition of the application pool could be affected by the unemployment rate and is random in nature.  Nevertheless, at this stage, this study is on optimization under a specific pool.  Stochastic optimization techniques such as sampling  to find the optimal allocation under a random pool will be of great interest. 
 
 % \begin{figure}[ht]
 %    \centering
