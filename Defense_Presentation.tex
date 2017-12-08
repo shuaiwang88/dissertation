@@ -1,10 +1,12 @@
-
-\documentclass{beamer}
+%\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usepackage{pgfpages}
- %\setbeameroption{hide notes} % Only slides
-%\setbeameroption{show only notes} % Only notes
+% \setbeameroption{hide notes} % Only slides
+% \setbeameroption{show only notes} % Only notes
 \setbeameroption{show notes on second screen=right} % Both
-\setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}\usepackage{palatino}
+\setbeamertemplate{note
+page}{\pagecolor{yellow!8}\insertnote}\usepackage{palatino}
+% page
 % https://gist.github.com/andrejbauer/ac361549ac2186be0cdb
 
 % \usetheme[hideothersubsections]{WrightState}
@@ -15,8 +17,8 @@ the Optimal Scholarship Allocation Problem for a State University}
 \author{Shuai Wang} %
 \institute{Wright State University \\
 
-	Department of Biomedical, Industrial \& Human Factors Engineering}
-\date{December 6 2017}
+	Department of Biomedical, Industrial, and Human Factors Engineering}
+\date{December 6th, 2017}
 
 \usepackage{natbib}  % for citation
 \usepackage{comment}
@@ -72,8 +74,10 @@ w}
        
      \note[item]{Thank for attending my thesis defense.}
       \note[item]{My name is Shuai Wang, and I am from BIE department}
-      \note[item]{my thesis topic is Data Mining Techniques and Mathematical Models for
-      the Optimal Scholarship Allocation Problem for a State University}
+\note[item]{my thesis title is Data Mining Techniques and Mathematical Models
+for the Optimal Scholarship Allocation Problem for a State University}
+\note[item]{essentially, i am trying to study what is the ideal scholarship for
+each individual and what is the optimal schohapship budget for school}
 \end{frame}
 %}% end Local TeX Group
 
@@ -82,7 +86,7 @@ w}
     \frametitle{Presentation Outline}
     
  \tableofcontents
- 
+ \note[item]{Here is the outline of my presentation}
 \end{frame}
 
 
@@ -92,43 +96,54 @@ w}
 \begin{frame}
     \frametitle{Background}
 \begin{itemize}
-\item In the United States, in the 2012-2013 academic year, there were a total 
+\item In the United States, the 2012-2013 academic year, there were a total 
 of 20.4 million students in degree-granting institutions.
-\item More than 80\% of them received financial aid and more than 70\% of
-them received grants.
-\item  Studies have shown that financial aid is one of the most important
-factor in attracting student and is vital to enrollment marketing.
+\item More than 80\% of them received financial aid.
+
+\item Studies have shown that financial aid is one of the most important
+factors in attracting student and is vital to enrollment management.
 \end{itemize}
 \note[item]{first,I'd like to talk about the background of the study}
-\note[item]{For the school under study, nearly half of the revenue are from tuition income}
+\note[item]{From the latest department of education report}
+%\note[item]{Grant are usually are need-based}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Background Cont.}
-    Enrollment management consisted of approaches to help education institute
+    Enrollment management consisted of approaches to help university
 to meet the established goal such as:
    \begin{itemize}
-   \item Attracting more high-caliber students.
+   \item Attract more high-caliber students.
    \item Diversify student body.
    \item Increase retention.
-  % \item etc,.
+   \item Improve graduation rate.
    \end{itemize} 
-   \note[item]{Enrollment management is critical part of university management}
-   \note[item]{Typical enrollment management activity starts from reaching potential
-   high school students and ends at graduation} 
+
 \end{frame}
 
 
 
 \begin{frame}
-\frametitle{Background Cont.}
-Financial aid is a critical part of enrollment management.
-It helps the university:
+\frametitle{Scholarship}
 \begin{itemize}
-\item Providing more access to families who need help.
+  \item Scholarship is the focused type of financial aid of the study.
+  \item Scholarship is the major marketing tool for targeting students.
+  \item Scholarship helps the university:
+\begin{enumerate}
+\item Giving more access to families who need help.
 \item Stimulating more students to major in area having labor shortage.
-\item Shaping and diversifying the student body.
+\item Diversifying the student body.
+\end{enumerate}
+\item Merit-based scholarship.
 \end{itemize}
+
+
+\note[item]{LAST: For example, some schools offer targeted scholarship for
+minorities students}
+\note[item]{ There are various types of scholarships, For this 
+study, we only focus on merit-based scholarship, which means, we only consider
+applicant's academic performance}
+
 \end{frame}
 
 
@@ -138,199 +153,279 @@ It helps the university:
 \frametitle{Motivation}
 
 \begin{enumerate}
-\item \textbf{Non-optimal} usage of financial aid at university:
+\item \textbf{Non-optimal} usage of scholarship budget at 
+    university: 
 
 \begin{itemize}
-\item   Over-spending financial aid budget would reduce revenue.
-\item   Under-spending financial aid would potentially
+\item   Over-spending scholarship budget would reduce revenue.
+\item   Under-spending scholarship would potentially
 undermine enrollment number and revenue. 
 \end{itemize}
 
-\item The tuition income account for nearly half on the 
-yearly revenue.
+\item The tuition income accounts for 48\% of the 
+yearly revenue of the university under study.
 
 \item The optimal allocation of scholarship problem has 
-\textbf{not} been widely studied.
+\textbf{not} been widely studied in literatures.
 
 \end{enumerate}
+\note[item]{Here is the motivation of the study}
+\note[item]{First let's see what happens if the school
+does not use the scholarship budget properly.}
+\note[item]{There two kinds of improper usage of scholarship, the first one is
+the second of is, they both could porentially reduce the revene and
+under-spending could also undermine the enrollment number}
 \end{frame}
 
-\subsection{Objective}
+
+
+
+\subsection{Research Questions and Contribution}
 \begin{frame}  
-    \frametitle{Objective}
-The objectives of this study are:
-\begin{enumerate}
-    \item How does financial aid impact on student's
+    \frametitle{Research Questions and Contribution}
+\begin{itemize}
+  \item Research questions:
+   \begin{enumerate}
+    \item How does scholarship affect student's
     decision?
-\item What is the optimal scholarship for each student in favor of the over 
-    all budget?
-    \item How to optimally allocate the financial aid budget at school level?
+\item What is the optimal scholarship for each student under the 
+    overall budget?
+\item What is the ideal scholarship budget for school?
 \end{enumerate}
+
+
+\item Contribution: 
+
+Utilized various data mining and optimization techniques to solve the above
+questions.
+\end{itemize}
+
+\note[item]{Here comes the reseach questions I want to answer in the study}
 
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%
-\subsection{Contribution}
-
-\begin{frame}
-    \frametitle{Contribution}
-    \begin{itemize}
-    \item Linking traditional prediction technique with optimization 
-    technique to solve existing managerial problems  in the enrollment
-    management such as:
-    \begin{enumerate}
-    \item Who should get more scholarship, by how much?
-    \item What is the ideal overall financial budget for institute?
-    \item Is it possible to give customized scholarship?
-    \end{enumerate}
-    
-%     \item \textbf{A complete set of models} to
-%     predict probability of enrollment, graduation
-%     and number years of stay in terms of various scholarship
-%     award.
-%     \item \textbf{An optimization model} to determine the 
-%     ideal scholarship level.
-%     \item \textbf{Integration} of data mining techniques and 
-%     optimization techniques.
-    \end{itemize}
-  
-\end{frame}
-
-\subsection{Results}
 
 
+
+
+
+
+
+\subsection{Results Example}
 \begin{frame}
     \frametitle{Results example}
+    
+    
+Enrollment probability of students with various background under different
+scholarship level.
+   
 \begin{table}[H]
 \centering
- \tiny
+ % \tiny 43
+ \scriptsize % 169
  \setlength\tabcolsep{3pt}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-    \hline \hline
-    \multicolumn{12}{ |c| }{GPA 2.9, ACT 19 }  \\ \hline
-& Student               & 0       & 1000    & 2000    & 3000    & 4000    &5000    & 6000    & 7000    & 8000    & 10000   \\ \hline
-1& 2.9-Tier1-19-White    & 59.55 & 64.63 & 69.39 & 73.77 & 77.73 & 81.24 & 84.31 & 86.96 & 89.22 & 91.72 \\ \hline
-2& 2.9-Tier5-19-White    & 36.96 & 40.20 & 43.53 & 46.92 & 50.34 & 53.75 & 57.13 & 60.45 & 63.67 & 69.74 \\ \hline
-     \multicolumn{12}{ |c| }{GPA 3.3, ACT  25 }   \\ \hline
-3& 3.3-Tier1-25-Hispanic & 23.80 & 27.44 & 31.42 & 35.69 & 40.20 & 44.88 & 49.65 & 54.43 & 59.13 & 67.97 \\ \hline
-4& 3.3-Tier1-25-White    & 55.60 & 59.32 & 62.94 & 66.42 & 69.72 & 72.84 &75.75 & 78.43 & 80.90 & 85.17 \\ \hline
-    \multicolumn{12}{ |c| }{GPA 3.8, ACT 28 }     \\ \hline
-5& 3.8-Tier1-28-White    & 42.29 & 46.05 & 49.85 & 53.65 & 57.41 & 61.08 &64.63 & 68.03 & 71.25 & 77.07 \\ \hline
-6& 3.8-Tier4-28-White    & 20.54 & 22.87 & 25.37 & 28.05 & 30.89 & 33.89 &37.02 & 40.26 & 43.60 & 50.41 \\ \hline
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline %\hline
+    \multicolumn{11}{ |c| }{GPA 2.9, ACT 19 }  \\ \hline
+& Student               & 0       & 1000    & 2000    & 3000    & 4000    &5000
+& 6000    & 7000    & 8000       \\ \hline
+1& 2.9-Tier1-19-White    & 59.55 & 64.63 & 69.39 & 73.77 & 77.73 & 81.24 &
+84.31 & 86.96 & 89.22  \\ \hline
+
+2& 2.9-Tier5-19-White    & 36.96 & 40.20 & 43.53 & 46.92 & 50.34 & 53.75 &
+57.13 & 60.45 & 63.67  \\ \hline
+     \multicolumn{11}{ |c| }{GPA 3.3, ACT  25 }   \\ \hline
+3& 3.3-Tier1-25-Hispanic & 23.80 & 27.44 & 31.42 & 35.69 & 40.20 & 44.88 &
+49.65 & 54.43 & 59.13  \\ \hline
+4& 3.3-Tier1-25-White    & 55.60 & 59.32 & 62.94 & 66.42 & 69.72 & 72.84 &75.75
+& 78.43 & 80.90  \\ \hline
+    \multicolumn{11}{ |c| }{GPA 3.8, ACT 28 }     \\ \hline
+5& 3.8-Tier1-28-White    & 42.29 & 46.05 & 49.85 & 53.65 & 57.41 & 61.08 &64.63
+& 68.03 & 71.25  \\ \hline
+6& 3.8-Tier4-28-White    & 20.54 & 22.87 & 25.37 & 28.05 & 30.89 & 33.89 &37.02
+& 40.26 & 43.60  \\ \hline
     \end{tabular}
     \end{table}
+
+
+
 \note[item]{Here are results of students' reaction to various amount of 
 scholarship  offered}
-\note[item]{2.9 Tier1 19 white means a student have GPA 2.9, from Tier1, 19 ACT,
-white}
-\note[item]{We can see the probability of enrollment of this student is increasing 
+\note[item]{2.9 Tier1 19 white means a student have GPA 2.9, from 
+Tier1, 19 ACT, white}
+\note[item]{We can see the probability of enrollment of this student 
+    is increasing
 with money offered.}
-\note[item]{I will explain more about the table later in the methodology section}
+\note[item]{I will explain more about the table later in the methodology
+section}
 \end{frame}
 
 
+
+
+
+
+\begin{frame}
+\frametitle{Results example}
+Using prediction of enrollment, graduation and number of years as input,
+and the optimization model yields:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics<1>[width=4in, height=2in,scale=0.2]{pic/ssi_14k.eps} 
+    \end{figure}     
+\note[item]{By using the prediction of enrollment, graduation and number of
+years as INPUT of the optimization mode the results look like this:}
+\note[item]{in the begining , the objective which is revenue increased with 
+the incerease of budget, and reach to the highest at when 2.8 million}
+ 
+
+\note[item]{When SSI= 14000, the total revenue increase increase when
+     more budget are used , then reaches to the highest revenue at about 2.8
+     million, and start to decrease when budget increases,
+     
+     
+     
+          so 2.8 million is the sweet spot here
+}
+     
+     
+
+\end{frame}
+	
+	
 
 
 
 \begin{frame}
 \frametitle{Results example}
 \begin{figure}
-	\includegraphics[width=2.5in,height=2in,scale=0.4]{pic/act_10k.eps}
+	\includegraphics[width=4in,height=2in,scale=0.4]{pic/scho_composite.eps}
     
-    Optimal allocation results vs ACT when SSI=10,000
-    \note[item]{this graph shows the optimization results when ssi=10,000}
-    \note[item]{It starts to allocate more scholarship when budget increase}
+    Average scholarship allocation  vs combine score when SSI=14,000
+\note[item]{this graph shows the optimization results when ssi=14,000 against 
+composite schore}
+    \note[item]{The scholarship increases along with the increase of the
+composite score}
 \end{figure}
 
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Results example}
 
-\begin{figure}[ht]
-    \centering
-%    [width=5in, height=3.5in,scale=0.5]
-    \includegraphics<1>[width=3in, height=2in,scale=0.2]{pic/ssi_14k.eps}
-    
-     Optimization results for SSI = 14,000. 
-\end{figure}     
-
-\note[item]{When SSI- 14000, the total revenue increase increase when
-     more budget are used , then reaches to the highest revenue at about 2.8
-     million, and start to decrease when budget increases}
-
-\end{frame}
-	
-\begin{frame}[fragile]
-\frametitle{Results}
-\begin{table}[H] \small
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-& 2013 & 2014 & \# Increase & \% Increase \\ \hline
-Application                    & 6,101 & 6,068 & -43         & -0.7\%      \\ \hline
-Admitted                       & 4,541 & 4,773 & 232         & 5.1\%       \\ \hline
-Non-Scholarship                & 2,166 & 2,157 & -9          & -0.4\%      \\ \hline
-Scholarship Award              & 2,375 & 2,616 & 241         & 10.1\%      \\ \hline
-%\% of scholarship              & 52\% & 55\% &             &             \\ \hline
-Matriculated                   & 2,001 & 2,222 & 221         & 11.0\%      \\ \hline
-%Non-Scholarship Student        & 931  & 1000 & 69          & 7.4\%       \\\hline
-%Scholarship Student            & 1070 & 1222 & 152         & 14.2\%      \\\hline
-%Scholarship Matriculation Rate & 45\% & 47\% &             &             \\
-\end{tabular}
-\end{table}
-
-Comparison of enrollment between 2012-2013 and 2013-2014 after applying the results.
-    \note[note]{it shows that under the same budget, the number of students 
-    who got scholarship increase, so as the number of matriculated students}
-\end{frame}
 
 
 
 
 %-----------liter review---------------------
 \section{Literature Review}
-
 \subsection{Student Demand Model at Macro-level}
+
+
+\begin{frame}
+  \frametitle{Macro and micro level of enrollment study}
+  Traditional enrollment studies:
+  \begin{itemize}
+    \item Macro level student demand studies.
+    \item Micro level students college choice models.
+  \end{itemize}
+  
+  \note{Before we dive into the fancy prediction and optimization model,
+  let's first look at what have been done in the
+literature in the realated fields such as Macro level student demand studies
+and micro level
+students college choice modes to understand  the underlying factors which are
+going to be used later in the prediction and optimization model.}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Macro level student demand studies}
+  Impact of the increasing tuition on enrollment decisions.
+  
+  Questions include \citep{Leslie1987,  Leslie1988, Heller1997,
+                          Ehrenberg2004, Crouse2015}:
+  
+ \begin{itemize}
+   \item What happens to the enrollment when universities raise 
+   their tuition?
+  \item What is the net impact of higher tuition and reduced enrollment 
+  upon institutional finance?
+  \item Who will not attend university because of the increasing tuition?
+
+
+ \end{itemize}
+ 
+  \note[item]{The macro level student demand theroy studies what is the impact
+of the increasing tuition on the student's enrollment decision}
+\end{frame}
 
 \begin{frame}
     \frametitle{Macro level student demand studies}
-Student demand theory studies the effects of increasing tuition on the
-enrollment decision:
+
 \begin{itemize}
-\item What's the impact of revenue and enrollment number if the tuition
-increasing?
-\citep{Leslie1987,  Leslie1988, Heller1997, Ehrenberg2004, Crouse2015}.
+  \item The increasing tuition leads to reduction in enrollment:
+  
+%\begin{enumerate}
+%\item What are the impact of revenue and enrollment number if the tuition
+%increases? 
+%\end{enumerate}
+
+
+\begin{enumerate}
+  \item \citet{Leslie1987} found that every \$100 tuition increase came 
+  with a 0.7\% drop in enrollment.
+\item \citet{Crouse2015} found a \$100 
+increase in tuition would lead to a decline in enrollment of about 0.88\%. 
+
+\end{enumerate}
+
+
 \end{itemize}
 
-Student demand theory on tuition:
-\begin{itemize}
-\item Higher tuition prices reduce higher education enrollments.
-\citet{Leslie1987} found that every \$100 tuition increase came with 0.7\%
-drop in enrollment.
-\end{itemize}
+\note[item]{And studies found that  higher tuition prices.....}
 \end{frame}
+
+
+\begin{frame}
+  \frametitle{Macro level student demand studies}
+    However:
+  \begin{itemize}
+    \item  Tuition kept increasing in the past decades.
+    \item Enrollment still grows.
+    
+  \end{itemize}
+  
+ Ameliorating effects of financial aid \citep{Leslie1987}.
+  
+\end{frame}
+
 
 
 \begin{frame}
     \frametitle{Macro level student demand studies}
  Student demand theory on financial aid:
+ 
+How does student response to the changes of financial aid.
 \begin{itemize}
 \item  \citet{Braunstein1999} found that every \$1,000 increase in
 financial aid, the probability of enrollment increased between 1.1\% and
 2.5\%.
- \item \citet{Crouse2015} studied the nationwide tuition elasticity of 
-public two-year colleges and found that at the mean, a \$100 increase in
-tuition would lead to a decline in enrollment of about 0.883\%.
+
  \end{itemize}
-\end{frame}
+ 
+ \end{frame}
+
+
 
 
 \begin{frame}
     \frametitle{Targeting Effect of Financial Aid on Students 
     with Various Characteristics}
+
+Targeting effects of financial aid vs broader effects of tuition.
 
 \begin{enumerate}
   \item The following group of students are more sensitive to 
@@ -342,12 +437,41 @@ tuition would lead to a decline in enrollment of about 0.883\%.
  \end{itemize}
  
 \item High-caliber students are less sensitive to
- the increase of tuition increase \citep{Heller1999}.
+ the increase of tuition \citep{Heller1999}.
+
 \end{enumerate}
-\note[item]{Because high-caliber students have more scholarship
+
+\note[item]{ we all  know that all students  are affected by  the 
+tuition increase,  but it is important to understand students with
+different background can react differently to changes in financial aid.
+Studies found that}
+
+\note[item]{One reason is that high-caliber students have more scholarship
 offer}
 
 \end{frame}
+
+
+
+
+
+\begin{frame}
+  \frametitle{Micro level student choice model}
+  \begin{itemize}
+    \item Student demand studies, at macro level, investigates the 
+    enrollment decisions associated with \textbf{groups} of students.
+    \item Student choice model, at micro level, studies the individual
+student's decision to enrollment at particular university.
+  \end{itemize}
+  
+ \note[item]{Previously, I talked about the student demand studies, it
+investigates how does a group of student react to the changes in tuition and
+finacial aid}
+
+\note[item]{in order to understand what impact student's decision at 
+individual level, the sudent choice model are studied}
+  \end{frame}
+
 
 \subsection{Enrollment Prediction at Micro Level}
 \begin{frame}
@@ -355,7 +479,8 @@ offer}
     \begin{enumerate}
     \item Predicting individual student's enrollment decision.
     
-    \item Type of variables used in the model \citet{Paulsen1990,Hossler1998}:
+    \item Type of variables used in the prediction model:
+\citet{Paulsen1990,Hossler1998}:
     \begin{itemize}
     \item Academic (GPA, ACT/SAT, Percentile)
     \item Financial (Income, Pell Grant, etc,.)
@@ -363,36 +488,43 @@ offer}
     High school, Home distance to campus, etc,.)
     \end{itemize}
     \end{enumerate}
+    
+  \note[item]{The outcome of decision model is binary 0 or 1, enrolled or not,
+graduated or not}
 \end{frame}
 
 \begin{frame}
     \frametitle{Response to Financial Aid and Optimization at Micro 
     Level}
-    Objective of the literature studies:
+    Objective of the mathematic modeling in the literature:
     \begin{enumerate}
-    \item Maximize index: SAT.
-      \citep{Ehrenberg1984,Sugrue2010}
-    \item Maximize tuition revenue. \citep{Thanh2007} 
+    \item Maximize index: SAT
+      \citep{Ehrenberg1984,Sugrue2010}.
+    \item Maximize tuition revenue \citep{Thanh2007}.
     \end{enumerate}
+    
+   \note[item]{There are only few literature using the optimization
+techniques.}
    \note[item] {The first one is to maximize the number of student 
    within a certain SAT range}
    \note[item]{the second one is to achieve a better SAT score as 
    possible while maintaining the same amount students}
+   
 \end{frame}
 
 \begin{frame}
     \frametitle{Response to Financial Aid and Optimization at Micro Level}
-    Constraints of the literature studies:
+    Constraints of the mathematic modeling in the literature:
     \begin{enumerate}
-    \item Capacity and faculty-student ratio. 
-    \citep{Thanh2007}
+    \item Capacity and faculty-student ratio
+    \citep{Thanh2007}.
     
     \item Availability of students in expected SAT range, 
-    budget and capacity. 
-    \citep{Sugrue2010}
+    budget, and capacity
+    \citep{Sugrue2010}.
     
     \end{enumerate}
-    \note[item]{capacity can be school, college and department level}
+    \note[item]{capacity can be under school, college, and department level}
 \end{frame}
 
 
@@ -402,26 +534,58 @@ offer}
  Issues of these studies:
  
  \begin{enumerate}
- \item Did not address the allocation of financial aid for students with various socioeconomic characteristics.
- \item Did not address how to optimally allocate a scholarship budget at the aggregate level.
+\item Did not address the allocation of financial aid for students with 
+various socioeconomic characteristics.
+\item Did not address how to optimally allocate scholarship at the
+aggregate level.
  \end{enumerate}
 
 \end{frame}
 
 
 \section{Methodology and Results}
+
+
+\begin{frame}
+\frametitle{Objective of the optimization model}
+\begin{itemize}
+  \item   Objective of the optimization model: 
+  Revenue income + SSI income
+ \item Revenue income:
+  Prob E * (Tuition - Scholarship)* NumYears
+
+\item SSI income:
+  Prob E * Prob G * SSI
+\end{itemize}
+
+\note[item]{i want to talk about objective of the optimization model first,
+because it links all the rest components together}
+\end{frame}
+
+
+
+
+
 \subsection{Enrollment and Graduation Prediction}
 \begin{frame}
     \frametitle{Enrollment and graduation outcome prediction}
-The outcome of enrollment and graduation problem is binary (yes or no). 
-It is a two-class classification problem.
+    \begin{itemize}
+      \item The outcome of enrollment and graduation problem is binary (yes or
+no). 
+\item It is a two-class classification problem.
+\item  Common methods for two-class classification problem:
 
-Common methods for binary outcome prediction include: logistic regression, decision tree, svm, etc,. 
+logistic regression, decision tree, svm, etc,.
+    \end{itemize}
+
+
+
+\note[item]{START: Let's see the how to predict enrollment and graduation}
 \end{frame}
 
 \begin{frame}
 \frametitle{Logistic Regression}
-We use logistic regression as the base line model.
+Logistic regression was used as the base line model.
 
 Why linear regression does not work?
 \includegraphics[scale=0.345]{pic/logistic_regression_vs_linear.jpg}
@@ -429,55 +593,25 @@ Why linear regression does not work?
 the outcome Y is continuous, with errors are normally distributed.}
 \note[item]{if the outcome is binary, this is clearly violated}
 \note[item]{Predicted values may be out of range, for 0,1, the linear
-regression prediction will be out of this range}
+regression prediction will be out of this range.
+
+So we need to find a type of regression which can predict the value from 0-1}
 \end{frame}
 
 \begin{frame}
     \frametitle{Logistic Regression}
 
-In logistic regression, the dependent variable is binary i.e. it only 
-contains data coded as 1 (TRUE, success, positive, etc.) or 0 (FALSE, 
-failure, negative, etc.)
 
 The goal of logistic regression is to find:
 
 \begin{itemize}
-\item best fitting  model to describe the relationship between the 
-binary characteristic of interest and a set of independent variables. 
+\item Best fitting  model to describe the relationship between the 
+binary outcome and a set of independent variables. 
 \end{itemize}
 
 \end{frame}
 
 
-\begin{frame}
-    \frametitle{Logistic Regression}
-Logistic regression generates the coefficients (and its standard 
-errors and significance levels) of a formula to predict a logit 
-transformation of the probability of presence of the characteristic 
-of interest:
- 
- \begin{equation}
-	logit(p)=\beta_0+\beta_1 x_1+\beta_2 x_2 +\ldots+\beta_k x_k
-\end{equation}
-where p is the probability of presence of the characteristic of 
-interest.
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Logistic Regression}
-  The logit transformation is defined as the logged odds:
-  
-\begin{equation}
-	Odds = \frac{p}{1-p} = \frac{\text{Prob of yes}}
-    {\text{Prob of no}}
-\end{equation}
-
-And 
-\begin{equation}
-logit(p) = \ln{\frac{p}{1-p}}
-\end{equation}
-\end{frame}
 
 
 
@@ -489,8 +623,7 @@ logit(p) = \ln{\frac{p}{1-p}}
 \item Financial: Pell Grant, EFC, Out-of-pocket, Scholarship,
 	Unemployment rate.
 \item Demographic: High School, Tier, Ethnicity. 
-    \note[item]{The variables collection is rather limited compared
-    to some of the studies}
+    
 \end{enumerate}
 
 \end{frame}
@@ -498,69 +631,97 @@ logit(p) = \ln{\frac{p}{1-p}}
 
 
 \begin{frame}
-\frametitle{Logistic Regression: Results}
+\frametitle{Logistic Regression: Enrollment prediction results}
 \begin{table}[H]
 \centering
- \tiny
+ % \tiny 43
+ \scriptsize % 169
  \setlength\tabcolsep{3pt}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-    \hline \hline
-    \multicolumn{12}{ |c| }{GPA 2.9, ACT 19 }  \\ \hline
-& Student               & 0       & 1000    & 2000    & 3000    & 4000    &5000    & 6000    & 7000    & 8000    & 10000   \\ \hline
-1& 2.9-Tier1-19-White    & 59.55 & 64.63 & 69.39 & 73.77 & 77.73 & 81.24 & 84.31 & 86.96 & 89.22 & 91.72 \\ \hline
-2& 2.9-Tier5-19-White    & 36.96 & 40.20 & 43.53 & 46.92 & 50.34 & 53.75 & 57.13 & 60.45 & 63.67 & 69.74 \\ \hline
-     \multicolumn{12}{ |c| }{GPA 3.3, ACT  25 }   \\ \hline
-3& 3.3-Tier1-25-Hispanic & 23.80 & 27.44 & 31.42 & 35.69 & 40.20 & 44.88 & 49.65 & 54.43 & 59.13 & 67.97 \\ \hline
-4& 3.3-Tier1-25-White    & 55.60 & 59.32 & 62.94 & 66.42 & 69.72 & 72.84 &75.75 & 78.43 & 80.90 & 85.17 \\ \hline
-    \multicolumn{12}{ |c| }{GPA 3.8, ACT 28 }     \\ \hline
-5& 3.8-Tier1-28-White    & 42.29 & 46.05 & 49.85 & 53.65 & 57.41 & 61.08 &64.63 & 68.03 & 71.25 & 77.07 \\ \hline
-6& 3.8-Tier4-28-White    & 20.54 & 22.87 & 25.37 & 28.05 & 30.89 & 33.89 &37.02 & 40.26 & 43.60 & 50.41 \\ \hline
-    \end{tabular}
-%  \caption{Prediction of enrollment under different levels of  
-% scholarships}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline %\hline
+    \multicolumn{11}{ |c| }{GPA 2.9, ACT 19 }  \\ \hline
+& Student               & 0       & 1000    & 2000    & 3000    & 4000    &5000
+& 6000    & 7000    & 8000       \\ \hline
+1& 2.9-Tier1-19-White    & 59.55 & 64.63 & 69.39 & 73.77 & 77.73 & 81.24 &
+84.31 & 86.96 & 89.22  \\ \hline
 
+2& 2.9-Tier5-19-White    & 36.96 & 40.20 & 43.53 & 46.92 & 50.34 & 53.75 &
+57.13 & 60.45 & 63.67  \\ \hline
+     \multicolumn{11}{ |c| }{GPA 3.3, ACT  25 }   \\ \hline
+3& 3.3-Tier1-25-Hispanic & 23.80 & 27.44 & 31.42 & 35.69 & 40.20 & 44.88 &
+49.65 & 54.43 & 59.13  \\ \hline
+4& 3.3-Tier1-25-White    & 55.60 & 59.32 & 62.94 & 66.42 & 69.72 & 72.84 &75.75
+& 78.43 & 80.90  \\ \hline
+    \multicolumn{11}{ |c| }{GPA 3.8, ACT 28 }     \\ \hline
+5& 3.8-Tier1-28-White    & 42.29 & 46.05 & 49.85 & 53.65 & 57.41 & 61.08 &64.63
+& 68.03 & 71.25  \\ \hline
+6& 3.8-Tier4-28-White    & 20.54 & 22.87 & 25.37 & 28.05 & 30.89 & 33.89 &37.02
+& 40.26 & 43.60  \\ \hline
+    \end{tabular}
 \end{table}
 
-The probability of enrollment increases with the increase of 
-scholarship awards. Though these observations are not surprising, 
-accurate  quantitative prediction of these probabilities is 
-essential to the allocation of scholarship.
+
+\note{ The prediction of graduation has the same fashion
+}
+
 \end{frame}
 
 \subsection{Number of Years Prediction}
 
 \begin{frame}
 \frametitle{Number of years prediction}
-The following methods are compared to predict how long will a student stay in school:
+
+\begin{itemize}
+  \item It is a regression problem.
+  \item The following methods are compared to predict the years of stay in
+school:
 
 \begin{table}[H]
 \centering
-\scriptsize
+%\scriptsize
+\small
 \label{num_year}
 \begin{tabular}{|c|c|c|c|c|} \hline
     & \multicolumn{2}{c|}{10-Fold Cross Validation} &
 \multicolumn{2}{c|}{Test Data} \\ \hline
-Model                        & RMSE                  & MAE                   & RMSE           & MAE           \\ \hline
-GLM                          & 1.40                  & 1.2                   & 1.53           & 1.26          \\ \hline
-SVM(Linear Kernel)           & 1.44                  & 1.20                  & 1.62           & 1.32          \\ \hline
-Decision Tree                         & 1.43                  & 1.24        & 1.43           & 1.23          \\ \hline
-Stochastic Gradient Boosting & 1.40                  & 1.19                  & \textbf{1.40}           & \textbf{1.19}    \\ 
+Model                        & RMSE                  & MAE                   &
+RMSE           & MAE           \\ \hline
+GLM                          & 1.40                  & 1.2                   &
+1.53           & 1.26          \\ \hline
+SVM (Linear Kernel)           & 1.44                  & 1.20                  &
+1.62           & 1.32          \\ \hline
+Decision Tree                         & 1.43                  & 1.24        &
+1.43           & 1.23          \\ \hline
+Stochastic Gradient Boosting & 1.40                  & 1.19                  &
+\textbf{1.40}           & \textbf{1.19}    \\
 \hline
 \end{tabular}
 \end{table}
-\note[item]{A gradient descent procedure is used to minimize the loss when adding trees. weaker learner to better learner}
+
+\end{itemize}
+
+\note[item]{A gradient descent procedure is used to minimize the loss when
+adding trees. weaker learner to better learner}
 \end{frame}
 
 
 \subsection{Optimization Model}
 \begin{frame}
-\frametitle{Optimization Model}
-The prediction of enrollment and graduation provide some 
-insights of how students response to the various
-scholarship. 
+\frametitle{Why prediction model is not enough?}
+\begin{enumerate}
+  \item The prediction of enrollment and graduation provide some 
+insights of how students response to the various scholarship. 
+  \item They have not addressed the allocation of limited
+scholarship budget to students fundamentally.
 
-However, they have not addressed the allocation of limited
-financial aid to students fundamentally.
+\note[item]{ most literatures end up in the phase 1 to predict the enrollment,
+ and tells you what factors are important but there is not further
+action}
+
+\note[item]{And in this study, we are trying to solve this by using
+optimization model, which is main contribution of thesis}
+\end{enumerate}
+
 
 % Questions like the following are addressed: 
 % \begin{enumerate}
@@ -573,11 +734,11 @@ financial aid to students fundamentally.
 
 
 \begin{frame}
-\frametitle{Math notation}
+\frametitle{Objective Model}
 \textbf{Sets}:
 \begin{itemize}
 \item I:   set of applicants,  indexed by $i$ and $j$ \\
-\item  M:  different levels of financial awards, indexed by 
+\item  M:  different levels of scholarship awards, indexed by 
 $m$\\
 $m \in  M = \{ 0,1000, 2000, \ldots ,8000\} $ \end{itemize}
 
@@ -585,8 +746,7 @@ $m \in  M = \{ 0,1000, 2000, \ldots ,8000\} $ \end{itemize}
 \textbf{Variables}:
 \begin{itemize}
 \item $x_{im}$ :
-whether a financial award $m$ 
-is allocated to applicant $i$ or not
+binary, whether a scholarship award $m$ is allocated to applicant $i$ or not
 \end{itemize}
 
 \end{frame}
@@ -600,15 +760,15 @@ is allocated to applicant $i$ or not
 $i$, if given award $m$
 \item $p^g_{im}$: \hspace{0.3cm}  probability of graduation for applicant 
 $i$, if given award $m$ 
-\item $N_{im}$: \hspace{0.3cm}   expected number of years student $i$ 
+\item $N_{im}$: \hspace{0.25cm} expected number of years student $i$ 
 stays at the institution, if given award $m$
-\item $d(i,j)$: \hspace{0.3cm}    1 if applicant $i$ dominates 
-applicant $j$; 0 otherwise.
-\item B:      \hspace{0.3cm} total budget for financial aid
-\item $A_m$:   \hspace{0.1cm} monetary value of award $m$
-\item $T_i$:   \hspace{0.2cm} tuition paid by applicant $i$
-\item $SSI_i$: \hspace{0cm} government compensation for
-				applicant $i$ when he/she graduates
+\item $d(i,j)$:\hspace{0.1cm} 1 if applicant $i$ dominates 
+applicant $j$; 0 otherwise
+\item B:       \hspace{0.3cm} total budget for financial aid
+\item $A_m$: \hspace{0.01cm} monetary value of award $m$
+\item $T_i$:  \hspace{0.2cm} tuition paid by applicant $i$
+\item $SSI_i$:\hspace{0cm} government compensation for
+				applicant $i$ graduates
 
 \end{itemize}
 \end{frame}
@@ -618,11 +778,12 @@ applicant $j$; 0 otherwise.
 
 \begin{frame}{fragile}
 \frametitle{Objective}
-\textbf{Maximize the total revenue}: tuition revenue + SSI 
-income
+\textbf{Maximize the total revenue}: Tuition revenue + SSI 
+income:
 
 \scriptsize{
- $\max \quad \sum_{i\in I} \sum_{m\in M} x_{im}\cdot p^e_{im}\cdot(T_i-A_m)\cdot N_{im}+
+$\max \quad \sum_{i\in I} \sum_{m\in M} x_{im}\cdot p^e_{im}\cdot(T_i-A_m)\cdot
+N_{im}+
 \sum_{i\in I} \sum_{m\in M} x_{im}\cdot p^e_{im} \cdot p^g_{im}\cdot SSI_i$
 
 }
@@ -634,8 +795,10 @@ income
 \begin{frame}
 \frametitle{Constraints}
 \begin{enumerate}
-\item Each student only get one scholarship: $\sum_{m \in 
-M}x_{im}=1  \hspace{1cm} \forall i\in I $
+\item Each student only gets one scholarship:
+
+ $\sum_{m \in 
+M}x_{im}=1  \hspace{0.5cm} \forall i\in I $
 \vfill
 \item Total budget constraint: 
 
@@ -645,7 +808,7 @@ x_{im}\cdot p^e_{im}\cdot A_m\leq B $
 \item Dominance constraint:
 
 $ \sum_{m \in M} x_{im}\cdot A_m \geq \sum_{m \in M} 
-x_{jm}\cdot A_m \hspace{1cm}  \forall
+x_{jm}\cdot A_m \hspace{0.5cm}  \forall
 (i,j)|d(i,j)=1 $
 
 \end{enumerate}
@@ -655,7 +818,7 @@ x_{jm}\cdot A_m \hspace{1cm}  \forall
 
 \begin{frame}
 \frametitle{Pair-wise Dominance Constraints}
-More than 5,500 applicants each year.
+Around 5,500 applicants each year.
 
 For the dominance constraints:
 
@@ -675,6 +838,10 @@ more than 15 million constraints.
 5 & 3.3 & 17 \\ \hline
 6 & 3.9 & 27 \\ \hline
 \end{tabular}
+
+\note{there are about 55 hundred applicants each year}
+\note{15 millions constraints is very hard to solve using the standard solver,
+so this should be reduced } 
 \end{table}
 
 \end{frame}
@@ -682,16 +849,24 @@ more than 15 million constraints.
 \begin{frame}
 \frametitle{Full and redundant dominance }
 
- \includegraphics[scale=0.4]{pic/dominance1.eps}
-\includegraphics[scale = 0.4]{pic/dominance2.eps}
+ \includegraphics[scale=0.5]{pic/dominance1.eps}
+\includegraphics[scale = 0.5]{pic/dominance2.eps}
+
+$ \sum_{m \in M} x_{im}\cdot A_m \geq \sum_{m \in M} 
+x_{jm}\cdot A_m \hspace{0.5cm}  \forall
+(i,j)|d(i,j)=1 $
+
+There are total 11 constraints in this case, 6 of them are redundant.
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Minimum dominance}
 \begin{center}
- \includegraphics[scale = 0.4]{pic/dominance3.eps}
+ \includegraphics[scale = 0.35]{pic/dominance3.eps}
 \end{center}
  
+ \small{
 \begin{center}
  \begin{tabular}{l|llllll}
         & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
@@ -703,7 +878,7 @@ more than 15 million constraints.
         6 & 0 & 1 & 0 & 0 & 0 & 0
     \end{tabular}
 \end{center}
-    
+    }
 \end{frame}
 
 
@@ -711,7 +886,7 @@ more than 15 million constraints.
 \frametitle{Size of the optimization models}
 
 \centering
-\scriptsize{
+\small{
 \begin{tabular}{|c|l|c|c|}
 \hline %\hline
 \multicolumn{2}{|c|}{Model Components}   &
@@ -721,7 +896,7 @@ $x_i$}
 & 57,860         & 57,860        \\ \hline
 \multirow{3}{*}{Constraint} & One Award per ID         &
 5,260          & 5,260         \\ \cline{2-4}
-& Dominance                & 13,833,800     & 191,497
+& Dominance                & \textbf{13,833,800}    & \textbf{191,497}
 \\ \cline{2-4}
 & Total Budget              & 1              & 1
 \\ \cline{2-4}
@@ -734,68 +909,108 @@ $x_i$}
 \end{frame}
 
 
-\frametitle{Results}
-\begin{frame}
-\begin{figure}
-    \centering
-  \includegraphics[width=8cm, height=6cm,scale=0.2]{pic/ssi_10k.eps}
-\end{figure}
-\end{frame}
+
+%\begin{frame}
+%\frametitle{Optimization Results}
+%\begin{figure}
+%    \centering
+%  \includegraphics[width=8cm, height=6cm,scale=0.2]{pic/ssi_10k.eps}
+%\end{figure}
+%\end{frame}
+%
+%
+%\begin{frame}
+%\frametitle{Optimization Results}
+%\begin{figure}
+%    \centering
+%  \includegraphics[width=8cm, height=6cm,scale=0.2]{pic/ssi_12k.eps}
+%\end{figure}
+%\end{frame}
 
 
 \begin{frame}
-\frametitle{Results}
-\begin{figure}
-    \centering
-  \includegraphics[width=8cm, height=6cm,scale=0.2]{pic/ssi_12k.eps}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Results}
+\frametitle{Optimization Results}
 \begin{figure}
     \centering
   \includegraphics[width=8cm, height=6cm,scale=0.2]{pic/ssi_14k.eps}
 \end{figure}
+
+
+\note{As we see from the graph, 2.8 million yields the best objective,
+bugget lower than 2.8 million is underspending and greater than 2.8 million
+is overspending.}
 \end{frame}
 
 \subsection{Implementation}
 
 \begin{frame}
-\frametitle{Implementation and Policy}
+\frametitle{Policy and Implementation}
 \begin{itemize}
-\item The scholarship allocation of individual 
-student and optimal budget are solved above.
-\item However, the enrollment administration need a 
-simpler policy to implement.
-\item  Decision tree and piece-wise linear regression were used for this task.
+\item First phase solves the prediction problems.
+\item Second phase solves optimal allocation problem.
+\item Enrollment administration needs a 
+simple policy to implement.
+\item  Decision tree and piecewise linear regression were used for this task.
 \end{itemize}
  
 \end{frame}
 
 \begin{frame}
 \frametitle{Decision tree policy}
+\begin{center}
 \includegraphics[width=10cm, height=6cm, scale = 0.4]
-{pic/FA_DT_Result.eps}
+{pic/FA_DT_Result.eps}  
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\begin{centering}
+\frametitle{Optimization Mean Scholarship vs GPA and ACT}
+  \includegraphics[width=13.5cm, height=7cm, scale = 0.4]{pic/gpa_act.png}
+  \end{centering}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Piece-wise linear regression results}
-Simplified version of policy in piece-regression form.
+\frametitle{Piecewise linear regression based policy}
+
+Piecewise linear regression using composite score:
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|} \hline
-Composite Score & Scholarship Amount \\ \hline
-0-54.9         & 0              \\ \hline
-55-59.9         & 1,500              \\ \hline
-60-65.9         & 2,500              \\ \hline
-66-69.9         & 3,500              \\ \hline
-70-74.9         & 4,500              \\ \hline
-75+             & 6,000              \\ \hline
+\begin{tabular}{|c|c|c|}
+\hline
+Composite Score & \# of Applicants & Scholarship Amount \\ \hline
+0-53.9         & 2,897  &0              \\ \hline
+54-68.9        & 2,103  &$309\times CS -16,380 $            \\ \hline
+69-76.9        &  241 &  $101\times CS - 2,024$           \\ \hline
+77-80       & 19 &   $711 \times CS -48,910$          \\ \hline
+\end{tabular}
+
+\end{table}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Piecewise linear regression based policy}
+Simplified version of policy in piecewise regression form.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|} \hline
+Composite Score & Scholarship Amount & \# of Applicants \\ \hline
+0-54.9          & 0        & 3,074       \\ \hline
+55-59.9         & 1,500    & 872         \\ \hline
+60-65.9         & 2,500    & 812         \\ \hline
+66-69.9         & 3,500    & 298         \\ \hline
+70-74.9         & 4,500    & 166          \\ \hline
+75+             & 6,000    & 38         \\ \hline
 \end{tabular}
 \end{table}
+Note: 41.6\% applicants receive scholarship.
 \end{frame}
 
 
@@ -804,10 +1019,56 @@ Composite Score & Scholarship Amount \\ \hline
 \begin{itemize}
 \item  The result of the study has been successfully implemented in the 
 state university and has resulted in millions of financial benefits. 
-\item The research would be applicable to many other institutions and offers 
-a methodology, tools and insights into the solution of financial aid 
+\item The research would be applicable to many other institutions and 
+offers a methodology, tools and insights into the solution of financial aid 
 problems. 
+
 \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Business impact and Application}
+  \begin{center}
+    \begin{table}[H] 
+%    \small %43
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+& 2013 & 2014 & \# Increase & \% Increase \\ \hline
+Application                    & 6,101 & 6,068 & -43         & -0.7\%      \\
+\hline
+Admitted                       & 4,541 & 4,773 & 232         & 5.1\%       \\
+\hline
+Non-Scholarship                & 2,166 & 2,157 & -9          & -0.4\%      \\
+\hline
+Scholarship Award              & 2,375 & 2,616 & 241     & \textbf{10.1\% }
+
+\\
+\hline
+%\% of scholarship              & 52\% & 55\% &             &             \\
+%\hline
+Matriculated                   & 2,001 & 2,222 & 221         & \textbf{11.0\%} 
+
+\\
+\hline
+%Non-Scholarship Student        & 931  & 1000 & 69          & 7.4\%
+%\\\hline
+%Scholarship Student            & 1070 & 1222 & 152         & 14.2\%
+%\\\hline
+%Scholarship Matriculation Rate & 45\% & 47\% &             &             \\
+\end{tabular}
+\end{table}
+  \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Business impact and Application}
+  \includegraphics[width=13cm, height=7cm, scale = 0.4]{pic/results.png}
 
 \end{frame}
 
@@ -816,51 +1077,65 @@ problems.
 \begin{frame}
 \frametitle{Summary}
 \begin{enumerate}
-\item A serious of models are developed to predict:
+\item A series of models are developed to predict:
   \begin{itemize}
     \item Enrollment probability
     \item Graduation probability
     \item Number of years of stay
   \end{itemize}
 \item Developed minimum cardinality dominance table to reduce the model size. 
-\item An optimization model is developed with the objective to maximize the revenue.
-\item A regression analysis is developed to translate the optimization results to
-	managerial insights and derive a policy for implementation.
+\item An optimization model is developed with the objective to maximize the
+revenue.
+\item A regression analysis is developed to translate the optimization 
+results to managerial insights and derive a policy for implementation.
 \end{enumerate}
 \end{frame}
+
+
+
+
 
 
 \subsection{Limitation}
 \begin{frame}
 \frametitle{Limitation}
-\begin{itemize}
-\item The prediction of student's enrollment decision is 
-hard.
+\begin{enumerate}
+
+\item The prediction of student's enrollment decision is hard.
 \item The research is also limited by the availability of 
 data provided by the institution under study.
-\end{itemize}
+\end{enumerate}
 
 \note[item]{is by itself a hard problem, because 
 enrollment in a particular institution is determined by 
 many factors that are not available to the institution.
-For example, it is well known that the students' decision  is affected by family influence and other factors, which are not traceable or measurable.}
+For example, it is well known that the students' decision  is affected by
+family influence and other factors, which are not traceable or measurable.}
 
+\note[item]{Data limitaion, the quliaty and quantity of the data we have is not
+very ideal, there are lots of missing information, which limits the
+performance of the predction}
 \end{frame}
 
 \subsection{Future Study}
 \begin{frame}
 \frametitle{Future Study}
-The results from the optimization specify the scholarship awards to each applicant under a 
-specific population and budget.  
+The results from the optimization specify the scholarship awards to 
+each applicant under a specific population and budget.  
 \begin{itemize}
-\item  The actual size and composition of the application pool could be affected by the 
+\item  The actual size and composition of the application pool could be
+affected by the
        unemployment rate and is random in nature. 
-\item  Stochastic optimization techniques such as sampling to find the optimal allocation 
-under a random pool will be of great interest. 
+%\item  Stochastic optimization techniques such as sampling to find 
+%the optimal allocation under a random pool will be of great 
+%interest. 
+
+\item Uncertainty: Budget, SSI, etc,. Use scenario analysis.
 
 \end{itemize}
 
-\note[item]{Nevertheless, at this stage, this study is on optimization under a specific pool}
+\note[item]{Nevertheless, at this stage, this study is on optimization under a
+specific pool}
 \end{frame}
 
 
@@ -868,7 +1143,7 @@ under a random pool will be of great interest.
 
 \section{Acknowledgement}
 \begin{frame}
-    \frametitle{Thank you!}
+  \frametitle{Thank you!}
     Dissertation Committee:
     \begin{itemize}
     \item Dr. Xinhui Zhang
@@ -877,47 +1152,128 @@ under a random pool will be of great interest.
     \item Dr. Subhashini Ganapathy
     \item Dr. Nan Kong
     \end{itemize}
-    \note{ I would like to express my sincere gratitude to my advisor DR. Zhang for the continuous support of my study.
+\note{ I would like to express my sincere gratitude to my advisor DR. Zhang for
+the continuous support of my study. 
     Thank you for your patience, motivation and knowledge.}
-    \note{Besides my advisor, I would like to thank the rest of my thesis committeei DR......  for serving as my committee.
-    I want to thank you for letting my defense be an enjoyable moment, and thank you for the valuable comments and suggestions, thanks to 
-    you.}
+\note{Besides my advisor, I would like to thank the rest of my 
+thesis committeei DR......  for serving  my committee.
+I want to thank you for letting my defense be an
+enjoyable moment, 
+and thank you for the invaluable comments and
+suggestions, thanks 
+to   you.}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Backup}
+\framesubtitle{Stochastic Boosting}
+\includegraphics[width=13cm, height=7cm, scale = 0.5]
+{pic/Stochastic_boositing.eps}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Backup}
+\includegraphics[width=13cm, height=7cm, scale = 0.5]
+{pic/gender.png}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{}
+\includegraphics[width=13cm, height=7cm, scale = 0.5]
+{pic/Raider.png}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{}
+\includegraphics[width=13cm, height=7cm, scale = 0.5]
+{pic/ethnicity.png}
 \end{frame}
 
 
 
 \begin{frame}
 \frametitle{}
+\includegraphics[width=13cm, height=7cm, scale = 0.5]
+{pic/state.png}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{What is the SSI formula?}
+
+SSI dollars are distributed directly to Ohio's public colleges 
+and universities through a formula primarily driven by enrollments that 
+are classified into models based on levels of instruction and the 
+statewide average costs of each model. For example, it costs more for a 
+campus to offer an advanced engineering course than it costs to offer an
+introductory history course. Therefore, enrollments in introductory 
+courses are funded at a lower rate than enrollments in more advanced 
+courses.
+
+Source: https://www.ohiohighered.org/board-of-regents/legislative-
+services/faq
 \end{frame}
 
 
 
+\begin{frame}
+    \frametitle{Logistic Regression}
+Logistic regression generates the coefficients of a formula to predict a
+logit 
+transformation of the probability of the binary outcome:
+ 
+ \begin{equation}
+	p(1 \mid x)=\beta_0+\beta_1 x_1+\beta_2 x_2 +\ldots+\beta_k x_k
+\end{equation}
+where p is the probability of the binary outcome of interests.
+\end{frame}
 
+\begin{frame}
+    \frametitle{Logistic Regression}
+  The logit transformation is defined as the logged odds:
+  
+\begin{equation}
+	Odds(p) = \frac{p}{1-p} = \frac{\text{Prob of yes}}
+    {\text{Prob of no}}
+\end{equation}
+
+And 
+\begin{equation}
+log\_xodds(p) = \ln{\frac{p}{1-p}}
+\end{equation}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{odds and log odds}
+  \includegraphics[scale = 0.4]{pic/odds.png}
+  \includegraphics[scale = 0.4]{pic/logodds.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sigmoid}
+\includegraphics[scale = 0.5]{pic/sigmoid.png}  
+
+${log\_odds}(P(y=1 \mid x)) = w_o + w_1x_1 + w_2x_2 + ... + w_nx_n$
+
+$P(y=1 \mid x) = \phi(z) = \dfrac{1}{1 + e^{-z}}$
+
+\end{frame}
 
 
 
 \bibliographystyle{plainnat}
 \bibliography{shuai_cita}
 \end{document}
+
 
 
