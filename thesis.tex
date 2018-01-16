@@ -10,6 +10,9 @@
 %\usepackage{subfigure} % allows the use of 339
 %\usepackage{subfig}
 
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
 \usepackage{dirtytalk} % for quoation
 \usepackage{epstopdf}  %for eps
 \usepackage{floatrow}
@@ -65,8 +68,6 @@
 %\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \usepackage{array,tabularx,float}
 \setlength\extrarowheight{2pt}
-\usepackage[nottoc]{tocbibind} % This add reference page number to
-tableofcontents
 
 
 \setcounter{tocdepth}{2}
@@ -95,9 +96,8 @@ the Optimal Scholarship Allocation Problem for a State University}
 
 \newcommand{\bachyear}{2011}% Bachelor degree year
 %No spaces should be before or after this title.
-\newcommand{\pdfsubject}{a short paraphrase of your title or focus of your
-thesis}
-\newcommand{\pdfkeywords}{keyword 1, keyword 2, keyword 3, keyword 4}
+\newcommand{\pdfsubject}{Enrollment optimal budget}
+\newcommand{\pdfkeywords}{Financial Aid, Enrollment Management, Optimization, Integer Programming, Data Mining}
 \newcommand{\yearcomplete}{2017}
     
 %-----------------------------------------------------------------------
@@ -150,21 +150,16 @@ Program} % CHANGE TO: Chair, Department of Mechanical and \\ Materials
 % \normalem
 \pagenumbering{roman}
 \pagestyle{plain}
-\rhead{\today
-}
+%\rhead{\today}
+%\rhead{\date{{December 14, 2017}}
 
 %\doublespace
 
 
 
 \begin{document}
-    \maketitle
+ \maketitle
     \doublespace\
-% * <vanstark88@gmail.com> 2017-12-14T20:09:28.903Z:
-%
-% ^.
-
-% Still don't touch!!
 
 %=============================
 %  approval sheet
@@ -173,8 +168,7 @@ Program} % CHANGE TO: Chair, Department of Mechanical and \\ Materials
 \thispagestyle{empty}
 \renewcommand\baselinestretch{2}
 \begin{singlespace}
-    %\masterSignaturePage      % USE FOR MASTER THESIS
-    \phdSignaturePage\        % USE FOR PHD DISSERATION
+      \phdSignaturePage\        % USE FOR PHD DISSERATION
 \end{singlespace}
 %
 %=============================
@@ -202,19 +196,18 @@ Program} % CHANGE TO: Chair, Department of Mechanical and \\ Materials
 % Start editing below.
 %========================
 \vspace*{0.15in} 
-\noindent \textbf{Enrollment Management and Financial Aid:}  Enrollment 
+\noindent \textbf{Enrollment Management and Financial Aid.}  Enrollment 
 management is the term that is often used to describe the synergistic 
-approach to influence the enrollment of higher education institutions, and 
-consists of activities pertaining to student college choice, 
+approaches to influence the enrollment of higher education institutions, and 
+consists of activities such as student college choice, 
 transition to college, retention, and graduation. Of all the factors, 
 financial aid, institution rank, and tuition are the three most important 
 ones that affect students' choice processes and matriculation decisions; as 
 such, with the continuous increase of tuition over the years, financial aid 
 serves as a marketing tool and plays an important role in attracting 
 students. In the United States, in the 2012-2013 academic year, there were a 
-total of 20.4 million students in degree-granting institutions; more than 
-eighty percent of them received financial aid and more than seventy percent 
-of them received grants.
+total of 20.4 million students enrolled in degree-granting institutions and more than 
+eighty percent of them received financial. 
 
 
 \vspace*{0.15in} 
@@ -223,26 +216,60 @@ leads to an important problem yet to be solved in the literature, i.e., how to o
 limited financial aid to students with various social and economic backgrounds so as to achieve 
 enrollment goals. Though financial aid can be of various forms, merit-based scholarships are the 
 primary part of the allocation process. This problem, referred to as \textit{the optimal scholarship 
-allocation problem}, has puzzled the enrollment management teams at many higher institutions and is 
-the focus of this thesis.
+allocation problem}, has puzzled the enrollment management teams at many higher institutions and 
+is the focus of this thesis.
 
 \newpage
-\noindent \textbf{Solution Approach:}  This research proposes a series of predictive and optimization models to solve the optimal financial aid allocation problems. The methodology consists of three sequential phases: 1) predictive models to find the responses (enrollment and graduation probabilities and years of study) to various levels of scholarship for students with various socioeconomic backgrounds; 2)  optimization models to find the maximum revenue for given budget based on the response discovered to the various levels of scholarships; and 3) data mining models to discover patterns and transform results from the optimization model to simple and effective policies. %The details of these phases are presented below.
+\noindent \textbf{Solution Approach:}  This thesis proposes a series of predictive and optimization 
+models to solve the optimal financial aid allocation problems. The methodology consists of three 
+sequential phases: 1) predictive models to find the responses (enrollment and graduation 
+probabilities and years of study) to various levels of scholarship for students with various 
+socioeconomic backgrounds; 2)  optimization models to find the maximum revenue for given budget 
+based on the response discovered to the various levels of scholarships; and 3) data mining models to 
+discover patterns and transform results from the optimization model to simple and effective policies. %The details of these phases are presented below.
 
 \vspace*{.1in} 
-\noindent \textit{Phase I: Predictive Models.} A series of predictive models have been investigated to estimate the responses from students to various levels of scholarship awards. These responses can be classified into two categories: the first are enrollment and graduation decisions and the second one is the number of years of study once a student enrolls in the institution. In the first category, because of the binary nature of the responses (for example "enroll" or "not enroll"), logistic regression based models have been adopted to predict the probability of enrollment and the probability of graduation given that student enrolls. In the second case, decision tree model and regression analysis are adopted.
+\noindent \textit{Phase I: Predictive Models.} A series of predictive models have been investigated to 
+estimate the responses from students to various levels of scholarship awards. These responses can 
+be classified into two categories: the first category includes enrollment and graduation decisions and 
+the second one is the number of years of study once a student enrolls in the institution. In the first 
+category,  because of the binary nature of the responses (enroll or  not enroll), logistic 
+regression based models have been adopted to predict the probability of enrollment and the 
+probability of graduation given that student enrolls. In the second category,
+regression analysis are adopted.
 
 \vspace*{.1in} 
-\noindent \textit{Phase II: Optimization Models}. An optimization model is designed to allocate financial aid to applicants with an objective to maximize the revenue, which is composed of net tuition, i.e., tuition minus scholarship, over the years of study, plus the state share of instruction once the student graduates. The constraints to be observed include the total budget limitations and a fairness constraint. For a merit-based scholarship, the fairness constraint stipulates that a student with better academic performance must be assigned to an equal or higher level of scholarships than that of students with a lower academic performance. The inclusion of the fairness constraint has dramatically increased the size of the model, and to reduce computational burden, the concept of a minimum dominance set is developed.  This has reduced the size of the model by orders of magnitude and enabled the efficient solution of the resulting mathematical model. 
+\noindent \textit{Phase II: Optimization Models}. An optimization model is designed to allocate financial aid 
+to applicants with an objective to maximize the revenue, which is composed of net tuition, i.e., 
+tuition minus scholarship, over the years of study, plus the state share of instruction once the student 
+graduates. The constraints to be observed include the total budget limitations and a fairness 
+constraint. For a merit-based scholarship, the fairness constraint stipulates that a student with better 
+academic performance must be assigned to an equal or higher level of scholarships than that of 
+students with a lower academic performance. The inclusion of the fairness constraint has 
+dramatically increased the size of the model, and to reduce computational burden, the 
+concept of a minimum dominance set is developed.  This has reduced the size of the model by orders 
+of magnitude and enabled the efficient solution of the resulting mathematical model. 
 
 \vspace*{.1in} 
-\noindent \textit{Phase III: Policies Analysis Models}. Regression analysis is developed to discover patterns in the optimization results, in the form of the  amount of scholarship awarded for each student, and translate them into simple and effective scholarship award policies for implementation. Several techniques such as decision tree and piecewise regression  have been explored. For the institution under study, the results suggested that  a composite score based on the student's GPA and ACT scores can be used as the basis for the award of scholarships; and a simple  yet effective award scholarship policy derived from piecewise regression has been discovered.
+\noindent \textit{Phase III: Policies Analysis Models}. Regression analysis is developed to discover patterns in the optimization 
+results, in the form of the  amount of scholarship awarded for each student, and translate them into simple and effective 
+scholarship award policies for implementation. Several techniques such as decision tree and piecewise regression  have been 
+explored. For the institution under study, the results suggested that  a composite score based on the student's GPA and ACT scores 
+can be used as the basis for the award of scholarships; and a simple  yet effective award scholarship policy derived from piecewise 
+regression has been discovered.
+
 
 \vspace*{.15in}
-\noindent \textbf{Implementation:} The analysis based on the above framework was adopted by the institution under study and has been used in an overhaul of the scholarship design. The piecewise regression derived, composite score based scholarship award policy proves to be effective, and together with a proactive marketing strategy it has yielded an 11\% increase in directly admitted students under a similar budget. This translates into millions of dollars of revenue and significantly improves the university's bottom line.
+\noindent \textbf{Implementation:} The analysis based on the above framework was adopted by the institution under study and has been 
+used in an overhaul of the scholarship redesign. The piecewise regression derived, composite score based scholarship award policy 
+proves to be effective, and together with a proactive marketing strategy it has yielded an 11\% increase in directly admitted 
+students under a similar budget. This translates into millions of dollars of revenue and significantly improves the university's 
+bottom line.
 
+\begin{comment}
 \vspace*{.15in}
 \noindent \textbf{Contribution:} The proposed methodology elegantly combines data mining with optimization techniques for the solution of the optimal scholarship decision problem,  contribute significantly to research studies in financial aid allocation, and has the potential to be applied to many other higher education institutions.
+\end{comment}
 
 
 
@@ -317,9 +344,6 @@ Hakan Gecili, Lijian Xiao and Jue Huang. Thanks for the
 fun time that we spent together. I would also thanks my 
 friends from the computer science department: Zhongliang 
 Li, Dr. Ming Tan, and Dr. Shaodan Zhai.
-Special thanks go to the May family: Christina May, Dr. 
-Maria May, Robert May, Anna May, and Janice Baratheon for 
-all the support during my study.
 
 %
 %=============================
@@ -349,23 +373,42 @@ all the support during my study.
 \citep{Maguire1976} and is the term that is often used to describe the synergistic approach to shape the 
 enrollment of institutions to meet established goals, such as to increase the number of high-caliber 
 students, to diversify the student body, and to retain more students \citep{Kemerer1982}. Enrollment 
-management consists serious of activities pertaining student college choice, transition to college, 
+management consists serious of activities such as student college choice, transition to college, 
 retention, and graduation \citep{Hossler1990} and is critical to many colleges and universities 
 \citep{Braunstein1999, Maltz2007, Aksenova2006}. 
 
-Financial aid is an integral part of enrollment management strategies for institutions 
-\citep{Dynarski2013}.  Financial aid is funding provided to students to cover various costs such as 
-tuition, fees and board  while they attend an institution. Financial aid comes from federal and state 
-programs, as well as private institutions and agencies. Financial aid can be awarded in different forms 
-such as grants, education loans, and scholarships. Grants are money that students do not have to repay, 
-such as the  federal Pell Grants. Loans such as Free Application for  Federal Student Aid (FAFSA) are money 
-students borrow and  must pay back, and which usually carry interest. Scholarships are  given  to students 
-based on desired qualities such as academic achievement, athletic ability. 
+Financial aid is an integral part of enrollment management strategies for 
+institutions \citep{Dynarski2013}.  Financial aid is funding provided to 
+students to cover various costs such as tuition, fees and board  while they 
+attend an institution. Financial aid comes from federal and state 
+programs, as well as private institutions and agencies. Financial aid can be 
+awarded in different forms such as grants, education loans, and scholarships. 
+Grants are money that students do not have to repay, 
+such as the  federal Pell Grants. Loans such as Free Application for  Federal 
+Student Aid (FAFSA) are money 
+students borrow and  must pay back, and which usually carry interest. 
+Scholarships are  given  to students based on desired qualities such as 
+academic achievement, athletic ability. 
 
 \vspace{0.15in}
-\noindent \textbf{Purpose of Financial Aid.} Financial aid serves multiple purposes, such as providing access and affordability to families who need financial help, stimulating more students to major in areas having labor shortages; nevertheless, financial aid programs have served the purpose of a marketing tool for institutions to attract students and shape its enrollment. 
+\noindent \textbf{Purpose of Financial Aid.} Financial aid serves multiple 
+purposes, such as providing access and affordability to families who need 
+financial help, stimulating more students to major in areas having labor 
+shortages; moreover, financial aid programs have served the purpose of a 
+marketing tool for institutions to attract students and shape its enrollment. 
 
-From early studies, \citet{Heller1997} and \citet{Leslie1988} noticed that ``receiving a financial aid award has a significant positive effect on the likelihood that a student will enter the institution that has made the financial aid offer'' and ``the effect of just receiving an award, regardless of the amount, equals or exceeds the effects of the amount of the award.'' \citep{Leslie1987} in an early review on the relationship between price and enrollment in higher education, suggested that ``higher prices reduce higher education enrollments, or as tuition increases, many high school students can not afford college and enrollment might decrease; however, this has not been observed in practice and a large number of students do attend college.'' and ``the above quandary and the answer was partially due to the ameliorating effects of financial aid.''.
+From early studies, \citet{Heller1997} and \citet{Leslie1988} noticed that 
+``receiving a financial aid award has a significant positive effect on the 
+likelihood that a student will enter the institution that has made the 
+financial aid offer'' and ``the effect of just receiving an award, regardless 
+of the amount, equals or exceeds the effects of the amount of the award.'' 
+\citet{Leslie1987}, in an early review on the relationship between price and 
+enrollment in higher education, suggested that ``higher prices reduce higher 
+education enrollments, or as tuition increases, many high school students can 
+not afford college and enrollment might decrease; however, this has not been 
+observed in practice and a large number of students do attend college.'' and 
+``the above quandary and the answer was partially due to the ameliorating 
+effects of financial aid''.
 
 In fact, various studies suggest that of all the factors, financial aid, institution rank, and tuition are the three most important ones that affect students' choice processes and matriculation decisions \citep{Fulleri2014}; as such, with the continuous increase of tuition over the years, financial aid plays an even more important part to price discriminate potential applicants and is widespread among many institutions.  
 
@@ -382,57 +425,174 @@ It bears mentioning that in the past few decades many studies have been conducte
 
 \vspace{0.1in}
 \noindent \textit{Macro-Level Student Demand Studies.} 
-Most research studies of financial aid are  macro-level student demand studies or the use of market level data for analyzing on the effects of tuition and financial aid on students' decisions.  For example, \citet{Hossler1989} have consistently found that ``African American students and Latino students are more cost sensitive and more responsive to financial aid offers than majority students of similar socioeconomic background.''  \citet{Braunstein1999} found that for every \$1,000 increase in financial aid, the probability  of  enrollment increased between 1.1\% and 2.5\%.  These studies have been used to study the effectiveness of various federal and state financial aid programs, such as the HOPE program, the CalGrant program, and the Adams program.  Most of these studies, however, address the effects of financial aid on enrollment over a longitude of years across institutions and are not intended to address the optimal  allocation of scholarship for each institution. 
+Most research studies of financial aid are  macro-level student demand studies 
+or the use of market level data for analyzing on the effects of tuition and 
+financial aid on students' decisions.  For example, \citet{Hossler1989} have 
+consistently found that ``African American students and Latino students are 
+more cost sensitive and more responsive to financial aid offers than
+students of similar socioeconomic background''.  \citet{Braunstein1999} found 
+that for every \$1,000 increase in financial aid, the probability  of  
+enrollment increased between 1.1\% and 2.5\%.  These studies have been studied the 
+effectiveness of various federal and state financial aid programs, 
+such as the HOPE program, the CalGrant program, and the Adams program.  Most 
+of these studies, however, only address the effects of financial aid on enrollment 
+over a longitude of years across institutions and are not intended to address 
+the optimal  allocation of scholarship for each institution. 
 
 \vspace{0.1in}
 \noindent \textit{Micro-Level Student Choice Process and Target Market Optimization.} 
-It is accepted that the response to the changes in financial aid could differ among various groups of students. For example, changes in tuition and financial aid affect poorer students more than wealthier; a change in financial aid affects African American students more than it affects white students. As students have diverse social and economic backgrounds, these studies suggest the response to financial aid differs from student to student, and the study of these factors and the decision process is referred  to as the college choice process model \citep{Paulsen1990}. For example, \citet{Jackson1978} created a general model of students' postsecondary decision processes as a function of place, background, school, student, friends, occupation, aspiration, plans, colleges and jobs.
+It is accepted that the response to the changes in financial aid could 
+differ among various groups of students. For example, changes in tuition 
+and financial aid affect poorer students more than wealthier; changes in 
+financial aid affect minority students more than 
+white students. As students have diverse social and economic backgrounds, 
+these studies suggest the response to financial aid differs from student 
+to student, and the study of these factors and the decision process is 
+referred  to as the college choice process model \citep{Paulsen1990}. For 
+example, \citet{Jackson1978} created a general model of students' 
+postsecondary decision processes as a function of place, background, 
+school, student, friends, occupation, aspiration, plans, colleges and 
+jobs.
 
-Given the various factors in the college choice process, it would be desirable to predict the students' 
-responses to the enrollment decision at specific university.  In many respects, this problem is similar to 
-problems addressed in the targeted marketing literature such as \citep{Reinartz2003}. Although the enrollment study shares
-some similarities with the the marketing targeting study,  the study of the response from individual students and the optimal 
-selection of the target set of students can still be rather complex to solve.
+Given the various factors in the college choice process, it would be 
+desirable to predict the students' responses to the enrollment decision 
+at specific university.  In many respects, this problem is similar to 
+problems addressed in the targeted marketing literature such as 
+\citep{Reinartz2003}. Although the enrollment study shares
+some similarities with the marketing targeting study,  the study of 
+the response of individual students and the optimal 
+selection of the target set of students can still be rather complex to 
+solve.
 
 
 \vspace*{.15in} 
 \noindent \textbf{Complexity and Importance of the Optimal Scholarship Allocation Problem.}
-The optimal scholarship allocation problem, however, is more complicated due to several reasons. 
+The optimal scholarship allocation problem, however, is more complicated due 
+to several reasons. 
 
-First and foremost, there exist many factors that affect students' college choice and enrollment decisions. For example, students' college selection is affected by their own aspirations, family background, et cetera, and not all these factors are available to researchers and hence to the decision makers. %For example, some families will not consider the college beyond the expected education budget, while some families link higher tuition with  higher education quality. As a result, the effect of tuition and financial aid do not uniformly affect the students' enrollment decision  \citep{hossler2000role}.
+First and foremost, there exist many factors that affect students' college 
+choice and enrollment decisions. For example, students' college decision are 
+affected by their own aspirations, family background, et cetera, and not all 
+these factors are available to researchers and let alone to the decision makers. %For example, some families will not consider the college beyond the expected education budget, while some families link higher tuition with  higher education quality. As a result, the effect of tuition and financial aid do not uniformly affect the students' enrollment decision  \citep{hossler2000role}.
 
-Second, it is difficult to construct models that separate the impact of tuition from the effects of financial aid, fit all institutions, and as of now, different practices exist in higher education to balance tuition and financial aid. For example, some colleges maintain low tuition and offer little financial aid, and rely on low tuition as the primary financial factor to achieve enrollment goals; yet other institutions could pursue a high tuition, high financial aid (the \textit{Robin Hood} strategy), to achieve enrollment goals.
+Second, it is difficult to construct models that separate the impact of 
+tuition from the effects of financial aid, and as 
+of now, different practices exist in higher education to balance tuition 
+and financial aid. For example, some public institutions apply low 
+tuition and offer little financial aid, and rely on low tuition as the 
+primary financial enticement; yet other institutions could pursue a high 
+tuition, high financial aid (the \textit{Robin Hood} strategy), to 
+achieve enrollment goals.
 
-Third, there are not as many optimization studies on the allocation of financial aid as have been seen in other industries such as airlines, thus there has not been any guidance in the solution of these problems. 
+Third, there are not as many optimization studies on the allocation of 
+financial aid as have been seen in other industries such as airlines, thus 
+there has not been any guidance in the solution of these problems. 
 
 \vspace*{.15in}  
-It is hypothesized, and will be demonstrated in this thesis, however, that it is possible for individual institutions  to study the impact of financial aid on students in the application pool, and moreover to optimize the allocation of financial aid to increase its enrollment goals. 
+It is hypothesized, and will be demonstrated in this thesis, however, that it 
+is possible for individual institutions  to study the impact of financial aid 
+on students in the application pool, and moreover to optimize the allocation 
+of financial aid to increase its enrollment goals. 
 
-The solution to the optimal scholarship decision problem could have a direct and significant impact on the institution's financial health; on the one hand, tuition is an important part of an institution's revenue, and excessive use of financial aid could potentially reduce its revenue. On the other hand, insufficient use of financial aid could potentially reduce student enrollment and thus undermine the total revenue as well. 
+The solution to the optimal scholarship decision problem could have a direct 
+and significant impact on the institution's financial health: on the one hand, 
+tuition is an important part of an institution's revenue, and excessive use of 
+financial aid could potentially reduce its revenue; on the other hand, 
+insufficient use of financial aid could potentially reduce student enrollment 
+and thus undermine the total revenue. 
 
 \vspace*{.15in} 
-\noindent \textbf{The Dilemma at a State University.} This study was  motivated by requirements from the executive teams at a public state  university to study the effectiveness of its financial aid policies  and potentially optimize its allocation to boost enrollment and  increase its financial bottom line.   The state university is one of the thirteen state universities  within Ohio and had an enrollment of 17,779  in the 2013-2014 academic year. At the time of the study, the university aims to provide an affordable yet high-quality education experience and is eager to grow its enrollment and revenue in the  coming years.  The desire to grow, however, is faced with tough 
-challenges because the university is competing with other flagship  universities for high-talented students and with community colleges  for students seeking affordability.
+\noindent \textbf{The Dilemma at a State University.} This study was  
+motivated by requirements from the executive teams at a public state  
+university to study the effectiveness of its financial aid policies  and 
+potentially optimize its allocation to boost enrollment and  increase its 
+financial bottom line.   The state university is one of the thirteen state 
+universities  within Ohio and had an enrollment of 17,779  in the 2013-2014 
+academic year. At the time of the study, the university aims to provide an 
+affordable yet high-quality education experience and is eager to grow its 
+enrollment and revenue in the  coming years.  The desire to grow, however, is 
+faced with tough challenges because the university is competing with other 
+flagship state universities for high-talented students and with community colleges 
+for students seeking affordability.
 
-Raising tuition, and accordingly allocating a portion of the increase in financial aid to target students, is not an option for the state institution. To provide affordable education, the state government has capped statewide tuition increases, and has mandated the increase of tuition to be zero for the 2015 - 2016 year. More than 95\% of the students, whose tuition contributes to 46.75\% of the university's revenue, come from the surrounding region where the population remains steady with no dramatic increase in high school graduates. As such, the effective use of institutional resources such as financial aid to increase enrollment has been the focus of university executives. Though several questions have been raised, these questions boil down to the solution of the financial aid allocation problem, i.e., what levels of scholarship students should be awarded to maximize the net revenue for the institution.
+Raising tuition, and accordingly allocating a portion of the increase in 
+financial aid to target students, is not an option for the state university. 
+To provide affordable education, the state government has capped statewide 
+tuition increases, and has mandated the increase of tuition to be zero for the 
+2015 - 2016 year. More than 95\% of the students, whose tuition contributes to 
+46.75\% of the university's revenue, come from the surrounding region where 
+the population remains steady with no dramatic increase in high school 
+graduates. As such, the effective use of institutional resources such as 
+financial aid to increase enrollment has been the focus of university 
+executives. Though several questions have been raised, these questions boil 
+down to the solution of the financial aid allocation problem, i.e., what 
+levels of scholarship students should be awarded to maximize the net revenue 
+for the institution.
 
 \section{A Three Phase Solution Approach}
-In the solution of the optimal financial aid decision problem,  it is necessary to solve several sequential problems related to a) the determination of responses to financial aid award from students with various demographic, academic, residential, and financial backgrounds, b) the allocation of the scholarship to find the maximum revenue for a given budget based on the response discovered to the various levels of scholarships, and c) derivation of discovered patterns and transform of the results from the optimization model into simple and effective scholarship award policies .
+In the solution of the optimal financial aid decision problem,  it is 
+necessary to solve several sequential problems related to a) the determination 
+of responses to financial aid award from students with various demographic, 
+academic, and financial backgrounds, b) the allocation of the 
+scholarship to find the maximum revenue for a given budget based on the 
+response discovered to the various levels of scholarships, and c) derivation 
+of discovered patterns and transform of the results from the optimization 
+model into simple and effective scholarship award policies .
 
-Various techniques have been investigated in the three-phase framework in the solution of the optimal scholarship allocation problem and policy analysis and the details of the techniques and models developed in this research are summarized presently.
+Various techniques have been investigated in the three-phase framework in the 
+solution of the optimal scholarship allocation problem and policy analysis and 
+the details of the techniques and models developed in this research are 
+summarized presently.
 
-The solution to these problems form a three-phase methodologies proposed in this study as follows:
+The solution to these problems form a three-phase methodologies proposed in 
+this study as follows:
 
 \vspace*{.1in} 
 \noindent \textit{Phase I: Predictive Models.} 
-One of the main objectives of the optimal scholarship assignment problem to maximize the revenue, which in this study is composed of two parts. The first one is the net tuition income from students, which is the difference between tuition and fees, over the years of the studies at the institution. The second one is the state share of instruction, known as SSI, which is awarded to the institution once the students graduate.  As such,  it is necessary to derive analytic models to predict the probability of student matriculation decisions, to predict the number of years of study at the institution, and to predict the probability of graduation from the institution. Due to dropouts and transfers, not all students will graduate from the institution. 
+One of the main objectives of the optimal scholarship assignment problem to 
+maximize the revenue, which in this study is composed of two parts. The first 
+one is the net tuition income from students, which is the difference between 
+tuition and fees, over the years of the studies at the institution. The second 
+one is the state share of instruction, known as SSI, which is awarded to the 
+institution once the students graduate.  As such,  it is necessary to derive 
+analytic models to predict the probability of student matriculation decisions, 
+to predict the number of years of study at the institution, and to predict the 
+probability of graduation from the institution. Due to dropouts and transfers, 
+not all students will graduate from the institution. 
 
-To this end, a series of predictive models have been investigated to estimate the two categories of responses from students to various levels of scholarship awards. The first category is the enrollment and graduation decisions and the second one is the number of years of study once a student enrolls in the institution. In the first category, because of the binary nature of the responses (namely "enroll" or "not enroll"), logistic regression based models have been adopted to predict the probability of enrollment and the probability of graduation given that student enrolls. In the second case, decision tree model and regression analysis are adopted.
+To this end, a series of predictive models have been investigated to estimate 
+the two categories of responses from students to various levels of scholarship 
+awards. The first category is the enrollment and graduation decisions and the 
+second one is the number of years of study once a student enrolls in the 
+institution. In the first category, because of the binary nature of the 
+responses ("enroll" or "not enroll"), logistic regression based models 
+have been adopted to predict the probability of enrollment and the probability 
+of graduation given that student enrolls. In the second case, regression analysis are adopted.
 
 
-\noindent \textit{Phase II: Optimization Models.}  An integer linear program is designed to optimally allocate financial aid to applicants with an objective to maximize the revenue. The optimal problem by itself is subject to two constraints: the first one is the budget limitation on the total scholarship and the second one is the fairness of the award, which states that a student with higher academic performance must be be awarded an equal or higher level of scholarship than a student with lower academic performance. These two constraints make it impossible to solve the scholarship assignment models at individual levels, and the large number of pairwise fairness constraints requires the development of a customized algorithm to effectively solve the problem at the aggregate budget level.
+\noindent \textit{Phase II: Optimization Models.}  An integer linear model 
+is designed to optimally allocate financial aid to applicants with an 
+objective to maximize the revenue. The optimal problem by itself is subject 
+to two constraints: the first one is the budget limitation on the total 
+scholarship and the second one is the fairness of the award, which states 
+that a student with higher academic performance must be be awarded an equal 
+or higher level of scholarship than a student with lower academic 
+performance. These two constraints make it impossible to solve the 
+scholarship assignment models at individual levels, and the large number of 
+pairwise fairness  constraints requires the development of a customized 
+algorithm to effectively solve the problem at the aggregate budget level.
 
-To reduce computational burden, the concept of a minimum cardinality dominance set is developed, which has reduced the size of the model by orders of magnitude and enabled the efficient solution of the resulting mathematical model. Computation experiments show that the use of minimum cardinality dominance has achieved a dramatic reduction regarding model size. In a test case with pairwise comparison of more than 6,000 students, this reduced over 13.5 million constraints to only 191,000 constraints, which enables effective solution of the models.   In this particular case,  the original model is computationally unsolvable, actually running out of memory; despite the large model size, the reduced model can be solved in only minutes.
+To reduce computational burden, the concept of a minimum cardinality 
+dominance set is developed, which has reduced the size of the model by 
+orders of magnitude and enabled the efficient solution of the resulting 
+mathematical model. Computation experiments show that the use of minimum 
+cardinality dominance has achieved a dramatic reduction regarding model 
+size. In a test case with pairwise comparison of more than 5,200 students, 
+this reduced over 13.8 million constraints to only 191,000 constraints, 
+which enables effective solution of the models.  In this particular case,  
+the original model is computationally unsolvable, actually running out of 
+memory; despite the large model size, the reduced model can be solved in 
+only minutes.
 % * <meiqingtian@gmail.com> 2017-11-08T04:05:10.237Z:
 % 
 % > minimum dominance
@@ -453,7 +613,7 @@ To reduce computational burden, the concept of a minimum cardinality dominance s
 \section{Implementation and Financial Results}
 %The analysis based on the above framework was adopted by the institution under study and has in an overhaul of the scholarship design. The piecewise regression derived, composite score based scholarship award policy proves to be effective, and together with a proactive marketing strategy it has yielded an 11\% increase in directly admitted students under a similar budget. This translates into millions of dollars of revenue and significantly improves the university's bottom lines.
 
-The methodology based on the above framework was adopted by the institution under study and its use resulted in an overhaul of the scholarship design. The piecewise regression derived, composite score based scholarship award policy was used as the foundation for the scholarship award for the university in the 2013 to 2014 academic year. A proactive marketing approach has been taken where the enrollment and admission office has obtained data on student performance from ACT and potential students are awarded the scholarship before they even apply. This has yielded an significant increase in directly admitted students under a similar budget. 
+The methodology based on the above framework was adopted by the institution under study and its use resulted in an overhaul of the scholarship design. The piecewise regression derived and composite score based scholarship award policy was used as the foundation for the scholarship award for the university in the 2013 to 2014 academic year. A proactive marketing approach has been taken where the enrollment and admission office has obtained data on student performance from ACT and potential students are awarded the scholarship before they even apply. This has yielded an significant increase in directly admitted students under a similar budget. 
 
 Table \ref{enroll_stats1} presents the enrollment statistics for the university in the 2012 - 2013 and 2013 - 2014 academic year after the new policy was applied:
 
@@ -488,24 +648,24 @@ The research studies the optimal allocation of scholarships that faces the enrol
 \textbf{Limitation.} The prediction of student's enrollment decision is by itself a hard problem,  because enrollment in a particular institution is determined by many factors that are not available to the institution.  For example, it is well known that a student's enrollment decision is affected by family influence and aspiration level, which are not available to any institution without detailed survey studies.  The research is also limited by the availability of data provided by the institution under study.   Nevertheless, the methodology proposed in this research could potentially be applied to similar college universities where merit-based aid could be an effective tool to attract students.
 
 \vspace{0.25in}
-\noindent \textbf{Organization of the Thesis.} The remainder of the thesis is organized as follows. Section 2 presents a review of related literature. Section 3 presents the predictive models based on logistic regression on the probability of enrollment and graduation and Section 4 presents the predictive models for the number of years of study; Section 5 presents the mathematical models and techniques for computational improvement. Section 6 presents the policy development and implementation results, and finally section 7 presents the conclusion and  future research.
+\noindent \textbf{Organization of the Thesis.} The remainder of the thesis is organized as follows. Section 2 presents a review of related literature. Section 3 presents the predictive models based on logistic regression on the probability of enrollment and graduation and Section 4 presents the predictive models for the number of years of study. Section 5 presents the mathematical models and techniques for computational improvement. Section 6 presents the policy development and implementation results, and finally Section 7 presents the conclusion and  future research.
 
 \chapter{Literature Review}
 %Enrollment management has provided a fertile ground for advanced statistical and data analytical studies. These studies can be categorized into the following areas: prediction of headcount \citep{Chang2006}, financial aid allocation \citep{leedsthe2014, Dynarski2003}, marketing strategies \citep{pandeyAdvertise}, retention studies \citep{grossinstitutional2015, Dynarski2003, Herzog2006}, course offering and evaluation \citep{SurjeetClassEnroll,luan2006courseoffer}, and graduation rate studies \citep{Bailey2006}.  %For details on some of these studies, please see \citep{Luan2006}.
-The solution of the financial aid allocation problems requires innovative models and techniques that draw insights from data mining and optimization techniques; as such, it is necessary to first look at traditional research such as the macro-level student demand studies and the micro-level students college choice models and to understand  thoroughly the underlying factors, financial aid being one of them, that affect the decision-making process of potential students.
+The solution of the financial aid allocation problems requires innovative models and techniques that draw insights from data mining and optimization techniques; as such, it is necessary to first look at traditional studies such as the macro-level student demand studies and the micro-level students college choice models and to understand  thoroughly the underlying factors, financial aid being one of them, that affect the decision-making process of potential students.
 
 \section{Macro-Level Student Demand Models}
 Early enrollment research studies stemmed from economics and were prompted to answer the questions related to the effect of raising the price of education on enrollment decisions. These questions include  ``What happens to enrollment when colleges and universities raise their prices?''  ``Who, if anyone, is sent away?''  ``What is the net impact of higher prices and reduced enrollments upon institutional finances?''  These questions  lead to what are called ``the student demand studies'', as an outgrowth of demand theory in economics \citep{Leslie1987,  Leslie1988, Heller1997, Ehrenberg2004, Crouse2015}.
 
-Demand theory holds that the quantity of a particular good is a function of price, the income of the buyers, the prices of other goods, and the buyers' tastes or preferences. In the student demand studies, these factors relate to tuition, financial aid (if viewed as a discount), income, race, student preferences et cetera.
+Demand theory holds that the quantity of a particular good is a function of price, the income of the buyers, the prices of other goods, and the buyers' tastes or preferences. In the student demand studies, these factors relate to tuition, financial aid (viewed as a discount), income, race, student preferences et cetera.
 
 \subsection{Student Demand Theory on Tuition}
-\citet{Leslie1987} presented an early review of literature on the relationship between price and enrollment in higher education. The authors studied the student demand and utilized meta-analytic methods to review 25 empirical student demand works in the 1980s. The results show that:
+\citet{Leslie1987} presented an early review of literature on the relationship between price and enrollment in higher education. The authors reviewed 25 empirical student demand works in the 1980s. The results show that:
 
 \blockquote{higher prices reduce higher education enrollments, that students historically have been more responsive to tuition prices than to (offsetting) student aid, and that low-income students are most sensitive to price changes, as are students in public versus private institutions.}
 
-Many more studies have been released ever since the meta-analysis in \citep{Leslie1987}. These research 
-studies reached similar conclusions, i.e., higher prices reduce higher education enrollments.  For example, \citet{Leslie1987} derived the calculation of a student price response coefficient (SPRC) and 
+Many more studies have been released since then. These research 
+studies reached similar conclusions: higher prices reduce higher education enrollments.  For example, \citet{Leslie1987} derived the calculation of a student price response coefficient (SPRC) and 
 found that the mean price response is about -0.7\%.  \say{That is, for every \$100 increase in  tuition price, given  year 1982 - 1983 average weighted higher education prices of \$3,842 for tuition and room  and board, one would expect an 18 - 24 year old participation rate drop of about three-quarters of a  percentage point} (p,188).
 
 The findings from these student demand studies with respect to tuition seem to suggest that higher prices reduce higher education enrollments, or as tuition increases, many high school students can not afford college and enrollment might decrease; yet this has not been observed in practice and a large number of students do attend college over the period being examined. \citet{Leslie1987} explained the quandary and the answer was partially due to the ameliorating effects of financial aid. 
@@ -514,9 +674,9 @@ The findings from these student demand studies with respect to tuition seem to s
 \citet{Leslie1988}, in a later study, reviewed 45 econometric analyses of relationships 
 between student financial aid and college enrollment and pointed out that, i.e., receiving a financial aid has a significant positive effect on the student's decision to the institution.  \citet{Heller1997} provided a literature and summarized the results of these studies on the effects of different forms of financial aid , which are separate from the tuition. 
 
-\citet{JACKSON198815} used a cross-sectional analysis of the determinants of the demand for colleges.  The results show that financial aid recipients were 6.5 percent and 7.8 percent more likely to enter colleges in 1972 and 1980 respectively than those who did not receive any financial aid . \citet{Braunstein1999} found that for every \$1,000 increase in financial aid, the probability of enrollment increased between 1.1\% and 2.5\%. \citet{Crouse2015} studied the nationwide tuition elasticity of for public two-year colleges and found that at the mean, a \$100 increase in tuition resulted a decline in enrollment of about 0.883\%.
+\citet{JACKSON198815} used a cross-sectional analysis of the determinants of the demand for colleges.  The results show that financial aid recipients were 6.5 percent and 7.8 percent more likely to enter colleges in 1972 and 1980 respectively than those who did not receive any financial aid. \citet{Braunstein1999} found that for every \$1,000 increase in financial aid, the probability of enrollment increased between 1.1\% and 2.5\%. \citet{Crouse2015} studied the nationwide tuition elasticity of for public two-year colleges and found that at the mean, a \$100 increase in tuition resulted a decline in enrollment of about 0.883\%.
 
-Many universities are trying to find a balance between tuition income and financial aid
+Many universities are trying to find the balance between tuition income and financial aid
 spending.  According to \citep{Hossler1998}, it was uncommon for schools to spend more than
 10\% to 15\% of the tuition revenue as scholarship. However, private colleges now can have a 
 high tuition and as high as 25\% to 30\% tuition discount. On the other hand, public schools
@@ -537,10 +697,9 @@ The effects on the increasing tuition and the \textit{targeting effects} of fina
 the students are different. For example, although all students are effected by the raising 
 tuition, however, not all the students react the same to the financial aid: universities could
 offer extra targeted financial aid toward students with various background.
-
-For example, ``do students from wealthier families have the same sensitivity to tuition 
+For example,  questions such as ``do students from wealthier families have the same sensitivity to tuition 
 increase compared to those from poorer families?",  ``Do white students react to financial aid 
-awards in a fashion as black students"?
+awards similar to black students?" need to be answered.
 
 \subsubsection{$\bullet \quad$  Targeting Effect of Financial Aid on Students with Varying 
 Characteristics }
@@ -558,7 +717,7 @@ tuition and aid than are students from middle- and upper-income families} \citep
 \noindent \textit{Race:}  Research studies have consistently found that ``African American 
 students and Latino students are more cost sensitive and more responsive to financial aid 
 offers than majority students of similar
-socioeconomic background''  and ``for Hispanic students, the results are mixed " 
+socioeconomic background''  and ``for Hispanic students, the results are mixed" 
 \citet{Hossler1989}.
 
 \vspace{0.15in}
@@ -566,7 +725,7 @@ socioeconomic background''  and ``for Hispanic students, the results are mixed "
 enrolled \citep{chapman1987college}. The reason is that high-caliber students usually 
 receive offers and scholarships from many universities and they tend to choose the 
 universities with the highest reputation or highest scholarship. As a result, university
-has to offer a large scholarship to high-caliber students to2 complete with other university.
+has to offer a large scholarship to high-caliber students to complete with other university.
 
 
 
@@ -584,24 +743,24 @@ Adams Scholarship, to name a few.
 
 \citet{Dynarski2000} studied the impact of aid on the college attendance of middle- and upper-
 income youth by evaluating Georgia's HOPE scholarship and the results suggest a large impact on 
-the attendance. They found that each \$1,000 in aid (\$1998) increased the college attendance 
+the attendance. They found that each \$1,000 in aid increased the college attendance 
 rate in Georgia by 3.7  to 4.2 percent. The author also found evidence that the HOPE program
 actually widened the racial and income gaps in the enrollment.
 
 
 \citet{Dynarski2003} studied the impact of the elimination of the social security student benefit 
-program. The author estimated that an offer of \$1000 in grant aid increases the probability of  
+program. The author estimated that an offer of \$1,000 in grant aid increases the probability of  
 enrollment by about 3.6 percent.
 
 \citet{Cohodes2014} applied a regression discontinuity design to study a Massachusetts merit aid 
 program and the students' enrollment decisions and rates of degree completion.  They found that 
-students are willing to sacrifice college quality given relatively little financial aid, but that 
+students are willing to sacrifice college quality given relatively little financial aid,  that 
 students who made this decision were less likely to matriculate on average, diminishing the value 
 of the extra enrollments.
 
 \citet{Turner2002} found that the Pell Grant, the largest source of federal grants for college, 
 has a positive effect on enrollment of potential students in their twenties and thirties.  It has 
-also been pointed out that though loans are the dominant form of aid today, little is known about 
+also been pointed out that though loans are the dominant form of aid today, little is known about how do
 they affect student behaviors \citep{Dynarski2013}. 
 
 \citet{Abraham2006} studied the District of Columbia's Tuition Assistance Grant Program (DCTAG) and concluded that under the program, the number of university applicants increases largely,
@@ -620,25 +779,22 @@ categories include \say{the estimation of rates of return to
 higher education; determinants of college enrollment, college graduation, and
 choice of major; studies of the academic labor market; studies relating to
 models of university behavior; and studies relating to higher education as an
-industry and higher education governance}.
-Finally, for some more recent 
-reviews of the student demand studies, please see \citep{Dynarski2002, Dynarski2003, 
-Dynarski2000, Dynarski2013}.
+industry and higher education governance}.Finally, for some more recent reviews of the student demand 
+studies, please see \citep{Dynarski2002, Dynarski2003, Dynarski2000,  Dynarski2013}.
 
 Though financial aid can improve college access and completion, the actual enrollment and
 completion of college is not good as we assume due to the program delivery and other factors.
-\citet{Winters2015}  found there is 
-no statistical evidence on the effectiveness of certain state-based merit aid programs on 
-college completion.
+\citet{Winters2015}  found there is no statistical evidence on the effectiveness of certain state-based merit aid 
+programs on college completion.
 
 \section{Enrollment Prediction at Micro-Level}
 The student demand studies investigate, at the macro level, enrollment decisions associated with students, yet it is still very hard to use these studies to evaluate the micro-level individual student's decision to enroll in particular schools. \citet{Carter2011} pointed out that ``published research using market-level data, though appropriate for national policy debates, is not necessarily useful for governance decisions at the university level".
 
-\subsection{College Choice Process / Models} 
+\subsection{College Choice Process and Models} 
 The prediction of whether a student will attend a particular college is quite challenging.  For example,  it is well known that financial aid is one of the many variables that affect a students enrollment decision, but students may still turn down a full-ride
 if they are admitted by a prestigious college.  As such, it is critical to understand the decision process and its related factors. These models are referred to as the college choice process models, which aim to address the following questions \citep{Paulsen1990}:
 \begin{quote}
-(1) What factors are important to students of nontraditional age in making college decisions? (2) What are the phases of the college choice process? (3) What factors are important in creating a desire to attend college? (4) Why is the college search and application phase so important? (5) How can an institution more effectively manage enrollment in the selection and attendance phase?
+(1) What factors are important to students of non-traditional age in making college decisions? (2) What are the phases of the college choice process? (3) What factors are important in creating a desire to attend college? (4) Why is the college search and application phase so important? (5) How can an institution more effectively manage enrollment in the selection and attendance phase?
 \end{quote}
 
 \citet{Jackson1978} derived a general model of students' post secondary decision processes as a function of ten variables, 
@@ -646,13 +802,22 @@ including background, aspiration, and friends. The author also stated that \say{
 attention if one wishes to weigh one background factor against another, or to determine which factors act upon the system and which 
 act within}.
 
-\citet{Paulsen1990} studied students' college choices to understand why students choose to attend one particular college over 
-another.  Micro-level enrollment model studies college choice behavior: estimate the probability of enrollment decision of 
-individual student for a particular school.
+\citet{Paulsen1990} studied students' college choices to understand why 
+students choose to attend one particular college over the other.
+
+Micro-level enrollment model studies college choice behavior: estimate the 
+probability of enrollment decision of individual student for a particular 
+school.
 
 
 \subsection{Micro-level Response to Financial Aid and Its Optimization} 
-Given the various factors in the college choice process, it would be desirable to predict a student's response to the enrollment decision at a university.  In many respects, this problem is similar to the target marketing problem which are applicable to many other industries. One part of the targeting marketing problem is to make individual level offer decisions \citep{Venkatesan2004}, and the problem of how does financial aid impact on the admission decision has many similarities with it.  For example, similar to \citep{Carter2011}, this thesis uses an individual customer response model and proposes  models to optimize the aid allocation.
+Given the various factors in the college choice process, it would be desirable to predict a student's response 
+to the enrollment decision at a university.  In many respects, this problem is similar to the target marketing 
+problem which are applicable to many other industries. One part of the targeting marketing problem is to 
+make individual level offer decisions \citep{Venkatesan2004}, and the problem of how does financial aid 
+impact on the admission decision has many similarities with it.  For example, similar to \citep{Carter2011}, 
+this thesis uses an individual customer response model and proposes  models to optimize the aid 
+allocation.
 
 \vspace{0.15in}
 
@@ -666,15 +831,22 @@ Given the various factors in the college choice process, it would be desirable t
 % The approach yielded an enrollment base with a higher average SAT score when applied.
 
 
-\citet{Carter2011} modeled individual student's choice and derived market level implications via upward aggregation to get college enrollment estimations. The authors are able to capture the real-time response of 
-candidate schools of the student as well as the differentiating factors in inter-university competition.
-The paper proposed the use of tuition elasticities estimated by college and showed that \say{elastic demand can have deleterious effects on the quality of an incoming class even when demand for seats far outstrips supply}.
+\citet{Carter2011} modeled individual student's choice and derived market level implications 
+via upward aggregation to get college enrollment estimations. The authors are able to capture 
+the real-time response of candidate schools of the student as well as the differentiating 
+factors in the inter-university competition.
 
-\citet{Belloni2012} recently combines the optimal admission, scholarship decisions, and the choice of customized marketing offers 
-to attract a desirable groups of students.  The authors pointed out that this is a large targeted  marketing and price 
-discrimination problem and required a tailored approach to exploit the particular setting.  The approach attempts to target a 
-cohort of students based on an expected profile and then offer customized scholarship. The approach is tested in a field study of 
-an MBA scholarship assignment process, and scholarship decisions were adjusted based on its results.
+The paper proposed the use of tuition elasticities estimated by college and showed that 
+\say{elastic demand can have deleterious effects on the quality of an incoming class even when 
+demand for seats far outstrips supply}.
+
+\citet{Belloni2012} recently combines the optimal admission, scholarship decisions, and the 
+choice of customized marketing offers to attract a desirable groups of students.  The authors 
+pointed out that this is a large targeted marketing and price discrimination problem which 
+required a tailored approach to exploit the particular setting.  The approach attempts to 
+target a cohort of students based on an expected profile and then offer customized 
+scholarship. The approach is tested in a field study of  an MBA scholarship assignment process, 
+and scholarship decisions were adjusted based on its results.
 
 It bears mentioning that most of these studies tried to solve the college choice problem at the individual level, i.e. determine the value of the scholarship  to a given student, but did not address the question that how to optimally allocate a scholarship budget at school level. What's more, these studies did not address the allocation of financial aid for students with various socioeconomic characteristics, and thus did not fundamentally address the university's optimal scholarship allocation problems to reach institutional goals such as to maximize revenue.  Though there have been a lot of mathematical models in various other industries, the use of mathematical models for enrollment management and financial aid allocation is rather limited.
 
@@ -683,10 +855,10 @@ Statistical models have been widely used in these macro-level student
 demand studies and micro-level student choice and prediction models. 
 For macro-level, the decision to be observed is the percentage of 
 enrolled students, and cross-sectional statistical regression 
-analysis is often used at the macro level. For micro-level, however, 
-the probability of "enroll" or "do not enroll" is not directly 
+analysis is often used at the macro-level. For micro-level, however, 
+the probability of "enroll" or "not enroll" is not directly 
 observed, and only binary outcomes are observed. Logistic regression 
-is typically adopted at the micro level, as it is used to predict 
+is typically adopted at the micro-level, as it is used to predict 
 binary outcomes.
 
 \subsection{Regression Models in Student Demand Studies}
@@ -699,18 +871,32 @@ let $S_i$ measuring student's decision such as matriculation, completion, and nu
 
 % \citet{Dynarski2002} investigated how to estimate these parameters in the faces of correlation.
 
-\subsubsection{$\bullet \quad$  The Inclusion of Time Series Variables in the Model} Hybrid approaches that combine multivariate analysis and time series can be seen in studies such as \citet{Heller1999}. In the examination of sources of variation in state spending on need-based aid, merit-based aid, and appropriations over the period 1990 to 2010, \citep{McLendon2014} uses the lagged value of an outcome variable itself as a variable in a regression model to forecast the state spending on need-based and
-merit-based financial aid.
-
-. \citep{Lavilles2012} applied three types of time series models to forecast the number of students enrolled in a class.
+\subsubsection{$\bullet \quad$  The Inclusion of Time Series Variables in 
+the Model} Hybrid approaches that combine multivariate analysis and time 
+series can be seen in studies such as \citep{Heller1999}. In the 
+examination of sources of variation in state spending on need-based aid, 
+merit-based aid, and appropriations over the period 1990 to 2010,  
+\citet{McLendon2014} used the lagged value of an outcome variable itself 
+as a variable in a regression model to forecast the state spending on 
+need-based and merit-based financial aid. \citet{Lavilles2012} applied 
+three types of time series models to forecast the number of students 
+enrolled in a class.
 
 \subsubsection{$\bullet \quad$  The Inclusion of External Change Variables in the Model} 
 
-\citet{Dynarski2003} argued that \say{the traditional approach to regress a person's educational attainment against covariates and the aid for which he is eligible and interpret the coefficient on aid as its causal effect} is problematic because of the complex nature of various characteristics which impact the matriculation decision. To identify the effect of financial aid, the authors suggest adding variation to the financial aid which is exogenous to unobservable factors that influence the matriculation.  A similar approach was used in \citep{Dynarski2003, Abraham2006},
+\citet{Dynarski2003} argued that \say{the traditional approach to regress 
+a person's educational attainment against covariates and the aid for 
+which he is eligible and interpret the coefficient on aid as its causal 
+effect} is problematic because of the complex nature of various 
+characteristics which impact the matriculation decision. To identify the 
+effect of financial aid, the authors suggest adding variation to the 
+financial aid which is exogenous to unobservable factors that influence 
+the matriculation.  A similar approach was used in \citep{Dynarski2003, 
+Abraham2006}.
 
 \citet{Curs2002} argued that application and enrollment decisions are correlated because the applicants from the pool share
 many similar features. Probit models were used to predict: first, the enrollment decision and second, the individual response
-to the net-price. The results show that in-state and out-of-state students react differently to the net-price changes(elasticity)
+to the net-price. The results show that in-state and out-of-state students react differently to the net-price changes (elasticity)
 and the differences are sensitive to both price variation exerted on both individuals and over time. 
 
 \subsection{Logistic Regression Models in Student Choice Response Studies}
@@ -726,18 +912,29 @@ Logistic regression has been used mostly for predicting enrollment levels and mo
 \citet{lr_1_chang} presented a case study of data mining in enrollment management and used logistic regression to predict the 
 student's probability of admission. This probability is then utilized by the institution to form a referral pool of highly prospective students for direct marketing outreach.
 
-\citet{lr_2} chose logistic regression to predict two stages in admission and enrollment. In the first stage, they predicted the probability of acceptance of each applicant. The results helped institutes to understand the features of potential incoming students such as geographical diversity, ethnicity, and academic  performance. In the second stage, the enrollment probability of an admitted  student was calculated. In this stage, they found that academically strong students are less likely to enroll.
+\citet{lr_2} chose logistic regression to predict two stages in admission 
+and enrollment. In the first stage, they predicted the probability of 
+acceptance of each applicant. The results helped institutes to understand 
+the features of potential incoming students such as geographical 
+diversity, ethnicity, and academic  performance. In the second stage, the 
+enrollment probability of an admitted  student was calculated. In this 
+stage, they found that academically strong students are less likely to 
+enroll.
 
-\citet{Braunstein1999} analyzed the impact of financial and socioeconomic factors on  enrollment. They found that, by using logistic regression, the probability of enrollment increased between 1.1\% and  2.5\% with every \$1,000 increase of financial 
-aid.
+\citet{Braunstein1999} analyzed the impact of financial and socioeconomic 
+factors on  enrollment. They found that, by using logistic regression, 
+the probability of enrollment increased between 1.1\% and  2.5\% with 
+every \$1,000 increase of financial aid.
 
-\citet{lr_aid2} applied logistic regression to see the impact of financial aid amounts  of different racial groups. Their results have shown that overall, grants and  combinations of loans and grants have a positive impact on enrollment;  however, different impact patterns were  found among individual racial groups.
+\citet{lr_aid2} applied logistic regression to see the impact of 
+financial aid amounts  of different racial groups. Their results have 
+shown that overall, grants and  combinations of loans and grants have a 
+positive impact on enrollment;  however, different impact patterns were  
+found among individual racial groups.
 
 %For the use of logistic regression model in other enrollment management domains, please  see \citet{lr_retention2} on a relationship study between freshmen year retention and  exposure to part-time faculty, and \citep{lr_alumni1,lr_alumni2} on the study on the  prospect of alumni who are likely to donate.
 
-
-Other studies in the individual enrollment prediction include Bayesian-based methods or decision-tree based analysis.  
-
+Other studies in the individual enrollment prediction include Bayesian-based methods or decision-tree based analysis. 
 For example, \citet{Thanh2007} applied Na{\"\i}ve Bayes  from Bayesian network to predict the probability of enrollment and developed  an ensemble model to overcome highly skewed data to increase the accuracy of  the prediction results. 
 
 \citet{dt_enroll_india} proposed an application of decision tree models, specifically the C4.5 method with an attribute selection measure function to predict the enrollment of engineering students. %The rationale behind the proposed algorithm is that the split information never approaches zero so that the generated rule set and the decision tree is stable. Then the C5.0 and artificial neural network were chosen to compare the prediction accuracy of the model.
@@ -786,7 +983,7 @@ the leading factors of retention and graduation rates for decision makers.
 Recall that the first phase of the proposed research is the predictive models for the probability of enrollment, length of studies, and the probability of graduation. The prediction models for the probabilities are based on some variant of logistic regression and presented in this chapter, and the prediction models for the length of studies are based on some variant of regression analysis and are presented in the next chapter. 
 
 \section{Data Exploration and Visualization}
-The data used in this study have been provided by the institutional research department at the  university and consists of  applications that span seven years from 2006 to 2013. 
+The data used in this study were provided by the institutional research department at the  university and consists of  applications that span seven years from 2006 to 2013. 
 
 \noindent \textbf{Application Counts}. In these seven years, there are a total of 47,932 applications; 8,072 applications were not granted admission due to incomplete information or not meeting the admission requirements, and 35,331 were granted admission. Out of the 35,331 admitted applications, 17,180 were enrolled, 18,151 were not; 44,994 (93.8\%) of the applications are from instate, 2,971 are from out-of-state. As financial aid awards for out-of-state (including international) students are different from in-state students, these out-of-state applicants are removed from the analysis. Home-schooled applications (104) and applications to a satellite campus (1,796) are also removed from the analysis. This leaves a total of 35,331 applications, and the statistics of the number of enrolled (yes) and not enrolled (no) applications in each year are shown in Table \ref{enroll_year_sum}.
 
@@ -802,7 +999,7 @@ Not Enrolled   & 2,092  & 2,197  & 2,559  & 2,525  & 2,843  & 2,976  & 2,959\\ \
 \end{table}
 
 \vspace{0.15in}
-\noindent \textbf{Variables}. The variables associated with these applications can be classified into the following categories: 1) academic performance, 2) financial status, and 3) personal information. The academic performance category includes the applicant's SAT/ACT  scores, GPA, high school, high school report card, and high school percentile. The  financial status category includes family income, expected family contribution (EFC), and Pell Grant award. The personal information category includes gender,  ethnicity, distance from the institution, and the applicant's intended colleges and majors.
+\noindent \textbf{Variables}. The variables associated with these applications can be classified into the following categories: academic performance, financial status, and personal information. The academic performance category includes the applicant's SAT/ACT  scores, GPA, high school, high school report card, and high school percentile. The  financial status category includes family income, expected family contribution (EFC), and Pell Grant award. The personal information category includes gender,  ethnicity, distance from the institution, and the applicant's intended colleges and majors.
 
 In the academic performance fields, the ACT score was normalized by translating it into a percentile.
 In the financial status fields, expected family contribution (EFC) measures an applicant's family's financial strength. The Federal Pell Grant is a need-based grant for low-income students and is dependent on EFC. To better estimate an applicant's affordability, two more variables are introduced: total free money and out of pocket. The former defines all the awards that an applicant gets while the latter is the total out-of-pocket money an applicant pays.
@@ -853,8 +1050,9 @@ Financially, among the applicants, the average awarded scholarship is \$1452, an
 % 
 % 
 % ^.
+
 \vspace{0.15in}
-\noindent \textbf{Distribution of matriculated students on numeric variables. }  The distributions   across selected categorical  variables related to enrolled applications  are presented in Table \ref{continuous_matriculated}. The table is organized similar to Table \ref{continuous_applications}.
+\noindent \textbf{Distribution of matriculated students on numeric variables. } The distributions   across selected categorical  variables related to enrolled applications  are presented in Table \ref{continuous_matriculated}. 
 
 \begin{table}[H]
 \centering
@@ -1412,7 +1610,7 @@ of the most popular procedures and is adopted in this study \citep{konishi2008in
 The stepwise variable selection includes backward elimination, forward selection, and bidirectional elimination. A backward stepwise regression, for example, works as follows: a) start with the full model with all predictors; b) subtracting one predictor at a time, removing the predictor if doing so improves accuracy; and c) iterate until no further improvement. 
 
 
-To determine the best models in the process, several criteria have been proposed, and for logistic regression, the most common ones are BIC, AIC, and AICc. In this paper, the AIC is adopted due to its popularity.  There is always a trade-off between model simplicity and accuracy, and the AIC methods determine whether additional variables are justified. For details, please see \citep{wagenmakers2004aic}
+To determine the best models in the process, several criteria have been proposed. For logistic regression, the most common ones are BIC, AIC, and AICc. In this paper, the AIC is adopted due to its popularity.  There is always a trade-off between model simplicity and accuracy, and the AIC methods determine whether additional variables are justified. For details, please see \citep{wagenmakers2004aic}.
      
 In an enrollment model, say with n predictor variables, to get the optimal model, a brute-force approach would have to evaluate $2^{n}$ possible models. The stepwise variable selection evaluates only a limited number of models and presents a heuristic solution to the problem in a fraction of the time.  
 
@@ -1535,7 +1733,7 @@ The data from academic years  2008-2009 to 2011-2012 is used as training data an
 %\noindent \textit{Parameter Estimation for Logistic Regression Models for Enrollment Management} 
 The summary statistics for major variables in the logistic regression selected by the backward stepwise selection for enrollment are shown in Table \ref{lr_summary}. In the table, the  "estimate" column reports the odds ratio obtained from logistic regression, and an entry with value larger (smaller) than 1 represents that as the corresponding value increases, the odds would  increase (decrease). For other fields, please see \citep{DesJardins2006, long2006regression}. 
 
-\begin{table}[H]
+\begin{table}[h]
 \centering
 \begin{adjustbox}{width=0.95\textwidth}
 \begin{tabular}{|lccclccc|} \hline %\hline
@@ -1599,8 +1797,8 @@ Table \ref{lr_summary2} shows the summary statistics of major variables in the l
 \caption{Summary statistics of logistic regression for graduation model}
 \label{lr_summary2}
 \begin{adjustbox}{width=0.95\textwidth}
-\begin{tabular}{|llllllll|} \hline %\hline
-Coefficients:                   & Estimate & Std. Error & z value & Pr(\textgreater|z|) & Significant & 5\%    & 95\%   \\
+\begin{tabular}{|lccccccc|} \hline %\hline
+Coefficients:                   & Estimate & Std. Error & z value & Pr(\textgreater|z|) & Significant & 5\%   & 95\%   \\ \hline
 (Intercept)                     & 2.6008   & 0.1576     & 3.1800  & 0.0015      & **          & 1.2737 & 2.1390 \\
 GPA                             & 2.6872   & 0.0505     & 7.9640  & 0.0000      & ***         & 1.3757 & 1.6242 \\
 ACT                             & 2.3540   & 0.0042     & -7.5840 & 0.0000      & ***         & 0.9622 & 0.9755 \\
@@ -1913,21 +2111,10 @@ However, it  bears mentioning that the prediction of these probabilities alone  
 
 \chapter {Prediction Models on the Number of Years of Study}
 Recall that the net tuition of a student is the difference between tuition and scholarship, and the scholarship is renewable. This chapter studies the models to address the question on the number of years of study once a student enrolls in the university. 
-% * <meiqingtian@gmail.com> 2017-11-19T21:22:45.597Z:
-% 
-% > scholarship
-% scholarship varies over the years?
-% 
-% ^.
+
 
 \section{Difference From a Retention Study}
 It bears mentioning that the prediction on the number of years of study is is different from retention studies in most literature reviews. In retention studies, the focus is what factors influence the retention, and by doing analysis, early stage hazards can be identified to improve retention rate.
-% * <meiqingtian@gmail.com> 2017-11-19T21:26:50.441Z:
-% 
-% > It bears mentioning
-% is there another way to say this? you keep using the same phrase over and over.
-% 
-% ^.
 
 Retention and dropout is affected by the interaction of students' pre-enrollment characteristics (academic performance, finance, ethnicity, etc.) and academic experience (peer group interactions, interaction with faculty, etc.) \citep{Tinto1975, Tinto1982, Terenzini1981}. Studies found that first-year students are the most vulnerable to drop out. Freshmen face drastic changes not only in  the form of the academic challenge but also all kinds of social challenges. Therefore retention of first-year students is mostly studied  \citep{Permzadian2016, Kovacic10earlyprediction, Horstmanshof2007, Noble2007}. Classification prediction methods such as logistic regression, decision tree, random forest, and neural networks were mostly used \citep{dekker2009, AdamGaither2005, quadri2010drop, yu2010data, Herzog2006, Lin2009,zhang2010using, Herzog2006}.
 
@@ -1937,7 +2124,7 @@ This study, however, is mainly focused on the use of pre-collegiate information 
 
 \section{Methods and Results}
 \subsection{Training and Testing Data}
-In this study, only records of enrolled students  during  the 2006, 2007, and 2008 academic years were utilized, as the the latest data obtainedis Fall semester 2012 and the cutoff value for the study is graduation within 5 years.   Among the enrolled students, 43\% were male, 57\% were female;  73.9\% Caucasian, African American 17.8\%,  2.1\% Asian, 2\% Hispanic, 4.2\% Others. 
+In this study, only records of enrolled students  during  the 2006, 2007, and 2008 academic years were utilized, as the the latest data obtained is Fall semester 2012 and the cutoff value for the study is graduation within 5 years.   Among the enrolled students, 43\% were male, 57\% were female;  73.9\% Caucasian, African American 17.8\%,  2.1\% Asian, 2\% Hispanic, 4.2\% Others. 
 
 The training data of this study is from the years 2006-2007 and 2007-2008 when 3,999 students were enrolled. The testing data is from the year 2008-2009 when 2,355 students were enrolled. %Since the data collection ends at 2012-2013, the latest year of stay for testing data is 4.5 years. There are two types of matriculated students in the study: students leave the college with or without getting a degree. Students who graduate with a degree and without spending average 4.1 and 2.05 years respectively.
 %The dependent variable for how long will stay has the following levels: 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5. Students who stayed more than five years are removed from the analysis due to the rarity. Although the dependent variable is discreet, the problem is still a regression problem instead of a classification problem.
@@ -1957,7 +2144,7 @@ height=3.5in]{pic/years_in_school_vs_composite_score.eps}
 \end{comment}
 
 \subsection{Prediction Models}
-Various data mining models such as linear regression, support vector machine regression, random forest, CART, and stochastic gradient boosting can be used to predict the number of years of study and provide ranks on the importance of the variable and are presented below.
+Various data mining models such as linear regression, support vector machine regression, random forest, CART, and stochastic gradient boosting are used to predict the number of years of study and provide ranks on the importance of the variable and are presented below.
 
 %\subsubsection{Generalized Linear Model (GLM)}
 \vspace{0.15in}
@@ -2022,7 +2209,6 @@ are used to split the value of an attribute. $\overline{y_1}$ and $\overline{y_2
 
 \vspace{0.15in}
 \noindent \textbf{Model Metrics.} To evaluate the performance of the model, the Root Mean Square Error (RMSE)  and the mean absolute error (MAE) are commonly used. 
-
 RMSE is the square root of the average square of the difference between our predicted and actual values. RMSE is in the same units as the predicted value.
 \begin{equation}
 RMSE:  \sqrt{\frac{1}{n}\sum_{n=1}^n (y_i-\hat{y}_i)^2}
@@ -2034,7 +2220,7 @@ MAE = \frac{1}{n}\sum_{i=1}^n \left| y_i - \hat{y_i}\right|
 \end{equation}
 
 \vspace{0.15in}
-\textbf{Model Implementation.} For SVM regression, we used linear kernel in R (implemented in e1071 package \citep{e1071} using default settings). For GLM, we used the base function in R base package. For stochastic gradient boosting, we used gbm package in R \citep{gbm}.
+\textbf{Model Implementation.} For SVM regression implementation, linear kernel in R's  e1071 package \citep{e1071} using default settings. For GLM,  base function in R base package was used. For stochastic gradient boosting, gbm package in R \citep{gbm} was used.
 
 \subsection{Experiment Results}
 Two sets of experiments were conducted to evaluate the model's performance. The 
@@ -2047,7 +2233,7 @@ results of the prediction models are as shown below:
 
 \begin{table}[H]
 \centering
-\caption{Model results for 10 fold validation and validation on test data}
+\caption{Model results of number of years of study}
 \label{num_year}
 \begin{tabular}{|c|c|c|c|c|} \hline
                              & \multicolumn{2}{c|}{10-Fold Cross Validation} &
@@ -2067,7 +2253,7 @@ The results show that the tree-based methods (decision trees and stochastic grad
 \caption{Summary statistics of linear regression for number of years of study }
 \label{LR_num_years}
 \begin{adjustbox}{width=0.95\textwidth}
-\begin{tabular}{|llllllll|} \hline %\hline
+\begin{tabular}{|lccccccc|} \hline %\hline
 Coefficients:                   & Estimate & Std. Error & z value & Pr(\textgreater|z|) & Significant & 5\%    & 95\%   \\
 
 (Intercept)                    &  -3.0276 & 1.3632  & -2.2  &  0.026 & *  &0.0033 & 0.7006 \\  
@@ -2367,7 +2553,7 @@ d^{r}_{i,j} =
 A minimum cardinality dominance matrix, defined as $D_m$, can be readily defined as: $$D_m = D_f - D_r $$
 
 \vspace{0.15in}
-\noindent \textit{Example:} By eliminating redundant relationships in the graph, the minimum dominance graph and matrix forms for the example are presented in Figure \ref{domin_matrix3}.
+\noindent \textit{Example:} By eliminating redundant relationships in the graph, the minimum dominance graph and matrix forms for the example are presented in Figure \ref{redundant1}.
 
 \begin{figure}
     \begin{floatrow}
@@ -2463,6 +2649,1302 @@ SSI                          & \multicolumn{5}{c|}{10,000}
 \label{ssi12k}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline   %\hline
+SSI     & \multicolumn{5}{c|}{12,000}                      
+\\ \hline 
+\multicolumn{1}{|l|}{Budget} & \multicolumn{1}{l|}{Integer Solution} &
+\multicolumn{1}{l|}{Linear Programming} & \multicolumn{1}{l|}{Optimality Gap} &
+\multicolumn{1}{l|}{\# Nodes} & \multicolumn{1}{l|}{Time} \\
+\hline
+1.4M   & 63,640,276         & 63,652,166           & 0.02\%         & 230           & 341  \\ \hline
+1.6M   & 63,656,200         & 63,667,992           & 0.02\%         & 31           & 174  \\ \hline
+1.8M   & 63,647,272         & 63,647,272           & 0.00\%         & 269          & 280  \\ \hline
+2.0M   & 63,683,212         & 63,688,055           & 0.01\%         & 0            & 48   \\ \hline
+2.2M   & 63,685,894         & 63,692,529           & 0.01\%         & 0            & 58   \\ \hline
+2.4M   & 63,676,591         & 63,688,012           & 0.02\%         & 49           & 159  \\ \hline
+2.6M   & 63,662,739         & 63,674,086           & 0.02\%         & 78           & 250  \\ \hline
+2.8M   & 63,668,398         & 63,669,711           & 0.00\%         & 0            & 51   \\ \hline
+3.0M   & 63,620,835         & 63,640,956           & 0.03\%         & 0            & 61   \\ \hline
+3.2M   & 63,565,618         & 63,568,716           & 0.00\%         & 1190         & 806  \\ \hline
+3.4M   & 63,523,681         & 63,526,856           & 0.00\%          & 529 		  & 323  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Computational statistics of optimization model under SSI=14,000}
+\label{ssi14k}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline %\hline 
+SSI     & \multicolumn{5}{c|}{14,000}                      
+\\ \hline
+\multicolumn{1}{|l|}{Budget} & \multicolumn{1}{l|}{Integer Solution} &
+\multicolumn{1}{l|}{Linear Programming} & \multicolumn{1}{l|}{Optimality Gap} &
+\multicolumn{1}{l|}{\# Nodes} & \multicolumn{1}{l|}{Time} \\
+\hline
+1.4M    & 65,673,717     & 65,686,331 & 0.02\%       & 256    &233                \\ \hline
+1.6M   & 65,729,171  & 65,736,548 & 0.01\%   & 300     &202                    \\ \hline
+1.8M   & 65,743,219   & 65,745,436 & 0.00\%       & 1191   & 470                \\ \hline
+2.0M  & 65,815,085   & 65,819,285 & 0.01\%   & 0  & 107                        \\ \hline
+2.2M   & 65,844,323   & 65,855,133 & 0.02\%     & 0  & 114                      \\ \hline
+2.4M   & 65,871,923   & 65,877,439 & 0.01\%     & 2   & 224                     \\ \hline
+2.6M      & 65,885,258     & 65,902,975 & 0.03\%     & 0       & 124                 \\ \hline
+2.8M   & 65,919,822      & 65,923,025 & 0.00\%   & 0      & 49                     \\ \hline
+3.0M    & 65,900,599    & 65,919,720 & 0.03\%   & 0    & 58                       \\ \hline
+3.2M  & 65,871,018    & 65,874,012 & 0.00\%  & 808    & 451                     \\ \hline
+3.4M      & 65,857,324     & 65,887,572 & 0.05\%   & 72    & 245                     \\ \hline
+\end{tabular}
+\end{table}
+
+The plots of optimization results are shown in Figure \ref{ssi_10k_plot}, Figure \ref{ssi_12k_plot} and, Figure \ref{ssi_14k_plot}. The horizontal axis represents the budget and the vertical axis the revenue. 
+
+
+\begin{figure}[ht]
+    \centering
+%    [width=5in, height=3.5in,scale=0.5]
+    \includegraphics[width=6in,height=3in,scale=0.5]{pic/ssi_10k.eps}
+    \caption{Optimization results for SSI = 10,000. }
+     \label{ssi_10k_plot}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+%    [width=5in, height=3.5in,scale=0.5]
+    \includegraphics[width=6in, height=3in, scale=0.5]{pic/ssi_12k.eps}
+    \caption{Optimization results for SSI = 12,000. }
+     \label{ssi_12k_plot}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+%    [width=5in, height=3.5in,scale=0.5]
+    \includegraphics[width=6in, height=3in,scale=0.5]{pic/ssi_14k.eps}
+    \caption{Optimization results for SSI = 14,000. }
+     \label{ssi_14k_plot}
+\end{figure}
+
+
+As can be seen in Figure \ref{ssi_10k_plot}, for SSI = 10,000, a 1.2 million budget yields the maximum  revenue return; for SSI  = 12,000, a 2.2 million budget yields the maximum revenue; for SSI  = 14,000, a  2.8 million budget yields the maximum revenue.  In all these figures, revenue increases at the beginning  as more financial aid is being allocated and more students are likely to enroll. However, after the point  where maximum revenue is reached, additional financial aid negatively affects net tuition and reduces  revenue and thus is not desired.  
+
+
+\begin{comment}
+\begin{figure}[ht]
+    \centering
+%    [width=5in, height=3.5in,scale=0.5]
+    \includegraphics[width=5in,height=2.5in,scale=0.3]{pic/ssi_14k.eps}
+    \caption{Optimization results under different budget SSI=14k }
+     \label{ssi_14k_plot}
+\end{figure}
+\end{comment}
+
+% \begin{figure}[ht]
+%    \centering
+%    \includegraphics[width=5in,height=2.5in,scale=0.3]{pic/act_10k.eps}
+% \end{figure}
+% \begin{figure}[ht]
+%    \centering
+%    \includegraphics[width=5in,height=2.5in,scale=0.3]{pic/act_12k.eps}
+% \end{figure}
+% \begin{figure}[ht]
+%    \centering
+%    \includegraphics[width=5in,height=2.5in,scale=0.3]{pic/act_14k.eps}
+% \end{figure}
+
+
+
+
+\begin{comment}
+
+\subsubsection {Extension with Program Capacity Variations}
+University have various units or programs, and typically with various
+capacities, that evolve over the years. Proactive marketing and optimization
+would help to attract as many students as possible to a business unit with
+capacity constraints, or minimal investment for a business unit with excess
+capacity (before layoffs or attrition).  The following additional notation is
+used in the development of capacity constraints.
+\begin{conditions*}
+U & &       \quad set of business units under study, indexed by u\\
+I_u & &     \quad set of students who are interested in business unit u\\
+N_u & &   \quad number of resources (such as faculty members) available for
+unit u\\
+C_u & &    \quad cost of a single resource\\
+\rho_u & & \quad supervising  rate or faculty-to-student ratio for a single
+resource in unit u\\
+Z_u & &    \quad the additional resource to be hired for each business unit u
+\end{conditions*}
+
+
+\begin{align}
+\sum_{i \in I_u}\sum_{m \in M} x_{i,m}\cdot p^e_{i,m}\leq \rho_u\cdot N_u +
+\rho_u\cdot Z_u  && \forall u \in U
+\end{align}
+
+This constraint states that total number enrolled (left hand size) has to be
+less than the current capacity of the program, plus additional hires if
+necessary.  The new hires can be added to the objective function.
+
+\end{comment}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Derivation of Scholarship Award Policies \& Implementation}
+
+The optimization result based on the above model could be sent to a general linear regression or decision tree for analysis to derive scholarship award policies.  These policies represent a simplified solution to the optimal allocation problem; as such, in the development of these policies, it would be desirable that they are simple to understand and do not lose the optimality of allocation. 
+
+
+\section{Derivation of Scholarship Award Policies}
+Scholarship award policies can be derived using the above model, which is based on general linear regression or decision tree.  Here the predictor or dependent variable is the amount of the award, and the independent variables are GPA, ACT scores, etc.  Although variables such as gender could affect the enrollment and graduation probabilities, aid allocation based on these variables is controversial. 
+As a result, in the derivation of financial aid policies, variables such as gender, family income and ethnicity are not considered in the design of a merit-based scholarship.
+
+\subsection{Scholarship Award Policy Based on Decision Tree }
+
+The decision tree analysis is used in the derivation of financial aid 
+policies.  In the past two decades, decision trees, as a decision support 
+tool, have been commonly used in various business domains, such as direct 
+mailing, on-line sales, customer retention and supplier selection, to 
+name a few \citep{Han2011}.
+
+Decision tree analysis is a tree-structured model. There are three types 
+of nodes in a decision tree: a) a root node that has no incoming edges; 
+b) an internal node with one incoming edge and one or more outgoing 
+edges; c) leaf node, which corresponds with a classification rule. Please 
+see \citep{Maimon2005} for more details.
+
+The financial aid policy initially obtained from the decision tree 
+analysis is presented in Figure \ref{FApolicybyDT}.  For example, for a 
+student with GPA = 4.0, ACT = 30, it passes to the right at the root node 
+(ACT < 26.5, no),  then to the right at node (GPA <3.85, no), and then to 
+the right at node (ACT <28.5, no),  which lands him at a scholarship of 
+\$5,339;   for  for a student with GPA = 3.5, ACT = 28, it passes to the 
+right at the root node (ACT < 26.5, No), then to the left at node (GPA 
+<3.85, yes), and then to the left at node (ACT <29.5, no), then to the 
+right at node (GPA<3,35, no), which lands him at a scholarship of 
+\$2,306.
+
+The decision tree analysis, though graphical, still seems a little complicated to reveal the intrinsic patterns of the award. 
+
+\begin{sidewaysfigure}
+\includegraphics[width=6.5in, height=4.5in]{pic/FA_DT_Result.eps}%
+\caption{Financial aid policy based on decision tree }
+\label{FApolicybyDT}
+\end{sidewaysfigure}
+ 
+\subsection{Scholarship Award Policy on Stepwise Regression}
+The more intuitive answer to the scholarship allocation from the optimization results is based on two observations; a) the composite score and 2) the piece-wise relations.  
+
+\vspace{0.1in}
+\noindent \textbf{1. Composite Score} 
+
+\noindent Table \ref{opt_scholar_act} presents the average financial aid with respect to the students' GPA and ACT scores. Here the row names represent the GPA scores, and the column names represent the ACT scores. The average financial aid awarded (based on the optimal results with a scholarship budget of \$2.4 million) is shown in the corresponding grid.
+
+These results suggest a strong relationship between the awards and both GPA and ACT scores. As a result, a \textit{composite score}, calculated as $10\times GPA + ACT $ was proposed by the enrollment team to capture the applicants' academic merits and used as the basis for the award.
+
+\begin{sidewaystable}[!htbp]
+ \resizebox{\linewidth}{175pt}{
+\begin{tabular}{@{\extracolsep{5pt}} |l|cccccccccccccccccc|c|}
+\hline
+GPA/ACT  & \multicolumn{1}{c|}{18}     & \multicolumn{1}{c|}{19}
+& \multicolumn{1}{c|}{20}          & \multicolumn{1}{c|}{21}          &
+\multicolumn{1}{c|}{22}          & \multicolumn{1}{c|}{23}   &
+\multicolumn{1}{c|}{24}          & \multicolumn{1}{c|}{25}          &
+\multicolumn{1}{c|}{26}        & \multicolumn{1}{c|}{27}         &
+\multicolumn{1}{c|}{28}          & \multicolumn{1}{c|}{29}          &
+\multicolumn{1}{c|}{30}          & \multicolumn{1}{c|}{31}         &
+\multicolumn{1}{c|}{32}          & \multicolumn{1}{c|}{33}          &
+\multicolumn{1}{c|}{34}          & 35     & Total \\ \hline
+1           &                                  &
+&                                  &                                  &     &
+&                                  &                                  &     &
+&                                  &                                  &
+&                                 &                                  &
+&                                  &        & 0           \\ \cline{1-1}
+\cline{20-20}
+1.1         &                                  &
+&                                  &                                  &
+&                           &                                  &
+&                                &                                 &
+&                                  &                                  &
+&                                  &                                  &
+&        & 0           \\ \cline{1-1} \cline{20-20}
+1.2         &                                  & 0
+&                                  &                                  &
+&                           &                                  &
+&                                &                                 &
+&                                  &                                  &
+&                                  &                                  &
+&        & 0           \\ \cline{1-1} \cline{20-20}
+1.3         & 0                                &
+&                                  &                                  &
+&                           &                                  &
+&                                &                                 &
+&                                  &                                  &
+&                                  &                                  &
+&        & 0           \\ \cline{1-1} \cline{20-20}
+1.4         &                                  & 0
+&                                  &                                  &
+&                           &                                  &
+&                                &                                 &
+&                                  &                                  &
+&                                  &                                  &
+&        & 0           \\ \cline{1-1} \cline{20-20}
+1.5         &                                  & 0
+&                                  &                                  &
+&                           &                                  &
+& 0                              &                                 &
+&                                  &                                  &
+&                                  &                                  &
+&        & 0           \\ \cline{1-1} \cline{20-20}
+2.5         & 0                                & 0
+& 0                                & 0                                & 0
+& 0                         & 0                                & 0
+& 0                              & 0                               & 0
+& 0                                &                                  & 0
+&                                  &                                  &
+&        & 0           \\ \cline{1-1} \cline{20-20}
+2.6         & 0                                & 0
+& 0                                & 0                                & 0
+& 0                         & 0                                & 0
+& 0                              & 0                               &
+& 1250                             & 1500                             &
+&                                  & 1500                             &
+&        & 25.8 \\ \cline{1-1} \cline{20-20}
+2.7         & 0                                & 0
+& 0                                & 0                                & 0
+& 0                         & 0                                & 0
+& 0                              & 0                               & 1500
+&                                  & 2000                             &
+&                                  &                                  &
+&        & 24.2 \\ \cline{1-1} \cline{20-20}
+2.8         & 0                                & 0
+& 0                                & 0                                & 0
+& 0                         & 0                                & 0
+& 0                              & 300                             & 1500
+& 2000                             &                                  &
+&                                  & 2500                             &
+&        & 39.4 \\ \cline{1-1} \cline{20-20}
+2.9         & 0.0                              & 0.0
+& 0.0                              & 0.0                              & 0.0
+& 0.0                       & 0.0                              & 0.0
+& 818.2                          & 1875.0                          & 2000.0
+&                                  &                                  &
+&                                  &                                  &
+&        & 63.4        \\ \cline{1-1} \cline{20-20}
+3           & 0.0                              & 0.0
+& 0.0                              & 0.0                              & 0.0
+& 0.0                       & 0.0                              & 1166.7
+& 1500.0                         & 2000.0                          & 2000.0
+& 2200.0                           &                                  & 3200.0
+&                                  &                                  & 5200.0
+&        & 216.3       \\ \cline{1-1} \cline{20-20}
+3.1         & 0.0                              & 0.0
+& 0.0                              & 0.0                              & 0.0
+& 0.0                       & 523.8                            & 1500.0
+& 1727.3                         & 2000.0                          & 2000.0
+& 2500.0                           & 2500.0                           &
+&                                  &                                  &
+& 7300.0 & 276.7       \\ \cline{1-1} \cline{20-20}
+3.2         & 0.0                              & 0.0
+& 0.0                              & 0.0                              & 0.0
+& 781.3                     & 1000.0                           & 1750.0
+& 2000.0                         & 2250.0                          & 2500.0
+& 2500.0                           & 2780.0                           & 3950.0
+& 5200.0                           &                                  &
+&        & 573.7       \\ \cline{1-1} \cline{20-20}
+3.3         & 0.0                              & 0.0
+& 0.0                              & 0.0                              & 647.1
+& 1000.0                    & 1613.6                           & 2000.0
+& 2315.8                         & 2500.0                          & 2920.0
+& 3200.0                           & 3866.7                           & 4200.0
+&                                  & 5200.0                           & 5200.0
+&        & 962.8       \\ \cline{1-1} \cline{20-20}
+3.4         & 0.0                              & 0.0
+& 0.0                              & 694.4                            & 1000.0
+& 1550.0                    & 2000.0                           & 2000.0
+& 2500.0                         & 2990.0                          & 3200.0
+& 3200.0                           & 4200.0                           & 4200.0
+&                                  &                                  &
+&        & 1185.1      \\ \cline{1-1} \cline{20-20}
+3.5         & 0.0                              & 0.0
+& 695.7                            & 1000.0                           & 1724.1
+& 2000.0                    & 2000.0                           & 2216.7
+& 2500.0                         & 3200.0                          & 3200.0
+& 3200.0                           & 4200.0                           & 4200.0
+&                                  & 5200.0                           &
+&        & 1696.7      \\ \cline{1-1} \cline{20-20}
+3.6         & 0.0                              & 545.5
+& 1000.0                           & 1000.0                           & 2000.0
+& 2000.0                    & 2357.1                           & 2500.0
+& 2864.0                         & 3200.0                          & 3200.0
+& 3800.0                           & 4200.0                           & 4200.0
+& 5200.0                           & 5200.0                           & 5200.0
+&        & 2148.1      \\ \cline{1-1} \cline{20-20}
+3.7         & 0.0                              & 1000.0
+& 1000.0                           & 1500.0                           & 2000.0
+& 2285.7                    & 2500.0                           & 2945.5
+& 3200.0                         & 3200.0                          & 3700.0
+& 4200.0                           & 4200.0                           & 5200.0
+& 5200.0                           &                                  & 5200.0
+&        & 2532.8      \\ \cline{1-1} \cline{20-20}
+3.8         & 0.0                              & 1000.0
+& 1000.0                           & 2000.0                           & 2000.0
+& 2500.0                    & 3006.9                           & 3200.0
+& 3200.0                         & 4014.8                          & 4200.0
+& 4200.0                           & 4900.0                           & 5200.0
+& 5200.0                           & 5200.0                           &
+&        & 3007.5      \\ \cline{1-1} \cline{20-20}
+3.9         & 666.7                            & 1000.0
+& 1000.0                           & 2000.0                           & 2000.0
+& 2500.0                    & 3200.0                           & 3200.0
+& 3680.0                         & 4200.0                          & 4200.0
+& 4644.4                           & 5200.0                           & 5200.0
+& 5200.0                           & 5200.0                           & 5200.0
+&        & 3360.4      \\ \cline{1-1} \cline{20-20}
+4           &                                  & 1000.0
+& 1000.0                           & 2000.0                           & 2000.0
+& 2500.0                    & 3200.0                           & 3200.0
+& 4200.0                         & 4808.7                          & 5200.0
+& 5200.0                           & 5200.0                           & 5200.0
+& 5200.0                           & 5200.0                           & 6542.9
+& 7300.0 & 4186.1      \\ \cline{1-1} \cline{20-20}
+4.1         &                                  & 1000.0
+& 1000.0                           & 2000.0                           & 2000.0
+& 2500.0                    & 3200.0                           & 3200.0
+& 4200.0                         & 5200.0                          & 5200.0
+& 5200.0                           & 5200.0                           & 5200.0
+& 5200.0                           & 5200.0                           & 7300.0
+&        & 3982.1      \\ \cline{1-1} \cline{20-20}
+4.2         & 1000.0                           &
+& 1000.0                           & 2000.0                           & 2000.0
+& 2500.0                    & 3200.0                           & 3200.0
+& 4200.0                         & 5200.0                          & 5200.0
+& 5200.0                           & 5200.0                           & 5200.0
+& 5200.0                           & 5200.0                           & 7300.0
+&        & 4175.0      \\ \cline{1-1}
+4.3         &                                  &
+&                                  &                                  & 2000.0
+& 2500.0                    & 3200.0                           & 3200.0
+& 4200.0                         & 5200.0                          & 5200.0
+& 5200.0                           & 5200.0                           & 5200.0
+& 5200.0                           & 5200.0                           & 7300.0
+&        & 4607.9      \\ \cline{1-1} \cline{20-20}
+4.4         &                                  &
+&                                  &                                  &
+&                           & 3200.0                           & 4200.0
+& 5200.0                         & 5200.0                          & 5200.0
+& 5200.0                           & 5200.0                           & 5200.0
+& 5200.0                           & 5200.0                           & 7300.0
+&        & 5125.0      \\ \cline{1-1} \cline{20-20}
+4.5         &                                  &
+& 1000.0                           &                                  & 2000.0
+& 2925.0                    &                                  & 5200.0
+& 5200.0                         &                                 & 5200.0
+& 5200.0                           &                                  & 5200.0
+& 5200.0                           & 6233.3                           &
+& 7300.0 & 4605.3      \\ \cline{1-1} \cline{20-20}
+4.6         &                                  &
+&                                  &                                  &
+& 4200.0                    &                                  &
+& 5200.0                         & 5200.0                          & 5200.0
+&                                  & 5200.0                           &
+& 5900.0                           & 7300.0                           & 7300.0
+&        & 5730.0      \\ \cline{1-1} \cline{20-20}
+4.7         &                                  &
+&                                  & 5200.0                           &
+&                           &                                  &
+& 5200.0                         & 5200.0                          & 6200.0
+&                                  &                                  & 8400.0
+& 8400.0                           & 8400.0                           &
+&        & 6377.8      \\ \cline{1-1} \cline{20-20}
+4.8         &                                  &
+&                                  &                                  &
+&                           &                                  &
+&                                & 5200.0                          & 6200.0
+&                                  & 6200.0                           &
+&                                  &                                  &
+&        & 5866.7      \\ \hline
+Grand Total & \multicolumn{1}{c|}{7.2} & \multicolumn{1}{c|}{92.7} &
+\multicolumn{1}{c|}{166.2} & \multicolumn{1}{c|}{428.7} &
+\multicolumn{1}{c|}{787.1} & \multicolumn{1}{c|}{1206} &
+\multicolumn{1}{c|}{1664.8} & \multicolumn{1}{c|}{2112} &
+\multicolumn{1}{c|}{2642.1} & \multicolumn{1}{c|}{3407.5} &
+\multicolumn{1}{c|}{3835.6} & \multicolumn{1}{c|}{3981.3} &
+\multicolumn{1}{c|}{4561.4} & \multicolumn{1}{c|}{4784.9} &
+\multicolumn{1}{c|}{5323.2} & \multicolumn{1}{c|}{5258.8} &
+\multicolumn{1}{c|}{6247.6} & 7300   & 1134.7 \\ \hline
+\end{tabular}}
+\caption{Optimization mean scholarship vs GPA and ACT}
+\label{opt_scholar_act}
+\end{sidewaystable}
+
+\vspace{0.1in}
+\noindent \textbf{2. Piecewise Relations}  
+
+\noindent Figure \ref{allocation_results} shows the piece-wise linear relationship between the average scholarship award and GPA and ACT. Here, the horizontal axis represents   GPA and ACT scores and the vertical axis represents the average scholarship awarded for the corresponding score.
+
+Figure \ref{allocation_results_a}, for example, clearly shows that no scholarship should be awarded when  GPA is below 2.9 or 3.0. In a similar way, no award is allocated for ACT lower than 20 or 21 and for composite score below 57 or 58. A linear relationship seems to exist between the scholarship and the composite score when the composite score is between 55 and 70, and the scholarship seems to remain the same when the score is above 70. %These results suggests the use of a piecewise linear regression model would be best.
+
+
+\begin{sidewaysfigure}[!htbp]
+\centering
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.5in,height=2.5in,scale=0.5]{pic/gpa_10k.eps}
+\caption{} \label{allocation_results_a}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth }
+\includegraphics[width=2.5in,height=2.5in,scale=0.5]{pic/gpa_12k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.5in,height=2.5in,scale=0.5] {pic/gpa_14k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+
+\medskip
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.5in,height=2.4in,scale=0.5]{pic/act_10k.eps}
+\caption{} %\label{allocation_results_d}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth }
+\includegraphics[width=2.5in,height=2.4in,scale=0.5]{pic/act_12k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.5in,height=2.4in,scale=0.5] {pic/act_14k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+\caption{
+(a) (b) (c) Scholarship vs ACT for various budgets and SSI.
+(d) (e) (f) Scholarship vs GPA for various budgets and SSI.
+}
+\label{allocation_results} 
+
+\end{sidewaysfigure}
+
+
+% \begin{table}
+% \includegraphics[width=6in,height=2in,scale=0.3]{pic/gpa_10k.eps}
+% \caption{} \label{allocation_results_a}
+% \end{table}
+
+
+% \begin{table}
+% \includegraphics[width=6in,height=2in,scale=0.3]{pic/gpa_12k.eps}
+% \caption{} \label{allocation_results_b}
+% \end{table}
+
+
+% \begin{table}
+% \includegraphics[width=6in,height=2in,scale=0.3]{pic/gpa_14k.eps}
+% \caption{} \label{allocation_results_c}
+% \end{table}
+
+
+% \begin{table}
+% \includegraphics[width=6in,height=2in,scale=0.3]{pic/act_10k.eps}
+% \caption{} \label{allocation_results_d}
+% \end{table}
+
+
+% \begin{table}
+% \includegraphics[width=6in,height=2in,scale=0.3]{pic/act_12k.eps}
+% \caption{} \label{allocation_results_e}
+% \end{table}
+
+% \begin{table}
+% \includegraphics[width=6in,height=2in,scale=0.3]{pic/act_14k.eps}
+% \caption{} \label{allocation_results_f}
+% \end{table}
+
+\begin{comment}
+
+\end{}
+%\begin{figure}[p] 
+\begin{sidewaysfigure}[!htbp]
+\centering
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.6in,height=2in,scale=0.3]{pic/gpa_10k.eps}
+\caption{} \label{allocation_results_a}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth }
+\includegraphics[width=2.6in,height=2in,scale=0.3]{pic/gpa_12k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.6in,height=2in,scale=0.3] {pic/gpa_14k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+
+\medskip
+
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.6in,height=2in,scale=0.3]{pic/act_10k.eps}
+\caption{} %\label{allocation_results_d}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth }
+\includegraphics[width=2.6in,height=2in,scale=0.3]{pic/act_12k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.6in,height=2in,scale=0.3] {pic/act_14k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+
+\medskip
+
+\begin{subfigure}{0.33\textwidth} 
+\includegraphics[width=2.6in,height=2.3in]{pic/composite_10k.eps}
+\caption{} \label{allocation_results_g}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth }
+\includegraphics[width=2.6in,height=2.3in]{pic/composite_12k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+\begin{subfigure}{0.33\textwidth}
+\includegraphics[width=2.6in,height=2.3in] {pic/composite_14k.eps}
+\caption{} %\label{}
+\end{subfigure}\hspace*{\fill}
+  \caption{
+    (a) (b) (c) Scholarship vs ACT under various budget and SSI
+    (d) (e) (f) Scholarship vs GPA under various budget and SSI 
+    (g) (h) (i) Scholarship vs Composite score under various budget and SSI}
+  \label{allocation_results} 
+\end{sidewaysfigure}
+
+\end{comment}
+
+%
+% \begin{figure}[ht]
+%   \centering
+% \includegraphics[scale=0.65]{pic/scho_composite.eps}
+% \caption{Scholarship versus composite score}
+% \label{compositescore}
+%\end{figure}
+
+
+\subsubsection{Stepwise Regression Based on Composite Score}
+Using ``CS'' as the variable representing the composite score, a piecewise 
+regression is used to capture these observations and the resulting regression 
+equations are shown in Table \ref{money_result}. After the communication with 
+the school enrollment administrations,  a simpler discretized version of the 
+scholarship policy is shown in Table \ref{money_result_discrete}. 
+
+
+% and a graph of the piecewise regression is shown in  Figure \ref{PieceWisePolicy}. 
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Composite Score & \# of Applicants & Scholarship Amount \\ \hline
+0-53.9         & 2,897  &0              \\ \hline
+54-68.9        & 2,103  &$309\times CS -16,380 $            \\ \hline
+69-76.9        &  241 &  $101\times CS - 2,024$           \\ \hline
+77-80       & 19 &   $711 \times CS -48,910$          \\ \hline
+\end{tabular}
+\caption{Piecewise scholarship allocation}
+\label{money_result}
+\end{table}
+
+% \begin{figure}[ht]
+%    \centering
+%  \includegraphics[width=6in, height=2.5in]{pic/PieceWiseRegression.eps}
+%  \caption{Piecewise linear regression result and the original results}
+%  \label{PieceWisePolicy}
+% \end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|} \hline
+Composite Score & Scholarship Amount \\ \hline
+0-54.9         & 0              \\ \hline
+55-59.9         & 1,500              \\ \hline
+60-65.9         & 2,500              \\ \hline
+66-69.9         & 3,500              \\ \hline
+70-74.9         & 4,500              \\ \hline
+75+             & 6,000              \\ \hline
+\end{tabular}
+\caption{Discretized version of scholarship allocation}
+\label{money_result_discrete}
+
+\end{table}
+
+\subsection{Insights on Change Of Budget}
+Figures \ref{allocation_results_g}, \ref{allocation_results_h}, and \ref{allocation_results_i} show the relationship between average scholarship award and GPA and ACT for different levels of budget and different levels of SSI. Here, the horizontal axis represents composite scores, the vertical axis represents average corresponding scholarship awarded, different regression lines represent different total budgets, and different figures represent different levels of SSI.
+
+\begin{comment}
+As budget changes, the reduction of scholarship across the board seems provide the best result in all cases.
+# iassac 
+? the results don't seem to read that way at all, it looks like increasing budget leads to increased scholarship across the board, and increased SSI leads to smoother scholarship awards
+shuai 
+\end{comment}
+
+\begin{figure} [!htbp]
+\includegraphics[width=6in,height=3in]{pic/composite_10k.eps}
+\caption{Scholarship vs Composite score for SSI=10,000} \label{allocation_results_g}
+\end{figure}
+
+\begin{figure} [!htbp]
+\includegraphics[width=6in,height=3in]{pic/composite_12k.eps}
+\caption{Scholarship vs Composite score for SSI=12,000} \label{allocation_results_h}
+\end{figure}
+
+
+\begin{figure} [!htbp]
+\includegraphics[width=6in,height=3in]{pic/composite_14k.eps}
+\caption{Scholarship vs Composite score for SSI=14,000} \label{allocation_results_i}
+\end{figure}
+
+\begin{comment}
+\subsection{Comparison of Policies} 
+
+Feeding Back these policies into the optimization model, table
+\ref{policy_compare} presents the results of various policies. Here  the Objective column represents the objective values, Enrollment represents the expected enrollment; the graduation represents the expected number of graduation; tuition represents the expected tuition income, and SSI represents the expected SSI from state when applicant enroll and graduate.
+
+
+
+    
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|l|} \hline
+Policy                        & Objective & Enrollment & Graduation& Tuition &
+SSI  \\ \hline \hline
+Optimization Result &                 &                   &                   &
+&                     \\ \hline
+Decision Tree Model  &                 &                   &
+&                  &                     \\ \hline
+Stepwise Regression Model     &                 &                   &
+&                  &                     \\ \hline
+Discrete Stepwise Regression  &                 &                   &
+&                  &                     \\ \hline
+Current Policy                &                 &                   &
+&                  &                    \\ \hline
+\end{tabular}
+\label{policy_compare}
+\end{table}
+
+As can be seen, it s expected that a 10\% increase in enrollment from *** to **
+if we adopted the optimal result and perform individualize scholarship.  DT
+tree analysis and stepwise regression and discrete stepwise regression based on
+composite scores ********
+
+Out of the composite scores, DT preforms best , followed by Stepwise 
+\end{comment}
+
+
+\newpage
+\section{Implementation and Results}
+The scholarship allocation based on the composite score and the policy presented in Table \ref{money_result} has been used as the foundation for the scholarship for the university in the 2013 to 2014 academic year.  The university has taken a proactive approach. The enrollment and admission office has purchased data on student performance and scholarship awards before they even apply (these awards hinge upon the verification of their official performance). 
+%For details, please see
+%\url
+%{http://www.wright.edu/raider-connect/financial-aid/first-year-scholarshipsb }.
+
+Table \ref{enroll_stats} presents the enrollment statistics for the university in the 2012 - 2013 academic year and those of the 2013 - 2014 academic year.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+& 2013 & 2014 & \# Increase & \% Increase \\ \hline
+Application                    & 6,101 & 6,068 & -43         & -0.7\%      \\\hline
+Admitted                       & 4,541 & 4,773 & 232         & 5.1\%       \\\hline
+Non-Scholarship                & 2,166 & 2,157 & -9          & -0.4\%      \\\hline
+Scholarship Award              & 2,375 & 2,616 & 241         & 10.1\%      \\\hline
+%\% of scholarship              & 52\% & 55\% &             &             \\ \hline
+Matriculated                   & 2,001 & 2,222 & 221         & 11.0\%      \\\hline
+%Non-Scholarship Student        & 931  & 1000 & 69          & 7.4\%       \\\hline
+%Scholarship Student            & 1070 & 1222 & 152         & 14.2\%      \\\hline
+%Scholarship Matriculation Rate & 45\% & 47\% &             &             \\\hline
+\end{tabular}
+\caption{Enrollment statistics for the 2012-2013 and 2013-2014 academic years}
+\label{enroll_stats}
+
+\end{table}
+
+In 2012-2013, there are a total of 6,101 applicants; 4,541  were admitted,
+2,375 were awarded scholarships, and 2,166 were not awarded scholarships.
+52\% of the students were awarded scholarships, and a total of 2,001
+students matriculated.
+
+In the 2013-2014 academic year, there were a total of 6,068 applicants; of them,
+4,773 were admitted, 2,616 were awarded scholarships, and 2,157 were not awarded 
+scholarships. 56\% of the students are awarded scholarships, and a total of 2,222
+students matriculated.
+
+Notice that the number of applicants does not change dramatically, actually
+showing a reduction of -43 (0.7\% decrease), but the actual enrollment increased
+by 221  or 11.0\% over the previous years.  It is believed that the use of the
+optimal policy could generate millions of dollars  in revenue for the
+university in the next few years.
+
+
+Table \ref{profit_rundown} shows the optimization model results under different 
+level.The objective reaches highest at 2.2 million budget when SSI = 12,000.
+When spending 0 and 2.2 million on budget, the average graduation probability is 
+43\% and 45\% respectively. The raw revenue of spending 0 (\ref{budget0}) and 2.2 
+(\ref{budget1}) million are calculated as:
+
+\begin{equation}	
+2167 * 8354 * 0.43 * 4 + 2167 * 0.43*12000 = 42,319,083
+\label{budget0}
+\end{equation}
+where 2167 is the number of students expected to enroll, 8,354 is the tuition, and 12,000
+is the SSI.
+
+\begin{equation}
+2356  * (8354-933)* 0.45* 4  + 2356 * 0.45*12000 = 44,193,377
+\label{budget1}
+\end{equation}
+where 933 is the average scholarship of the each student gets under 2.2 million budget.
+
+As a result, the profit of spending extra 2.2 million is 44,193,377 - 42,319,083 = 1,874,294.
+
+\begin{table}[h]
+\centering
+\caption{Optimization results when SSI=12,000}
+\label{profit_rundown}
+\begin{tabular}{|c|c|c|}
+\hline
+budget & objective  & num\_student \\ \hline
+0      & 63,222,695 & 2,167        \\ \hline
+0.2  & 63,303,024 & 2,185        \\ \hline
+0.4  & 63,385,102 & 2,203        \\ \hline
+0.6  & 63,449,801 & 2,221        \\ \hline
+0.8  & 63,518,563 & 2,239        \\ \hline
+1    & 63,578,064 & 2,256        \\ \hline
+1.2  & 63,619,230 & 2,273        \\ \hline
+1.4  & 63,640,276 & 2,290        \\ \hline
+1.6  & 63,656,200 & 2,307        \\ \hline
+1.8  & 63,647,273 & 2,322        \\ \hline
+2    & 63,683,212 & 2,340        \\ \hline
+2.2  & 63,685,894 & 2,356        \\ \hline
+2.4  & 63,676,591 & 2,372        \\ \hline
+2.6  & 63,662,739 & 2,387        \\ \hline
+2.8  & 63,668,398 & 2,404        \\ \hline
+3    & 63,620,835 & 2,418        \\ \hline
+3.2  & 63,565,619 & 2,433        \\ \hline
+3.4  & 63,523,681 & 2,448        \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{comment}
+\section{Implementation}
+
+
+In an attempt to improve the academic profile of our new, direct from high
+school class of all 2013 and to address capacity for growth within the
+colleges, the  financial aid office did a study: WSU awarded additional
+scholarship funds to students who were direct admits into some colleges. The
+students targeted had an average HS GPA of 3.97 and an ACT of 27+. Overall this
+funding proved to be very successful because the number of students who
+enrolled with a HS GPA of 4.0 and greater increased by 51\% and the students
+who had an ACT of 31+ increased by 18\%. WSU matriculated an additional 34\% of
+students in this group due to the additional funding.
+%This effort began our scholarship leveraging efforts, and we had good results
+considering the timing of the original project.
+        
+After an extensive data review process, we found that because the average award
+for this group of students increased to \$3,500-\$4,500 (full in-state tuition
+is \$8,354), WSU were able to attract higher achieving students with the
+additional scholarships, by meeting their `need'\ for competitive merit-based
+scholarships. WSU were competitive with our peers by percentage of tuition
+discounted for this group.
+
+We initiated the study in the 2013 Fall semester to redesign our merit-based
+scholarship structure aiming to increase the headcount without sacrificing
+academic profile. At the same time, a massive marketing campaign lead by the
+school administration kicked off. Since more than 95\% of the incoming students
+at WSU are Ohio residents, our study is focus on this group of students.
+
+Application data from 2006 to 2013 was collected via the enrollment office. The
+data contains mainly two categories: students academic profiles and economic
+status. More details are included in the study approach portion of this study.
+\end{comment}
+
+
+\begin{comment}
+\citet{Maltz2007}: developing predicting models for enrollment levels and
+on systems for identifying expected targeting applicants. And the prediction
+models largely consist of two levels \citet{Aksenova2006}: (1)
+curve-fitting techniques such as moving averages, exponential smoothing,
+spectral analysis; (2) data mining models such as regression models, tree
+structure models, stochastic models.
+
+\end{comment}
+
+% Study on enrollment management falls into two main areas
+
+\chapter{Conclusion}
+This research studies the optimal financial aid allocation problem that puzzles many higher education institutions.  The problem is complex yet of financial importance. Various techniques have been investigated and a three-phase framework was proposed in the paper as the solution of the optimal scholarship allocation problem to derive simple yet effective financial aid policies.
+
+In the first phase, a series of predictive models have been investigated to estimate two types of responses from students with financial aid awards. The first response is enrollment and graduation decisions from students with various socioeconomic characteristics;  the second response is the number of years of study once a student enrolls in the institution.
+
+In the first case,  because of the binary nature of the responses,  "enroll" or "not enroll",  "graduate" or "not graduate", logistic regression based models have been adopted to predict the probability of enrollment of an applicant and the probability of graduation given that he/she enrolls. In the second case, a regression analysis is to be used to predict the number of years of study once the student enrolls in the institution.
+
+In the second phase, an integer linear program is designed to allocate financial aid to applicants with an objective to maximize the revenue, which is composed of tuition minus scholarship allocated over the years, plus the state share of instruction (SSI) once the student graduates.  The constraints to be observed include the total budget limitations as well as other considerations such as fairness. For a merit-based scholarship, the fairness constraint stipulates that a student with better academic performance should be assigned to an equal or higher level of scholarship than that of a students with a lower academic performance. The inclusion of the fairness constraints has dramatically increased the size of the model and a model reduction technique, referred to as minimum cardinality dominance, had to be developed to solve the model effectively.
+
+A computational experiment shows that the use of minimum cardinality dominance has achieved a dramatic reduction regarding model size. In a test case, pairwise comparison of 6,000 students was reduced from more than 13.5 million constraints to only 191,000 constraints, enabling effective solution of the models.  In this particular case,  the original model is computationally unsolvable, actually running out of memory because of the large model size;  the reduced model nevertheless can be solved in minutes.
+
+In the third phase, regression analysis is developed to translate the optimization results, in the form of the  amount of scholarship awarded for each student, into managerial insights and to derive a policy for implementation.  The analysis suggested that the use of a composite score, derived based on the student's GPA and ACT scores, could be used as the basis in the award of scholarships to form simple yet effective scholarship policies.
+
+The result of the study has been successfully implemented in the exemplary state university and has resulted in millions of financial benefits.  The research would be applicable to many other institutions and offers methodology, tools and insights into the solution of financial aid problems. 
+
+\noindent \textbf{Future Studies.}
+The results from the optimization specify the scholarship awards to each applicant under a specific population and budget.  The actual size and composition of the application pool could be affected by the unemployment rate and is random in nature.  Nevertheless, at this stage, this study is on optimization under a specific pool.  Stochastic optimization techniques such as sampling  to find the optimal allocation under a random pool will be of great interest. 
+
+% \begin{figure}[ht]
+%    \centering
+%  \includegraphics[width=5.0in,height=2.8in,scale=0.5]{pic/applicant_unmployment.eps}
+%  \caption{Applicants vs unemployment rate}
+% \end{figure}
+
+
+
+\begin{comment}
+The response variables in the enrollment and graduation models are:
+\begin{itemize}
+    \item MATRICULATION. Whether the applicant enrolled or not.
+    \item DEGREE.AWARDED. Whether the enrolled applicant graduated or not.
+\end{itemize}
+
+The variables represent applicant's academic performance in the model include: 
+\begin{itemize}
+\item GPA. The high school GPA of the applicant. The range of the GPA is 0.5 to
+5. Some high school students take AP or college classes so that the GPA is
+larger than 4.0.
+\item  ACT. The highest ACT composite score that applicant reported. Applicant
+only submit the highest ACT composite score. For student who took SAT, the
+score was converted to ACT according to \citep{ACTSAT}.
+\item HS.Percentile, ranging from 1 to 100, the applicant's percentile from the
+high school, which is an easy way to represent applicant's standing at
+graduation relative to other graduate.
+\end{itemize}.    
+
+
+
+
+The variables related to applicant's financial status include:
+\begin{itemize}
+\item TUITION. The amount of tuition that a applicant pays before the deduction
+of any types of aids. Since this study does not include the out-of-state
+applicants, the tuition are equal for all the applicants.
+\item Family Effective Contribution (EFC). This variable is used to get the
+Pell Grant information.
+\item Pell Grant. The Pell Grant is converted from EFC, which followed by the
+metric got from \citep{EFC_Pell}. There are 8560 applicants who did not fill
+the EFC information in the data. I assumed these applicants knew that they did
+qualify any Pell Grant, so that the NAs were converted to the lowest EFC which
+does not qualify any Pell Grant.
+\item SCHOLARSHIP. The amount amount of money applicant promised in the
+enrollment stage.
+\item TOTAL.FREE.MONEY. This variable is calculated as SCHOLARSHIP + PELL
+GRANT. It represents that all the aids that one applicant got.
+\item OUT.OF.POCKET. It is calculated as TUITION - Total.FREE.MONEY. This
+indicates how much money does one applicant needs to pay.
+\item UNEMPLOYMENT.INDEX. The school year Ohio unemployment rate was added to
+reflect the overall economy. It is known that college is the safe harbor when
+economy underperforms \citep{barr2015out}.
+\end{itemize}
+
+The personal information variables include:
+\begin{itemize}
+    \item GENDER. Applicant's gender.
+\item HS.COUNTY.TIER. the distance between home and campus could be an important factor. This variable
+relates to the distance from the county in which the applicant lived, to the university. There were six tiers in all, as well as ?Out of State/Unknown?
+subcategory. Tier 1 included students who lived in: Clark, Greene, Miami and
+Montgomery counties. Tier 2: Butler, Champaign, Clinton, Darke, Preble and
+Warren counties. Tier 3: included Auglaize, Mercer and Shelby counties. Tier 4
+included Franklin, and Hamilton counties. Tier 5 was northern Ohio counties.
+And Tier 6 was all other Ohio counties. As you can see, Tier 1 includes the
+counties closest to the university, and Tier 5, 6/Out of State include the
+counties furthest from the university.
+\item HS.DISTANCE. The numeric value of distance between high school and campus
+are also added.
+
+\item ETHNICITY. This variable has several different ethnicities:
+BlackOrAfricanAmerican, White, Asian, Hispanic, TwoMore.
+    \item APP.COLLEGE. The intended college of a applicant.
+\end{itemize}
+
+\end{comment}
+
+%-----------------------------------------------------------------------
+% Bibliography
+%-----------------------------------------------------------------------
+\clearpage \phantomsection %used to correctly anchor hyperlinks
+\renewcommand\baselinestretch{1.5}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\bibliographystyle{apalike}
+\bibliographystyle{plainnat}
+\bibliography{shuai_cita}
+
+
+\renewcommand\baselinestretch{1.25}
+
+\end{document}  
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+\vspace{0.15in}
+\noindent \textbf{Variable Importance.} Finally, Table \ref{relatice_influ} presents the importance of variables in the prediction of number of years from a boosting model. %It seems to suggest that GPA, HS.PERCENTILE contribute the most to the model.
+
+\begin{table}[H]
+\centering
+\caption{Relative influence of variables in gradient boosting model}
+\label{relatice_influ}
+\begin{tabular}{|c|c|} \hline
+Variable                        & Relative Influence \\ \hline
+GPA                             & 47.91771887        \\ \hline
+HS.PERCENTILE                   & 12.9595027         \\ \hline
+ACT                             & 7.050451247        \\ \hline
+%ETHNICITYTwoMore                & 6.706346519        \\ \hline
+PELL.GRANT                      & 4.743360342        \\ \hline
+SCHOLARSHIP\_PER                & 4.033307548        \\ \hline
+UNEMPLOYMENT.INDEX              & 3.202687597        \\ \hline
+%ETHNICITYUnknown                & 2.83996864         \\ \hline
+OUT.OF.POCKET                   & 1.770385883        \\ \hline
+%ETHNICITYHispanic               & 1.68325614         \\ \hline
+DISTANCE.BIN04                  & 1.251210899        \\ \hline
+%COLLEGEN                    & 1.235771755        \\ \hline
+DISTANCE.BIN05                  & 0.893538412        \\ \hline
+DISTANCE.BIN02                  & 0.79644945         \\ \hline
+DISTANCE.BIN03                  & 0.788177176        \\ \hline
+%COLLEGEEG                   & 0.783195486        \\ \hline
+ETHNICITYWhite                  & 0.542182288        \\ \hline
+%COLLEGELA                   & 0.507483376        \\ \hline
+%COLLEGESM                   & 0.295005675        \\ \hline
+%COLLEGEED                   & 0                  \\ \hline
+%COLLEGEUC                   & 0                  \\ \hline
+%DISTANCE.BIN06                  & 0                  \\ \hline
+%ETHNICITYBlackOrAfricanAmerican & 0                  \\ \hline
+%ETHNICITYForeign                & 0                  \\ \hline
+%ETHNICITYHawaiian               & 0                  \\ \hline
+%ETHNICITYIndianAlaskan          & 0                  \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{comment}
+\begin{figure}[ht]
+   \centering
+\includegraphics[width=5in,
+height=3.5in,scale=0.5]{pic/Stochastic_boositing.eps}
+ \caption{Stochastic booting procedure}
+ \label{boosting}
+\end{figure}
+\end{comment}
+
+
+\chapter{Mathematical Models for The Optimal Financial Aid  Allocation Problem }
+The study of students' responses to scholarship awards, though it has provided many insights into the behavior of students in responding to awards, has not addressed the allocation of limited financial aid to students fundamentally.
+
+For example, it is easy to see that local students require less money while students in far-away regions may need more money,  but it is still puzzling as: a) should we allocate the money to local students as they are our bread and butter students and require less money or b) should we allocate the money to far-away students as local students will come anyway? The solution to these problems requires the solution of an optimization problem to allocate the financial aid optimally, which is addressed in this chapter.
+
+\section{The Financial Aid Optimization Model}
+Given a set of applicants and their probabilities of enrollment and graduation with respect to different levels of financial aid, the optimization problem to be solved is to determine the financial aid to each applicant to  maximize the revenue. This is referred as the financial aid allocation problem.
+
+In the development of the model, the following notations are used:
+%------ define the list of set, variables, parameters
+%------------------------------------
+\newenvironment{conditions*}
+  {\par\vspace{\abovedisplayskip}\noindent
+\tabularx{\columnwidth}{>{$}l<{$} @{}>{${}}c<{{}$}@{}
+>{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
+%
+%http://tex.stackexchange.com/questions/95838/how-to-write-a-perfect-equation
+%-parameters-description
+%---------------------------------------------------------------------  
+\begin{conditions*}
+\noindent\textbf{Sets}\\
+I  \mbox{\qquad \qquad} &   & set of applicants,  indexed by $i$ and $j$ \\
+M     &   & set of  different levels of financial awards, indexed by $m $\\
+       &   &   $m \in  M = \{ 0,1000, 2000, \ldots ,8000\} $
+\end{conditions*}
+\vspace{-0.3in}
+
+\begin{conditions*}
+\textbf{Parameters}\\
+p^e_{im}  & & probability of enrollment for applicant $i$, if given award $m$\\
+p^g_{im}    & & probability of graduation for applicant $i$, if given award $m$\\
+N_{im}    & & expected number of years student $i$ stays at the institution, if given award$m$  \\  
+d(i,j)         & & 1 if applicant $i$ dominates applicant $j$; 0 otherwise.\\
+B                & & total budget for financial aid\\
+A_m              & &  monetary value of award $m$\\
+T_i             & & tuition paid by applicant $i$\\
+SSI_i     & & government compensation for applicant $i$ when he/she graduates\\
+
+\textbf{Variables}\\
+x_{im}           & & whether a financial award $m$ is allocated to applicant
+$i$ or not\\
+\end{conditions*}
+
+\hspace{-0.5cm}\textbf{Objective}
+\begin{align}
+\max \quad
+& \sum_{i\in I} \sum_{m\in M} x_{im}\cdot p^e_{im}\cdot(T_i-A_m)\cdot N_{im}+
+\sum_{i\in I} \sum_{m\in M} x_{im}\cdot p^e_{im} \cdot p^g_{im}\cdot SSI_i
+\label{objective}
+\end{align}
+
+\hspace{-0.55cm}\textbf{Subject to}
+\begin{align}
+\sum_{m \in M}x_{im}=1 &&   \forall i\in I \label{constraint:1}  \\
+\sum_{i \in I} \sum_{m\in M} x_{im}\cdot p^e_{im}\cdot A_m\leq B
+\label{constraint:2}  \\
+\sum_{m \in M} x_{im}\cdot A_m \geq \sum_{m \in M} x_{jm}\cdot A_m && \forall
+(i,j)|d(i,j)=1 \label{constraint:3}
+\end{align}
+
+The objective (\ref{objective}) is to maximize the total revenue. The first term represents the total tuition income from matriculated students, i.e., the tuition minus the award for each student, times the number of years of study; the second term represents the state compensation once the student graduates.
+
+Constraint \ref{constraint:1}  states that each applicant is given one award (zero is an award with no monetary value). Constraint \ref{constraint:2} states that the total financial aid allocated cannot exceed the total budget B. Constraint  \ref{constraint:3} states that if applicant $i$ dominates applicant $j$, then applicant $i$ should be allocated a higher level award than applicant $j$.
+
+\section{Model Size Reduction and Dominance Matrix}
+
+\subsection{The Size of Pair-wise Dominance Constraints}
+\noindent The size of the above model could be very large because of the number of pair-wise dominance relationships that form constraint \ref{constraint:3}.  For example, the university under study typically has more than 5,500 applicants each year; for each applicant $i$ and $j$ ($i \neq j$), there will be $(5,500 \times 5,500) / 2$ or more than 15 million constraints. Initial experiments with state-of-the-art commercial solvers were unsuccessful due to running out of memory.
+
+However, if an applicant $i$ dominates applicant $k$, and applicant $k$ dominates applicant $j$, then it is only necessary to explicitly include domination constraints for applicants $i$ and $k$, as well as $k$ and $j$, but not necessarily for $i$ and $k$. The dominance constraint $i$ and $k$ is redundant as it is implicitly expressed in the other constraints.  In view of this, to reduce the size of the model, an efficient algorithm has been developed to find the domination matrix of minimum cardinality  without redundant dominance.
+
+\subsection{Full Dominance Matrix}
+The full dominance matrix between any applicant is defined first below. \textbf{Full (Direct) Dominance Matrix:} Let $D^{f}$ be an $n$ by $n$ matrix, where each element $d_{i,j}$ represents whether applicant $i$ dominates applicant $j$ or not. For simplicity,  dominance is only related to academic performance, for example:
+
+\begin{equation}
+   d_{i,j} =
+  \begin{cases}
+\quad   1   & \quad \mbox{if }  GPA_i \geq GPA_j \mbox{ and }  ACT_i \geq ACT_j
+\\
+  \quad   0  & \quad \mbox{otherwise}
+  \end{cases}   
+\end{equation}
+
+\vspace{0.15in}
+\noindent \textit{Example}:  Table \ref{student_sample} presents the ACT and GPA scores of six applicants.  Based on the above dominance definition, among these applicants, applicant 2 dominates 1, 4 and 5; applicant 3 dominates 1, 2, and 4; applicant 6 dominates applicants 1, 2, 4 and 5.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+  Applicant & GPA & ACT \\ [0.5ex] 
+\hline
+1 & 2.9 & 18 \\ \hline
+2 & 3.7 & 21 \\ \hline
+3 & 3.8 & 30 \\ \hline
+4 & 2.7 & 21 \\ \hline
+5 & 3.3 & 17 \\ \hline
+6 & 3.9 & 27 \\ \hline
+\end{tabular}
+\caption{An example  six students and their GPA and ACT scores} 
+\label{student_sample}
+\end{table}
+
+These pairwise dominance relationships can be represented by graph and matrix forms shown in Figure \ref{full_domin}. Here, an arc between applicant $i$ and $j$ in the graph represents the dominance of applicant $i$ over $j$,  as is the entry of 1 in cell $(i,j)$ in the matrix form.
+
+
+\begin{figure}
+    \begin{floatrow}
+        \ffigbox{%
+            \includegraphics[scale=0.4]{pic/dominance1.eps}
+        }{%
+        \caption{Full dominance relationships in graph form}%
+    }
+    \capbtabbox{%
+        \begin{tabular}{l|llllll}
+            & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+            1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+            2 & 1 & 0 & 0 & 1 & 1 & 0 \\
+            3 & 1 & 1 & 0 & 1 & 1 & 0 \\
+            4 & 0 & 0 & 0 & 0 & 0 & 0 \\
+            5 & 0 & 0 & 0 & 0 & 0 & 0 \\
+            6 & 1 & 1 & 0 & 1 & 1 & 0 \\
+        \end{tabular}%}
+    }{%
+    \caption{Full dominance relationships in matrix form}%
+    \label{full_domin}
+}
+\end{floatrow}
+\end{figure}
+
+
+In this example, applicant 2 dominates applicant 1 and applicant 3 dominates applicant 2, so the dominance between applicant 3 and applicant 1 is redundant and can be eliminated.
+
+\subsection{Redundant Dominance Matrix}
+Graphically, a redundant relationship from node $i$ to node $j$ states that there exists at least one two-step path (not a direct path from node $i$ to node $j$) with one intermediate node, say from node $i$ to node $k$, and then from node $k$ to node $j$ (where $k$ can be any intermediate node).  The number of two-step paths from node $i$ to node $j$ with one intermediate node can be easily calculated by $$ \sum_k d(i,k) \cdot  d(k,j)$$ i.e., if there exists a redundant relationship, the inner product of the two corresponding vectors should be greater or equal to 1, and 0 otherwise.
+
+The redundant relationship can thus be represented in a matrix, denoted as $D^2$,  as follows. $$D^2 = D^{f} \cdot D^{f} $$  Here $D^f$ is the original direct dominance matrix and  each entry in $D^2$ represents the number of two-step paths between a pair of applicants.
+ 
+\noindent \textit{Example:} Applicant 2 dominates applicant 1, and applicant 3 dominates both applicants 1 and 2, therefore the entry $d_{21}=d_{31}=d_{32}=1$. The relationship between applicant 3 and the other applicants $k$ is: $d_{3k}=(1,1,0,1,1,0)$, and applicant 1 and the other applicants is $d_{k1}=(0,1,1,0,0,1) ^T $. Furthermore $\sum_k d_{3j} \cdot d_{k1}=d_{31}=1$. This represents that the relationship between applicants 1 and 3 is redundant.
+
+
+\begin{figure}
+\begin{floatrow}
+    \ffigbox{%
+        \includegraphics[scale=0.4]{pic/dominance3.eps}
+        
+    }{%
+    \caption{Redundant dominance relationships in graph form}%
+}
+\capbtabbox{%
+    \begin{tabular}{l|llllll}
+        & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+        1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        3 & 1 & 0 & 0 & 1 & 1 & 0 \\
+        4 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        5 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        6 & 1 & 1 & 0 & 1 & 1 & 0 \\
+    \end{tabular}
+    \label{domin_matrix2}%}
+}{%
+\caption{Redundant dominance relationships in matrix}%
+\label{redundant1}
+}
+\end{floatrow}
+\end{figure}
+
+
+Finally, the elements of a \textbf{redundant matrix}, denoted as $ D_r$, can be defined as follows:
+\begin{equation}
+d^{r}_{i,j} =
+  \begin{cases}
+  \quad  1   & \quad if d^{2}_{i,j} >= 1 \\
+  \quad  0  & \quad d^{2}_{i,j} = 0 
+  \end{cases}   
+\end{equation}
+
+\subsection{Minimum Cardinality Dominance Matrix}
+A minimum cardinality dominance matrix, defined as $D_m$, can be readily defined as: $$D_m = D_f - D_r $$
+
+\vspace{0.15in}
+\noindent \textit{Example:} By eliminating redundant relationships in the graph, the minimum dominance graph and matrix forms for the example are presented Figure \ref{redundant2}:
+
+\begin{figure}
+    \begin{floatrow}
+        \ffigbox{%
+            \includegraphics[scale=0.4]{pic/dominance2.eps}
+        }{%
+        \caption{Minimum dominance in graph form}%
+    }
+    \capbtabbox{%
+    \begin{tabular}{l|llllll}
+        & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+        1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        2 & 1 & 0 & 0 & 1 & 1 & 0 \\
+        3 & 0 & 1 & 0 & 0 & 0 & 0 \\
+        4 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        5 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        6 & 0 & 1 & 0 & 0 & 0 & 0
+    \end{tabular}
+        \label{domin_matrix3}%}
+    }{%
+    \caption{Minimum dominance in matrix form}%
+    \label{redundant2}
+}
+\end{floatrow}
+\end{figure}
+
+
+\section{Model Comparison and Results}
+Computation experiments show that the use of minimum cardinality dominance has achieved a dramatic reduction in terms of model size.  To see this, Table \ref{model_comparison} presents the numbers of variables and constraints corresponding to each model. Here, though the number of variables has not changed, the number of constraints has been dramatically reduced, specifically the dominance constraint (\ref{constraint:2}), which comprises the largest part of the model. The original model has a total of 13,833,800 dominance constraints due to the use of a direct or full dominance matrix, the reduced model; however, has only 220,877 constraints.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|c|c|}
+\hline %\hline
+\multicolumn{2}{|c|}{Model Components}     &
+Original Model & Reduced Model \\ \hline
+Variables                   & \multicolumn{1}{|l|}{Allocation (binary)  $x_i$}
+& 57,860         & 57,860        \\ \hline
+\multirow{3}{*}{Constraint} & One Award per ID  (\ref{constraint:1})        &
+5,260          & 5,260         \\ \cline{2-4}
+& Dominance  (\ref{constraint:2})    & 13,833,800   & 191,497
+\\ \cline{2-4}
+& Total Budget   (\ref{constraint:3})   & 1       & 1
+\\ \cline{2-4}
+& Total Number of Constraints                   & 13,839,061     & 196,758
+\\ \hline
+\end{tabular}
+\caption{Size of the optimization models }
+\label{model_comparison}
+\label{size_model}
+\end{table}
+
+The solution of the original model with a state-of-the-art commercial solver is not possible due to memory limitations; the reduction model, however,  was solved in a few minutes on a standard laptop computer ( i7-4850HQ 2.3 GHz with 8G of RAM).
+
+\subsection{Results Under Different SSI}
+Table \ref{ssi10k}, Table \ref{ssi12k}, and Table \ref{ssi14k} show the optimization results for SSI set at 10000, 12000 and 14000 respectively.  Here  ``Integer Solution'' represents the integer solution value,  ``Linear Programming'' the linear programming solution values, ``Optimality Gap'' the optimality gap,  ``\# Nodes'' the number of nodes in the branch and bound tree,  and ``Time'' the time required in seconds to solve the problem. 
+
+\begin{table}[H]
+\centering
+\caption{Computational statistics of optimization model under SSI=10,000}
+\label{ssi10k}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline %\hline
+SSI                          & \multicolumn{5}{c|}{10,000}                      
+\\ \hline
+\multicolumn{1}{|l|}{Budget} & \multicolumn{1}{l|}{Integer Solution} &
+\multicolumn{1}{l|}{Linear Programming} & \multicolumn{1}{l|}{Optimality Gap} &
+\multicolumn{1}{l|}{\# Nodes} & \multicolumn{1}{l|}{Time} \\
+\hline
+0.4M   & 61,516,543    & 61,527,360 & 0.02\%    & 0    &27                           \\ \hline
+0.6M     & 61,552,340    & 61,559,211 & 0.01\%    & 181     &56                        \\ \hline
+0.8M   & 61,584,196    & 61,594,905 & 0.02\%         & 45         &78                 \\ \hline
+1.0M   & 61,603,302   & 61,616,648& 0.02\%     & 0     &27                          \\ \hline
+1.2M   & 61,624,947    & 61,625,981& 0.00\%    & 0       &29                         \\ \hline
+1.4M      & 61,606,891    & 61,618,654 & 0.02\%      & 0          & 108                  \\ \hline
+1.6M    & 61,593,948      & 61,602,401 & 0.01\%      & 402     &431                      \\ \hline
+1.8M       & 61,550,031         & 61,550,031 & 0.00\%         & 2270     &1080                 \\ \hline
+2.0M       & 61,552,621       & 61,557,068 & 0.01\%      & 0          &133                   \\ \hline
+2.2M     & 61,521,260       & 61,530,258 & 0.01\%    & 0     & 130                         \\ \hline
+2.4M   & 61,472,929   & 61,495,934 & 0.04\%       & 0   &145                         \\ \hline
+2.6M   & 61,428,352   & 61,455,128 & 0.04\%     & 80    &410                         \\ \hline
+2.8M    & 61,414,620      & 61,416,969 & 0.00\%        & 0        &185                   \\ \hline
+3.0M    & 61,350,350     & 61,361,072 & 0.02\%    & 32    & 209                         \\ \hline
+3.2M    & 61,260,758  & 61,272,605 & 0.02\%   & 1444      &640                        \\ \hline
+3.4M    & 61,185,830   & 61,197,559 & 0.02\%   & 598    & 373                          \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Computational statistics of optimization model under SSI=12,000}
+\label{ssi12k}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline   \hline
 SSI     & \multicolumn{5}{c|}{12,000}                      
 \\ \hline 
 \multicolumn{1}{|l|}{Budget} & \multicolumn{1}{l|}{Integer Solution} &
@@ -3292,7 +4774,7 @@ The personal information variables include:
 \begin{itemize}
     \item GENDER. Applicant's gender.
 \item HS.COUNTY.TIER. the distance between home and campus could be an important factor. This variable
-relates to the distance from the county in which the applicant lived, to the university. There were six tiers in all, as well as “Out of State/Unknown”
+relates to the distance from the county in which the applicant lived, to the university. There were six tiers in all, as well as ?Out of State/Unknown?
 subcategory. Tier 1 included students who lived in: Clark, Greene, Miami and
 Montgomery counties. Tier 2: Butler, Champaign, Clinton, Darke, Preble and
 Warren counties. Tier 3: included Auglaize, Mercer and Shelby counties. Tier 4
@@ -3324,6 +4806,4 @@ BlackOrAfricanAmerican, White, Asian, Hispanic, TwoMore.
 \renewcommand\baselinestretch{1.25}
 
 \end{document}  
-
- 　
 
