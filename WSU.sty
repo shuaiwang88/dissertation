@@ -79,6 +79,8 @@
 \makeatother
 
 \newcommand{\authorfull}{\authorfirst\ \authorMI\authorlast}
+
+
 \newcommand{\bachfull}{\bachdegreeshort, \bachinstitution, \bachyear}  % creates Bachelor information under name on title page
 %\newcommand{\degreefullall}{\degreefull\ in En\-gi\-neer\-ing}  % added forced hyphenation (automatic hyphenation disabled for \uline)
 
@@ -92,11 +94,13 @@
 \setlength{\textheight}{9in}
 \setlength{\headheight}{0.5in}
 \setlength{\headsep}{0.1in}
+
 %
 %----------------------------------------------------------------------
 %  Title page info - do not change!
 %-----------------------------------------------------------------------
-\title{                          \thesistitle                          }
+\title{        \MakeUppercase{             \thesistitle        }            }
+%\title{ {DATA MINING TECHNIQUES AND MATHEMATICAL MODELS FOR THE OPTIMAL SCHOLARSHIP ALLOCATION PROBLEM %FOR A STATE UNIVERSITY}}
 
 \author{           A \MakeLowercase{\thesisordissertationlc}\ submitted in partial fulfillment          \\  %  SHUAI
                      of the requirements for the degree of            \\
@@ -104,10 +108,10 @@
 \\ \\ \\
                                        by                             \\
 \\ \\ \\
-\uppercase{                       \authorfull                        }\\
+\MakeUppercase{                       \authorfull                        }\\
                                      \bachfull                           \\
                                   \\
- \\ \\ \\ \\
+ \\ \\ \\ 
                                  \yearcomplete                        \\
                                   \institution                         }
 
@@ -117,11 +121,11 @@
 \newcommand{\phdSignaturePage}{%
 \begin{center}
               \uppercase{\institution}\\
-              COLLEGE OF GRADUATE STUDIES\\
+              GRADUATE SCHOOL\\
 \end{center}
 
 \begin{flushright}
-              \today
+              \date{{December 14, 2017}}
 \end{flushright}
 
 \renewcommand\baselinestretch{1}
@@ -192,7 +196,7 @@
 \end{center}
 
 \begin{flushright}
-              \today
+              \date{December 14, 2017}
 \end{flushright}
 
 \renewcommand\baselinestretch{1}
